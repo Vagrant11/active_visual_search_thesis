@@ -1,0 +1,3 @@
+[submodule "external/time_optimal_ergodic_search"]
+	path = external/time_optimal_ergodic_search
+	url = https://github.com/ialab-yale/time_optimal_ergodic_search
