@@ -44,7 +44,7 @@
     "trajectory_spatial_shift_js_0.1_gamma_0.05.npz": "58e2564a05965622213b67c8f4274114e54e456f826306c6e11fcb0c06c5a3ac",
     "trajectory_spatial_shift_js_0.1_gamma_0.1.npz": "8d00b3873eb1a383ddaa8844125252974be2deda7ace9604c748d47ecc740b54"
   },
-  "analysis_source_sha256": "00db9bbe644ca56da74e03e6a52212f833c399aab11a7e359f209ba2d8d9cc2b",
+  "analysis_source_sha256": "22f02f504536950e2f39ce60ba662baf28ca01a136ea0188c7d286e6bd5bb2d6",
   "source_directory": "/Users/leofang/Desktop/active_visual_search_thesis/milestone_4/results/pilot",
   "plans": 26,
   "episodes": 3328,
@@ -57,7 +57,10 @@
     "summary statistics recomputed from raw episodes",
     "paired outcomes reconstructed from episodes",
     "every saved coverage time sample reproduced",
-    "every episode detection reproduced from saved trajectory"
+    "every episode detection reproduced from saved trajectory",
+    "exact true-prior-weighted detection rate cross-checked against validated oracle_probability_mass_covered",
+    "exact uniform-weighted detection rate cross-checked against validated visible_free_fraction",
+    "calibration priors.npz hashes and true prior/points cross-checked against validated pilot inputs"
   ],
   "interpretation": "descriptive single-scene analysis; no formal ranking or causal mediation claim"
 }

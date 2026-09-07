@@ -1,0 +1,14 @@
+prior_id,family,target_js_nats,entropy_nats
+oracle,oracle,0.0,6.53722105911039
+diffuse_blur_js_0.05,diffuse_blur,0.05,6.931329863140963
+diffuse_blur_js_0.1,diffuse_blur,0.1,7.208513293442342
+diffuse_blur_js_0.15,diffuse_blur,0.15,7.320314038025272
+false_hotspot_js_0.05,false_hotspot,0.05,6.790028984442505
+false_hotspot_js_0.1,false_hotspot,0.1,6.798450411303044
+false_hotspot_js_0.15,false_hotspot,0.15,6.749097704606396
+false_negative_suppression_js_0.05,false_negative_suppression,0.05,7.0482546497070615
+false_negative_suppression_js_0.1,false_negative_suppression,0.1,7.14503713725276
+false_negative_suppression_js_0.15,false_negative_suppression,0.15,7.16473759368523
+spatial_shift_js_0.05,spatial_shift,0.05,6.552377920249398
+spatial_shift_js_0.1,spatial_shift,0.1,6.556194819113552
+spatial_shift_js_0.15,spatial_shift,0.15,6.55954175618573

@@ -18,8 +18,70 @@ from .protocol import ROOT, fixed_inputs, protocol_manifest
 
 LABEL = ("prior_id", "family", "target_js_nats", "gamma")
 OUTCOMES = ("both_success", "oracle_only", "error_only", "both_timeout")
+# Explicit 2x2 (oracle outcome x error-prior outcome) reading of OUTCOMES, so the
+# discordant/concordant structure is visible in column names, not just prose.
+OUTCOME_2X2 = {"both_success": ("success", "success"), "oracle_only": ("success", "timeout"),
+               "error_only": ("timeout", "success"), "both_timeout": ("timeout", "timeout")}
 COLORS = ("#0072B2", "#009E73", "#D55E00", "#CC79A7")
 NAMES = ("Spatial shift", "Diffuse / blur", "False hotspot", "False-negative suppression")
+CALIBRATION_PRIORS_PATH = ROOT / "milestone_4/results/calibration/priors.npz"
+
+
+def entropy_nats(p):
+    """Standard discrete entropy -sum(p*log(p)) over the support, in nats."""
+    p = np.asarray(p, dtype=float)
+    support = p > 0
+    return float(-np.sum(p[support] * np.log(p[support])))
+
+
+def trajectory_length(states):
+    """Physical path length: sum of consecutive Euclidean distances between planned (x, y) nodes."""
+    xy = np.asarray(states)[:, :2]
+    return float(np.sum(np.linalg.norm(np.diff(xy, axis=0), axis=1)))
+
+
+def weighted_detection_stats(first, weights):
+    """Exact full-grid detection probability and weighted mean/median T_find, given detection.
+
+    `weights` need not sum to 1 over the detected subset alone; the reported rate is the
+    weighted mass detected (e.g. true-prior mass covered, or uniform-mass fraction of the
+    support ever visible), and the mean/median are conditional on detection so that cells
+    never seen do not silently enter the timing statistic. The rate is always returned
+    alongside so the denominator behind the conditional mean/median is explicit.
+    """
+    first = np.asarray(first, dtype=float)
+    weights = np.asarray(weights, dtype=float)
+    seen = np.isfinite(first)
+    rate = float(weights[seen].sum()) if seen.any() else 0.0
+    if not seen.any() or rate <= 0:
+        return {"detection_probability": rate, "weighted_mean_t_find": None, "weighted_median_t_find": None}
+    w, t = weights[seen], first[seen]
+    order = np.argsort(t)
+    t_sorted, cum = t[order], np.cumsum(w[order])
+    median = float(t_sorted[np.searchsorted(cum, 0.5 * cum[-1])])
+    return {"detection_probability": rate, "weighted_mean_t_find": float(np.sum(w * t) / w.sum()),
+            "weighted_median_t_find": median}
+
+
+def load_prior_entropy(inputs, config):
+    """Per-prior entropy from the calibration artifact, cross-checked against pilot inputs.
+
+    This does not run the planner or generator; it only loads and validates the already-saved
+    `results/calibration/priors.npz` against hashes/arrays the pilot itself was already
+    validated against in `load_and_validate`.
+    """
+    with np.load(CALIBRATION_PRIORS_PATH, allow_pickle=False) as data:
+        cal = {k: data[k].copy() for k in data.files}
+    require(np.array_equal(cal["points"], inputs["points"]), "Calibration points differ from pilot inputs")
+    require(np.array_equal(cal["true_prior"], inputs["true_prior"]), "Calibration true prior differs from pilot inputs")
+    require(np.array_equal(cal["free_mask"], inputs["true_prior"] > 0), "Calibration free mask differs from true-prior support")
+    entropy = {"oracle": entropy_nats(cal["true_prior"])}
+    for key in sorted(k for k in cal if k not in ("points", "true_prior", "free_mask")):
+        require(hashlib.sha256(cal[key].tobytes()).hexdigest() == config["prior_sha256"][key],
+                f"Calibration prior hash changed: {key}")
+        entropy[key] = entropy_nats(cal[key])
+    require(set(entropy) == set(config["prior_sha256"]) | {"oracle"}, "Calibration priors do not cover all pilot conditions")
+    return entropy
 
 
 def read_csv(path):
@@ -89,13 +151,27 @@ def paired_stats(records):
     counts = Counter(r["outcome"] for r in records)
     delta = [r["delta_t_find_both_success"] for r in records if r["outcome"] == "both_success"]
     n = len(records)
+    both_success = counts["both_success"]
+    faster, equal, slower = (sum(d < -1e-10 for d in delta), sum(abs(d) <= 1e-10 for d in delta),
+                             sum(d > 1e-10 for d in delta))
+    def rate(count):
+        return count / both_success if both_success else None
     return {"pairs": n, **{f"{k}_count": counts[k] for k in OUTCOMES},
+            # Same four counts, named as an explicit oracle-outcome x error-outcome 2x2 table.
+            **{f"oracle_{o}_error_{e}_count": counts[k] for k, (o, e) in OUTCOME_2X2.items()},
             "delta_success_rate": (counts["error_only"] - counts["oracle_only"]) / n if n else None,
             "both_success_mean_delta_t_find": float(np.mean(delta)) if delta else None,
             "both_success_median_delta_t_find": float(np.median(delta)) if delta else None,
-            "error_faster_count_both_success": sum(d < -1e-10 for d in delta),
-            "equal_time_count_both_success": sum(abs(d) <= 1e-10 for d in delta),
-            "error_slower_count_both_success": sum(d > 1e-10 for d in delta)}
+            "both_success_p75_delta_t_find": float(np.percentile(delta, 75)) if delta else None,
+            "both_success_p90_delta_t_find": float(np.percentile(delta, 90)) if delta else None,
+            "both_success_p95_delta_t_find": float(np.percentile(delta, 95)) if delta else None,
+            "both_success_max_delta_t_find": float(np.max(delta)) if delta else None,
+            "error_faster_count_both_success": faster,
+            "equal_time_count_both_success": equal,
+            "error_slower_count_both_success": slower,
+            "error_faster_rate_both_success": rate(faster),
+            "equal_time_rate_both_success": rate(equal),
+            "error_slower_rate_both_success": rate(slower)}
 
 
 def first_seen_grid(policy, environment, points, support):
@@ -234,7 +310,13 @@ def load_and_validate(source):
     return config, tables, pairs, env, inputs, policies, firsts
 
 
-def aggregate(tables, pairs, config):
+def aggregate(tables, pairs, config, extra_by_key_gamma=None, entropy_by_prior=None):
+    """extra_by_key_gamma/entropy_by_prior are per-condition (not per-seed) diagnostics —
+    exact full-grid metrics, trajectory length and prior entropy — merged identically into
+    every seed_scope row, the same way visible_free_fraction/oracle_probability_mass_covered
+    already are below. Both default to empty so unit tests that build minimal tables/config
+    without these optional artifacts still run unchanged."""
+    extra_by_key_gamma, entropy_by_prior = extra_by_key_gamma or {}, entropy_by_prior or {}
     metrics, paired = [], []
     coverage = index_unique(tables["coverage_summary"], ("prior_id", "gamma"))
     groups, pair_groups = defaultdict(list), defaultdict(list)
@@ -252,7 +334,9 @@ def aggregate(tables, pairs, config):
             metrics.append({**label, **values, "delta_success_rate": values["success_rate"] - oracle["success_rate"],
                             "delta_mean_t_find_success_only": (values["mean_t_find_success_only"] - oracle["mean_t_find_success_only"]
                                 if values["success_count"] and oracle["success_count"] else None),
-                            **{k: coverage[key, gamma][k] for k in ("visible_free_fraction", "oracle_probability_mass_covered")}})
+                            **{k: coverage[key, gamma][k] for k in ("visible_free_fraction", "oracle_probability_mass_covered")},
+                            **extra_by_key_gamma.get((key, gamma), {}),
+                            **({"entropy_nats": entropy_by_prior[key]} if key in entropy_by_prior else {})})
             if key != "oracle":
                 raw = pair_groups[key, gamma]
                 raw = raw if scope == "pooled" else [r for r in raw if r["seed"] == scope]
@@ -393,7 +477,7 @@ def plot_results(out, config, metrics, paired, mechanism, firsts, inputs, polici
         save_figure(fig, out, f"mechanism_gamma_{gamma:g}")
 
 
-def write_report(out, config, metrics, paired, mechanism):
+def write_report(out, config, metrics, paired, mechanism, prior_entropy_table):
     lines = ["# Milestone 4 pilot analysis", "", "This is a descriptive analysis of saved trajectories and paired targets.",
              "No planner was imported or run. Four error families share JS levels 0.05, 0.10 and 0.15 nats.",
              "The analysis verifies the saved calibration, episode summaries, pairings and every coverage time sample.", "",
@@ -407,12 +491,44 @@ def write_report(out, config, metrics, paired, mechanism):
              "  scenes or optimizer replicates. No confidence intervals, p-values or general family ranking are reported.",
              "- On this fixed target grid with the ideal detector and shared observation times, true-prior mass covered",
              "  equals the detection probability under the discrete true distribution. Agreement with sampled success",
-             "  is therefore an expected sampling relationship, not independent proof of a causal mediation mechanism.", ""]
+             "  is therefore an expected sampling relationship, not independent proof of a causal mediation mechanism.",
+             "- **Primary endpoints for this pilot and the proposed formal suite are the exact full-grid metrics**:",
+             "  exact detection probability (true-prior mass with finite first-visible time; identical to true-prior",
+             "  mass covered above) and its true-prior-weighted mean/median T_find, conditional on detection. Sampled",
+             "  successful-only mean/median and the 128-draw success rate are retained as a secondary, precision-sensitivity",
+             "  check against target-draw noise (see observation 6 and the protocol v2 draft's primary-endpoint section).",
+             "- **Uniform-weighted diagnostic**: the same exact full-grid computation reweighted by a uniform distribution",
+             "  over the supported free-cell mask instead of the true prior, applied to the same oracle-conditioned saved",
+             "  trajectories -- not a new planner run under a uniform prior. Its detection rate is exactly",
+             "  `visible_free_fraction` (the visited fraction of supported cells); its weighted mean/median T_find is new",
+             "  and isolates *where the trajectory physically went* from *how much true-prior probability mass it",
+             "  captured*. A true uniform-prior baseline would require planning a fresh trajectory under a uniform prior;",
+             "  that is deferred to the protocol v2 preflight/formal design, not computed here.",
+             "- **Paired outcomes are a 2x2 table** of (oracle succeeded/timed out) x (error-prior policy succeeded/timed",
+             "  out): `oracle_success_error_success_count`, `oracle_success_error_timeout_count`,",
+             "  `oracle_timeout_error_success_count`, `oracle_timeout_error_timeout_count` in the paired summary CSVs",
+             "  (equal to the legacy `both_success/oracle_only/error_only/both_timeout` columns, kept for compatibility).",
+             "- Paired timing now also reports p75/p90/p95/max of the both-success ΔT distribution and the ΔT>0/=0/<0",
+             "  proportions (not just counts), alongside the existing mean/median.",
+             "- `prior_entropy.csv` and the `trajectory_length`/`entropy_nats` columns in `mechanism_summary.csv` record",
+             "  discrete Shannon entropy (nats) of each calibrated prior and the physical path length of each planned",
+             "  trajectory (sum of consecutive node-to-node distances), for cross-reference against coverage and success",
+             "  in the same row.", ""]
     def metric(key, gamma):
         return next(r for r in metrics if r["prior_id"] == key and r["gamma"] == gamma and r["seed_scope"] == "pooled")
+    def fmt_signed(value):
+        return "NA" if value is None else f"{value:+.3f}"
+    def fmt(value):
+        return "NA" if value is None else f"{value:.3f}"
     shift_lo, shift_hi = metric("spatial_shift_js_0.1", .1), metric("spatial_shift_js_0.1", .05)
     hotspot = next(r for r in mechanism if r["prior_id"] == "false_hotspot_js_0.15" and r["gamma"] == .05)
     small_shift = next(r for r in mechanism if r["prior_id"] == "spatial_shift_js_0.15" and r["gamma"] == .05)
+    non_oracle_mechanism = [r for r in mechanism if r["prior_id"] != "oracle"]
+    both_positive_count = sum(1 for r in non_oracle_mechanism
+                              if r["delta_exact_weighted_mean_t_find"] > 0 and r["delta_uniform_weighted_mean_t_find"] > 0)
+    exact_exceeds_uniform_count = sum(1 for r in non_oracle_mechanism
+                                      if r["delta_exact_weighted_mean_t_find"] > r["delta_uniform_weighted_mean_t_find"])
+    exception = min(non_oracle_mechanism, key=lambda r: r["delta_exact_weighted_mean_t_find"] - r["delta_uniform_weighted_mean_t_find"])
     timing = [r["both_success_mean_delta_t_find"] for r in paired if r["seed_scope"] == "pooled"
               and r["both_success_mean_delta_t_find"] is not None]
     same_seed_signs = all(np.sign(r["delta_success_rate"]) == np.sign(metric(r["prior_id"], r["gamma"])["delta_success_rate"])
@@ -436,7 +552,20 @@ def write_report(out, config, metrics, paired, mechanism):
               f"   changes true-prior mass covered by {small_shift['delta_true_prior_mass']*100:+.2f} points while pooled sampled",
               f"   success changes by {small_shift['delta_success_rate_pooled']*100:+.2f} points.",
               "   These are different quantities: one integrates the fixed distribution, the other uses 128 draws.",
-              "   This motivates separating target-sampling uncertainty from scenario/geometry variation.", ""]
+              "   This motivates separating target-sampling uncertainty from scenario/geometry variation.",
+              "6. **True-prior- and uniform-weighted timing agree in sign but not in magnitude.** Across all "
+              f"{len(non_oracle_mechanism)} pooled error-versus-oracle mechanism rows (12 conditions x 2 gammas), the",
+              f"   true-prior-weighted and uniform-weighted changes in mean T_find are both positive (slower) in "
+              f"{both_positive_count} of {len(non_oracle_mechanism)} rows: this is not a sign-flip finding like observation 2's",
+              "   coverage/mass contrast. The true-prior-weighted change exceeds the uniform-weighted change in "
+              f"{exact_exceeds_uniform_count} of {len(non_oracle_mechanism)} rows -- e.g. for false hotspot at JS=0.15, gamma=0.05, the",
+              f"   true-prior-weighted mean T_find changes by {fmt_signed(hotspot['delta_exact_weighted_mean_t_find'])} s versus "
+              f"{fmt_signed(hotspot['delta_uniform_weighted_mean_t_find'])} s uniform-weighted (same trajectories, reweighted",
+              f"   only by which cells were physically visited). The exception is {dict(zip(FAMILIES, NAMES))[exception['family']].lower()} at "
+              f"JS={exception['target_js_nats']:g}, gamma={exception['gamma']:g}, where the uniform-weighted change "
+              f"({fmt_signed(exception['delta_uniform_weighted_mean_t_find'])} s) exceeds the true-prior-weighted change",
+              f"   ({fmt_signed(exception['delta_exact_weighted_mean_t_find'])} s). This is a descriptive pattern in this",
+              "   pilot's rows, not a mechanism claim.", ""]
     for gamma in config["planner"]["gammas"]:
         oracle = next(r for r in metrics if r["gamma"] == gamma and r["prior_id"] == "oracle" and r["seed_scope"] == "pooled")
         lines += [f"## gamma = {gamma:g}", "",
@@ -450,12 +579,48 @@ def write_report(out, config, metrics, paired, mechanism):
                 key = prior_id(family, level)
                 r = next(r for r in metrics if r["prior_id"] == key and r["gamma"] == gamma and r["seed_scope"] == "pooled")
                 p = next(r for r in paired if r["prior_id"] == key and r["gamma"] == gamma and r["seed_scope"] == "pooled")
-                def fmt(value):
-                    return "NA" if value is None else f"{value:.3f}"
                 lines.append(f"| {name} | {level:g} | {r['success_rate']*100:.2f} | {r['delta_success_rate']*100:+.2f} | "
                              f"{fmt(r['mean_t_find_success_only'])} / {fmt(r['median_t_find_success_only'])} | {p['both_success_count']} | "
                              f"{fmt(p['both_success_mean_delta_t_find'])} / {fmt(p['both_success_median_delta_t_find'])} | "
                              f"{r['visible_free_fraction']*100:.2f} | {r['oracle_probability_mass_covered']*100:.2f} |")
+        oracle_exact = next(m for m in mechanism if m["prior_id"] == "oracle" and m["gamma"] == gamma)
+        lines += ["", "**Exact full-grid diagnostics (primary endpoint, columns 3-5; uniform-weighted diagnostic, columns 6-8).**",
+                  "Detection probability/rate is the true-prior (resp. uniform) mass with a finite first-visible time;",
+                  "weighted mean/median T_find are conditional on that detection. Trajectory length is the summed",
+                  "node-to-node path distance of the planned trajectory.", "",
+                  f"Oracle: exact detection {oracle_exact['exact_detection_probability']*100:.2f}%, exact weighted mean/median "
+                  f"{fmt(oracle_exact['exact_weighted_mean_t_find'])}/{fmt(oracle_exact['exact_weighted_median_t_find'])} s; "
+                  f"uniform detection {oracle_exact['uniform_detection_probability']*100:.2f}%, uniform weighted mean/median "
+                  f"{fmt(oracle_exact['uniform_weighted_mean_t_find'])}/{fmt(oracle_exact['uniform_weighted_median_t_find'])} s; "
+                  f"trajectory length {oracle_exact['trajectory_length']:.3f}.", "",
+                  "| Family | JS | Exact detect % | Exact weighted mean / median s | Uniform detect % | Uniform weighted mean / median s | Trajectory length | Delta length |",
+                  "|---|---:|---:|---:|---:|---:|---:|---:|"]
+        for family, name in zip(FAMILIES, NAMES):
+            for level in config["js"]["levels"]:
+                key = prior_id(family, level)
+                m = next(m for m in mechanism if m["prior_id"] == key and m["gamma"] == gamma)
+                lines.append(f"| {name} | {level:g} | {m['exact_detection_probability']*100:.2f} | "
+                             f"{fmt(m['exact_weighted_mean_t_find'])} / {fmt(m['exact_weighted_median_t_find'])} | "
+                             f"{m['uniform_detection_probability']*100:.2f} | "
+                             f"{fmt(m['uniform_weighted_mean_t_find'])} / {fmt(m['uniform_weighted_median_t_find'])} | "
+                             f"{m['trajectory_length']:.3f} | {m['delta_trajectory_length']:+.3f} |")
+        lines += ["", "**Paired discordant outcomes (2x2: oracle outcome x error-prior outcome) and both-success ΔT tails.**",
+                  "ΔT = error T_find - oracle T_find on the common-success subset; positive is slower. Proportions use",
+                  "the \"oracle ok, error ok\" (both-success) count from this same row as their denominator.", "",
+                  "| Family | JS | Oracle ok, error ok | Oracle ok, error timeout | Oracle timeout, error ok | Both timeout | ΔT>0 % | ΔT=0 % | ΔT<0 % | p75 | p90 | p95 | max s |",
+                  "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|"]
+        for family, name in zip(FAMILIES, NAMES):
+            for level in config["js"]["levels"]:
+                key = prior_id(family, level)
+                p = next(r for r in paired if r["prior_id"] == key and r["gamma"] == gamma and r["seed_scope"] == "pooled")
+                def pct(value):
+                    return "NA" if value is None else f"{value*100:.1f}"
+                lines.append(f"| {name} | {level:g} | {p['oracle_success_error_success_count']} | "
+                             f"{p['oracle_success_error_timeout_count']} | {p['oracle_timeout_error_success_count']} | "
+                             f"{p['oracle_timeout_error_timeout_count']} | {pct(p['error_slower_rate_both_success'])} | "
+                             f"{pct(p['equal_time_rate_both_success'])} | {pct(p['error_faster_rate_both_success'])} | "
+                             f"{fmt(p['both_success_p75_delta_t_find'])} | {fmt(p['both_success_p90_delta_t_find'])} | "
+                             f"{fmt(p['both_success_p95_delta_t_find'])} | {fmt(p['both_success_max_delta_t_find'])} |")
         lines += ["", f"![Metric comparisons](metrics_gamma_{gamma:g}.png)", "",
                   f"![Paired outcomes and timing](paired_gamma_{gamma:g}.png)", "",
                   f"![Visibility gains and losses](coverage_maps_gamma_{gamma:g}.png)", "",
@@ -472,9 +637,24 @@ def write_report(out, config, metrics, paired, mechanism):
               "`metrics_by_seed.csv` and `paired_summary_by_seed.csv` retain separate seed outcomes. The plots show",
               "seed 7 dashed, seed 11 dotted and pooled solid. With only two target seeds, their spread is descriptive",
               "and is not an uncertainty estimate across scenes or error geometries.", "",
-              "## Limits and next experiment", "",
+              "## Prior entropy", "",
+              "Discrete Shannon entropy (nats, natural log, matching the JS units used elsewhere) of each calibrated",
+              "prior and the true/oracle prior, from `results/calibration/priors.npz`. Entropy is a property of the",
+              "prior alone and does not vary with gamma; `prior_entropy.csv` and the `entropy_nats` column of",
+              "`mechanism_summary.csv` carry the same values for cross-reference against coverage and success.", "",
+              "| Prior | Family | JS | Entropy (nats) |", "|---|---|---:|---:|",
+              f"| oracle | oracle | 0.0 | {next(r['entropy_nats'] for r in prior_entropy_table if r['prior_id'] == 'oracle'):.4f} |"]
+    for family, name in zip(FAMILIES, NAMES):
+        for level in config["js"]["levels"]:
+            key = prior_id(family, level)
+            e = next(r["entropy_nats"] for r in prior_entropy_table if r["prior_id"] == key)
+            lines.append(f"| {key} | {name} | {level:g} | {e:.4f} |")
+    lines += ["", "## Limits and next experiment", "",
               "These comparisons establish condition-specific behavior under the frozen planner, camera and budget.",
               "They do not establish universal error-family ordering, or coverage as the only pathway affecting timing.",
+              "The exact full-grid detection probability and weighted T_find are the declared primary endpoints for the",
+              "proposed formal suite (see the protocol v2 draft's primary-endpoint section); sampled successful-only",
+              "statistics remain a secondary precision-sensitivity check, motivated directly by observation 6 above.",
               "The next deliverable is the [protocol v2 draft](../../PROTOCOL_V2_DRAFT.md): a prespecified scenario and",
               "error-geometry set, per-block JS calibration, and paired contrasts with scenes as the unit of generalization.",
               "Its feasibility and precision checks must precede freezing the formal experiment manifest.", ""]
@@ -489,30 +669,74 @@ def analyze(source, out):
     files = sorted(p for p in source.iterdir() if p.is_file())
     before = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
     config, tables, pairs, env, inputs, policies, firsts = load_and_validate(source)
-    metrics, paired = aggregate(tables, pairs, config)
+
+    # Exact full-grid diagnostics (step 1/5): primary endpoints computed by reweighting the
+    # already-replayed visibility (`firsts`), never by planning. True-prior weights give the
+    # exact detection probability/weighted T_find; uniform weights over the supported free-cell
+    # mask give a diagnostic baseline isolating physical area coverage from true-prior mass.
+    support = inputs["true_prior"] > 0
+    uniform_weights = support.astype(float) / support.sum()
+    exact_by_key_gamma, traj_len_by_key_gamma = {}, {}
     cover = index_unique(tables["coverage_summary"], ("prior_id", "gamma"))
+    for (key, gamma), first in firsts.items():
+        true_stats = weighted_detection_stats(first, inputs["true_prior"])
+        uniform_stats = weighted_detection_stats(first, uniform_weights)
+        # Sanity checks tying the new exact metric to the coverage fields already validated
+        # against the saved pilot in load_and_validate: the true-prior-weighted detection rate
+        # must equal the already-checked oracle_probability_mass_covered, and the uniform-weighted
+        # rate must equal the already-checked visible_free_fraction (uniform mass ever visited
+        # equals the visited fraction of supported free cells by construction).
+        require(same_number(true_stats["detection_probability"], cover[key, gamma]["oracle_probability_mass_covered"]),
+                f"Exact true-prior detection probability disagrees with validated coverage: {key}, {gamma}")
+        require(same_number(uniform_stats["detection_probability"], cover[key, gamma]["visible_free_fraction"]),
+                f"Uniform-weighted detection probability disagrees with validated free-cell coverage: {key}, {gamma}")
+        exact_by_key_gamma[key, gamma] = {
+            "exact_detection_probability": true_stats["detection_probability"],
+            "exact_weighted_mean_t_find": true_stats["weighted_mean_t_find"],
+            "exact_weighted_median_t_find": true_stats["weighted_median_t_find"],
+            "uniform_detection_probability": uniform_stats["detection_probability"],
+            "uniform_weighted_mean_t_find": uniform_stats["weighted_mean_t_find"],
+            "uniform_weighted_median_t_find": uniform_stats["weighted_median_t_find"]}
+        traj_len_by_key_gamma[key, gamma] = trajectory_length(policies[key, gamma]["states"])
+
+    entropy_by_prior = load_prior_entropy(inputs, config)
+    extra_by_key_gamma = {key: {**exact_by_key_gamma[key], "trajectory_length": traj_len_by_key_gamma[key]}
+                          for key in firsts}
+    metrics, paired = aggregate(tables, pairs, config, extra_by_key_gamma=extra_by_key_gamma, entropy_by_prior=entropy_by_prior)
     mechanism = []
     for (key, gamma), policy in policies.items():
         row = cover[key, gamma]
         arrival = (len(policy["states"]) - 1) * policy["tf"] / len(policy["states"])
         pooled = next(r for r in metrics if r["prior_id"] == key and r["gamma"] == gamma and r["seed_scope"] == "pooled")
+        exact, oracle_exact = exact_by_key_gamma[key, gamma], exact_by_key_gamma["oracle", gamma]
+        def delta_exact(field):
+            return (exact[field] - oracle_exact[field]) if exact[field] is not None and oracle_exact[field] is not None else None
         mechanism.append({k: row[k] for k in LABEL} | {"terminal_arrival_time": arrival, "optimized_tf": policy["tf"],
                           "visible_free_fraction": row["visible_free_fraction"],
                           "true_prior_mass_covered": row["oracle_probability_mass_covered"],
                           "delta_visible_free_fraction": row["visible_free_fraction"] - cover["oracle", gamma]["visible_free_fraction"],
                           "delta_success_rate_pooled": pooled["delta_success_rate"],
-                          **coverage_comparison(firsts[key, gamma], firsts["oracle", gamma], inputs["true_prior"], arrival)})
+                          **coverage_comparison(firsts[key, gamma], firsts["oracle", gamma], inputs["true_prior"], arrival),
+                          **exact, "trajectory_length": traj_len_by_key_gamma[key, gamma],
+                          "delta_trajectory_length": traj_len_by_key_gamma[key, gamma] - traj_len_by_key_gamma["oracle", gamma],
+                          "delta_exact_weighted_mean_t_find": delta_exact("exact_weighted_mean_t_find"),
+                          "delta_uniform_weighted_mean_t_find": delta_exact("uniform_weighted_mean_t_find"),
+                          "entropy_nats": entropy_by_prior[key]})
+    prior_entropy_table = [{"prior_id": pid, **({"family": "oracle", "target_js_nats": 0.0} if pid == "oracle" else
+                            {"family": pid.rsplit("_js_", 1)[0], "target_js_nats": float(pid.rsplit("_js_", 1)[1])}),
+                            "entropy_nats": value} for pid, value in entropy_by_prior.items()]
     out.mkdir(parents=True, exist_ok=True)
     for name, rows in (("metrics_by_seed", [r for r in metrics if r["seed_scope"] != "pooled"]),
                        ("metrics_pooled", [r for r in metrics if r["seed_scope"] == "pooled"]),
                        ("paired_summary_by_seed", [r for r in paired if r["seed_scope"] != "pooled"]),
                        ("paired_summary_pooled", [r for r in paired if r["seed_scope"] == "pooled"]),
-                       ("paired_time_differences", pairs), ("mechanism_summary", mechanism)):
+                       ("paired_time_differences", pairs), ("mechanism_summary", mechanism),
+                       ("prior_entropy", prior_entropy_table)):
         write_csv(out / f"{name}.csv", rows)
     np.savez(out / "visibility_replay.npz", points=inputs["points"], true_prior=inputs["true_prior"],
              **{f"{key}_gamma_{gamma:g}": times for (key, gamma), times in firsts.items()})
     plot_results(out, config, metrics, paired, mechanism, firsts, inputs, policies, env)
-    write_report(out, config, metrics, paired, mechanism)
+    write_report(out, config, metrics, paired, mechanism, prior_entropy_table)
     require(all(hashlib.sha256(p.read_bytes()).hexdigest() == before[p.name] for p in files), "Input files changed during analysis")
     require("milestone_3.planner" not in sys.modules, "Planner unexpectedly imported")
     audit = {"passed": True, "planner_imported": False, "planner_calls": 0,
@@ -522,7 +746,10 @@ def analyze(source, out):
              "paired_outcomes": len(pairs), "replayed_coverage_samples": len(tables["coverage_timeseries"]),
              "checks": ["frozen protocol and prior hashes", "complete valid-plan diagnostics", "paired target identities",
                         "summary statistics recomputed from raw episodes", "paired outcomes reconstructed from episodes",
-                        "every saved coverage time sample reproduced", "every episode detection reproduced from saved trajectory"],
+                        "every saved coverage time sample reproduced", "every episode detection reproduced from saved trajectory",
+                        "exact true-prior-weighted detection rate cross-checked against validated oracle_probability_mass_covered",
+                        "exact uniform-weighted detection rate cross-checked against validated visible_free_fraction",
+                        "calibration priors.npz hashes and true prior/points cross-checked against validated pilot inputs"],
              "interpretation": "descriptive single-scene analysis; no formal ranking or causal mediation claim"}
     (out / "analysis_audit.json").write_text(json.dumps(audit, indent=2, allow_nan=False) + "\n")
     return audit

@@ -24,6 +24,18 @@ These exploratory observations motivate the design; they are not confirmatory
 evidence for a general ranking. V1's exact scene remains a separate reference
 and is excluded from the proposed primary suite.
 
+The pilot's post-hoc analysis was subsequently extended (still zero new planning
+runs) to add exact full-grid detection/timing metrics, a uniform-weighted
+reweighting diagnostic, paired-outcome tail diagnostics and per-prior entropy/trajectory
+length; see the [primary endpoint declaration](#primary-endpoint-declaration) below. That
+extended analysis motivates the primary-endpoint choice below, but surfaced no
+concrete reason to change the 12-scene/geometry/JS design itself: full-grid
+detection and its area-only (uniform-weighted) diagnostic changed in the same
+direction in all 24 pilot rows, and only differed in relative magnitude in one;
+entropy varied smoothly across families and levels with no attainability failure.
+If a future formal-suite preflight finds otherwise, document the finding and
+issue a revised draft rather than changing the design silently.
+
 ## Proposed finite scene suite
 
 Cross four Gaussian hotspot centers with three obstacle layouts, giving 12
@@ -83,6 +95,60 @@ levels or drop difficult conditions. Revise the common levels for the entire
 suite using calibration evidence alone, document the revision, and recalibrate.
 Freeze full-precision priors, parameters and hashes before evaluating search.
 
+## Primary endpoint declaration
+
+**Primary endpoints: exact full-grid detection probability and its true-prior-weighted
+mean/median T_find, conditional on detection.** For every scene/geometry/JS/gamma block
+and family (plus oracle), evaluate every supported target-grid cell under the same
+visibility and observation rules used for sampled episodes. At budget this gives an exact
+detection probability (the true-prior mass with a finite first-visible time) and, restricted
+to detected mass, an exact true-prior-weighted mean/median T_find. Both are deterministic
+functions of the frozen planner's output for that block — not draws — so they carry no
+target-sampling noise and do not depend on the evaluation seed count chosen in the section
+below.
+
+**Secondary: sampled successful-only mean/median T_find and the sampled success/timeout
+rate**, over the seeds/targets-per-seed fixed later in this draft. These remain fully
+reported, including the paired-outcome contrasts in "Contrasts and aggregation," as a
+precision-sensitivity check: they show whether a given number of target draws would recover
+the exact full-grid answer, and by how much a finite-sample estimate can diverge from it.
+
+**Diagnostic, not primary or secondary: the uniform-weighted diagnostic.** The same exact
+full-grid computation, reweighted by a uniform distribution over the scene's supported
+free-cell mask instead of its true prior, applied to the same true-prior-conditioned planned
+trajectory, isolates which cells a trajectory physically visited from how much true-prior
+probability mass it captured. Report it alongside the primary true-prior-weighted result for
+every block, but do not treat it as a confirmatory or ranking metric on its own. It is not a
+true uniform-prior baseline: that would require planning a fresh trajectory under a uniform
+prior rather than reweighting the existing one, and is deferred to a future formal-suite
+preflight or design revision, not computed by this reweighting.
+
+This ordering reverses the v1 pilot draft's original stance (which held sampled metrics
+primary and full-grid evaluation supplemental). The reversal is justified directly by the
+pilot's own findings, not asserted a priori:
+
+- Observation 5 in the [pilot report](results/analysis/REPORT.md): at spatial shift
+  JS=0.15, gamma=0.05, true-prior mass covered (the exact full-grid detection probability)
+  changes by +1.58 percentage points relative to oracle, while the pooled 128-draw sampled
+  success rate for the same saved trajectory changes by -4.69 points — opposite signs for
+  the same underlying plan. The exact metric integrates the fixed distribution; the sampled
+  metric is one finite draw of it. Declaring the distributional quantity primary removes
+  this kind of disagreement as a source of conflicting reports on the same saved trajectory.
+- Observation 6: reweighting the same saved trajectories by a uniform baseline instead of
+  the true prior kept the same sign as the true-prior-weighted timing change in all 24
+  pilot rows, but changed the magnitude — the true-prior-weighted change exceeded the
+  uniform-weighted change in 23 of 24 rows. The true-prior-weighted (primary) and
+  uniform-weighted (diagnostic) full-grid quantities are therefore not interchangeable, and
+  only the former is the quantity the search task is actually specified to minimize risk
+  against (true-prior-weighted, not area-weighted, detection).
+
+Every scene/geometry/JS/gamma block report (see "Contrasts and aggregation") must present
+the primary full-grid metrics first, the uniform-weighted diagnostic alongside them and
+labeled as diagnostic, and the sampled metrics second and labeled as a precision-sensitivity
+check against the primary. Do not silently substitute one for another, and do not compute a
+formal ranking or confidence interval from the sampled metrics alone without also reporting
+the exact full-grid value for the same block.
+
 ## Planner and evaluation invariants
 
 Use the v1 frozen source commits and hashes, two gamma bounds (0.10/0.05),
@@ -99,27 +165,41 @@ scene's exact sampled target arrays across every family, level, geometry and
 gamma. Store and pair using `(scene_id, seed, episode)`. Do not assume identical
 coordinates across scenes merely because the seed is identical.
 
-As a prespecified supplemental diagnostic, evaluate all supported target-grid
-cells using the same visibility and observation rules, weighted by true-prior
-mass. At budget, this gives the exact detection probability for the finite
-grid distribution and separates sampling discrepancies from trajectory effects.
-This is not continuous-space ground truth or an extra independent replicate.
-Keep the sampled success/timeout and conditional timing metrics as primary
-reported outputs; label distribution-weighted diagnostics separately.
+Evaluate all supported target-grid cells using the same visibility and
+observation rules, weighted by true-prior mass and, as a diagnostic, by a
+uniform distribution over the supported mask; see "Primary endpoint
+declaration" above for why the true-prior-weighted full-grid result — not the
+sampled success/timeout and conditional timing metrics below — is the primary
+reported output. This is not continuous-space ground truth or an extra
+independent replicate; it separates sampling discrepancies from trajectory
+effects using the same saved trajectory the sampled metrics are computed from.
 
 ## Contrasts and aggregation
 
 1. For every scene/geometry/JS/gamma block, report all four families plus oracle:
-   success/timeout rate; successful-only mean/median T_find; coverage fraction;
-   true-prior mass covered; and planner validity.
+   exact full-grid detection probability and true-prior-weighted mean/median
+   T_find (primary; see "Primary endpoint declaration"); the uniform-weighted
+   diagnostic of both; success/timeout rate and successful-only
+   mean/median T_find (secondary, sampled); coverage fraction; trajectory
+   length; prior entropy; and planner validity.
 2. Reconstruct oracle-versus-error pairs and all six unordered family-pair
-   comparisons at fixed JS and gamma. The primary contrast is paired success
-   difference. Also report the complete four-outcome table and both-success
-   paired mean/median timing differences, including the common-success count.
-3. Do not pool gamma values. Average the two geometry-block contrasts inside
-   each scene, then give each of the 12 scenes equal weight. Retain the full
-   scene/block matrix and show the range and sign consistency of contrasts.
-   Reused oracle/blur plans and shared targets are dependencies, not extra n.
+   comparisons at fixed JS and gamma. Report the exact full-grid detection
+   probability and weighted-T_find difference for every comparison first.
+   Alongside it, as a distinct target-level contrast (not a substitute for the
+   primary full-grid difference), reconstruct the paired outcome table as an
+   explicit 2x2 (oracle outcome x error-prior outcome) of success/timeout
+   counts, and report both-success paired mean/median ΔT plus its p75/p90/p95
+   and max, and the ΔT>0/=0/<0 proportions, all with the common-success count
+   as their stated denominator.
+3. Do not pool gamma values, for either the primary full-grid metrics or the
+   secondary sampled metrics: gamma indexes a distinct deterministic plan, so
+   an exact full-grid value at one gamma is not exchangeable with the other,
+   and the pilot's spatial-shift contrast changing sign between gammas shows
+   sampled contrasts are not either. Average the two geometry-block contrasts
+   inside each scene, then give each of the 12 scenes equal weight. Retain the
+   full scene/block matrix and show the range and sign consistency of
+   contrasts. Reused oracle/blur plans and shared targets are dependencies,
+   not extra n.
 4. Pool conditional time summaries from raw detections when describing a
    within-scene target set. Do not average seed medians, or replace missing
    successful-only times with zero. Do not interpret a common-success timing
@@ -132,11 +212,14 @@ reported outputs; label distribution-weighted diagnostics separately.
    and a separately justified number of independent scenes.
 
 The first formal suite report will emphasize effect sizes, finite-suite
-contrasts and per-scene variation, without a post-hoc significance ranking.
-Supplemental full-grid diagnostics reveal which sampled contrasts are sensitive
-to the target draws. If inferential tests are later required, specify estimands,
-independent sampling units, sample-size justification and multiplicity treatment
-in a further protocol revision before obtaining the relevant confirmatory data.
+contrasts and per-scene variation, without a post-hoc significance ranking, led
+by the primary exact full-grid contrasts. The secondary sampled contrasts
+reveal which of those primary results a given evaluation sample size would
+actually have recovered, i.e. how sensitive the sampled estimate is to the
+target draws — not the reverse. If inferential tests are later required,
+specify estimands, independent sampling units, sample-size justification and
+multiplicity treatment in a further protocol revision before obtaining the
+relevant confirmatory data.
 
 ## Invalid plans and missing conditions
 
@@ -163,7 +246,7 @@ replication. Target seeds change evaluation workload, not this plan count.
 1. Implement v2 scene/error manifests and run calibration/geometry preflight
    only. Finalize common JS levels before viewing any new search outcomes.
 2. Validate saved-input pairing and unchanged evaluator semantics on synthetic
-   cases. Measure evaluation cost, including the supplemental grid calculation.
+   cases. Measure evaluation cost, including the primary full-grid calculation.
 3. Use a separately labelled engineering check for solver feasibility/runtime;
    select any checked blocks by geometry criteria, not pilot performance.
    Archive the check and exclude any data used to tune the design from later
