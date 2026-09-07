@@ -1,0 +1,27 @@
+{
+  "scene_id": "cx0.25_cy0.25_layoutB",
+  "grid_points": 1600,
+  "seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109
+  ],
+  "targets_per_seed": 256,
+  "total_sampled_targets": 2560,
+  "full_grid_replay_seconds": 0.010522915999999993,
+  "full_grid_exact_detection_rate": 0.49065151653458844,
+  "sampled_evaluate_seconds": 0.252345417,
+  "sampled_success_rate": 0.48203125,
+  "per_plan_evaluation_seconds": 0.262868333,
+  "projected_plan_count": 552,
+  "projected_total_evaluation_seconds": 145.103319816,
+  "projected_total_evaluation_hours": 0.04030647772666667,
+  "note": "Timed on a synthetic (non-optimized) trajectory of realistic shape/scale; no planner call. Evaluation cost is dominated by grid/target count and trajectory sample count, not path optimality."
+}

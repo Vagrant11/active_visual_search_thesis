@@ -1,0 +1,53 @@
+{
+  "pilot_observed_discrepancy_percentage_points": 4.69,
+  "candidates": [
+    {
+      "seed_count": 2,
+      "targets_per_seed": 256,
+      "total_draws": 512,
+      "worst_case_se_percentage_points": 2.209708691207961,
+      "resolves_pilot_discrepancy_with_margin": false
+    },
+    {
+      "seed_count": 3,
+      "targets_per_seed": 256,
+      "total_draws": 768,
+      "worst_case_se_percentage_points": 1.8042195912175805,
+      "resolves_pilot_discrepancy_with_margin": false
+    },
+    {
+      "seed_count": 5,
+      "targets_per_seed": 256,
+      "total_draws": 1280,
+      "worst_case_se_percentage_points": 1.3975424859373686,
+      "resolves_pilot_discrepancy_with_margin": true
+    },
+    {
+      "seed_count": 10,
+      "targets_per_seed": 256,
+      "total_draws": 2560,
+      "worst_case_se_percentage_points": 0.9882117688026185,
+      "resolves_pilot_discrepancy_with_margin": true
+    }
+  ],
+  "final_decision": {
+    "seed_count": 5,
+    "seeds": [
+      100,
+      101,
+      102,
+      103,
+      104
+    ],
+    "targets_per_seed": 256,
+    "total_draws_per_scene_per_condition": 1280,
+    "worst_case_se_percentage_points": 1.3975424859373686
+  },
+  "rationale": [
+    "Exact full-grid detection probability/weighted T_find are the primary endpoints and carry zero target-sampling noise; sampled success/timeout is declared secondary, used only as a precision-sensitivity sanity check against the exact value, never for a formal ranking or confidence interval on its own (PROTOCOL_V2_DRAFT.md, 'Primary endpoint declaration').",
+    "Measured evaluation cost is negligible regardless of seed count: the full candidate 10-seed design costs ~0.26s/plan (see gate2_cost_check.json), ~2.4 minutes across the whole 552-plan suite. Cost therefore does not drive this choice in either direction.",
+    "At least 3 independent seeds are needed to see a seed-to-seed spread at all; the pilot's own 2 seeds (7, 11) could only show two conditions differ, not characterize a distribution.",
+    "5 seeds x 256 targets = 1280 draws gives a worst-case binomial SE of 1.40 percentage points, resolving the pilot's largest observed exact-vs-sampled discrepancy (4.69 points, Observation 5) with more than 3x margin -- comfortably enough for a sanity check.",
+    "5 seeds is deliberately smaller than the draft's earlier 10-seed candidate: since cost is immaterial, the remaining reason to pick a number is to keep the sampled design's scale visibly matched to its declared secondary/sanity-check role, rather than an n large enough to look like it could support a confirmatory ranking, which the protocol explicitly forbids computing from sampled metrics alone."
+  ]
+}

@@ -178,12 +178,26 @@ Keep range 0.25, FoV 90°, zero-phase pan `pi*t/2`, budget 15 seconds and
 0.05-second observations. Preserve collision validation, reference node timing
 and terminal hold exactly. Target coordinates never reach planning.
 
-Proposed evaluation sampling is seeds **100–109**, **256 targets per seed per
-scene**, using the unchanged `default_rng(seed).choice(..., p=true_prior)` rule.
-These are candidate precision settings, not a power calculation. Share each
-scene's exact sampled target arrays across every family, level, geometry and
-gamma. Store and pair using `(scene_id, seed, episode)`. Do not assume identical
-coordinates across scenes merely because the seed is identical.
+**Finalized evaluation sampling (Gate 4): seeds 100–104 (5 seeds), 256 targets per
+seed per scene, 1,280 draws per scene/condition**, using the unchanged
+`default_rng(seed).choice(..., p=true_prior)` rule; see
+[gate4_seed_decision.json](results/preflight/gate4_seed_decision.json). This is
+smaller than the earlier 10-seed candidate. Measured evaluation cost is
+negligible either way (~0.26s/plan at 10 seeds across the whole grid and target
+set; see [gate2_cost_check.json](results/preflight/gate2_cost_check.json)), so
+cost did not drive the reduction. The primary exact full-grid endpoints carry
+zero target-sampling noise and are unaffected by this count; sampled
+success/timeout is declared secondary and used only as a precision-sensitivity
+sanity check against the exact value, never for a formal ranking or confidence
+interval on its own. 5 seeds gives a worst-case binomial standard error of
+~1.40 percentage points, resolving the pilot's largest observed exact-vs-sampled
+discrepancy (4.69 points, Observation 5) with more than 3x margin, while
+keeping the sampled design's scale visibly matched to its secondary role rather
+than an n large enough to read as confirmatory-grade. Share each scene's exact
+sampled target arrays across every family, level, geometry and gamma. Store and
+pair using `(scene_id, seed, episode)` — see the Gate 2 synthetic pairing tests
+in `milestone_4/tests/test_v2_preflight.py`. Do not assume identical coordinates
+across scenes merely because the seed is identical.
 
 Evaluate all supported target-grid cells using the same visibility and
 observation rules, weighted by true-prior mass and, as a diagnostic, by a
@@ -277,9 +291,15 @@ count.
    All 12 candidate scenes passed the geometry/support/feasibility audit; all 252
    scene/direction-block/family/level JS-calibration rows matched at the existing
    0.05/0.10/0.15 nat levels, so no level revision was needed.
-2. Validate saved-input pairing and unchanged evaluator semantics on synthetic
-   cases. Measure evaluation cost, including the primary full-grid calculation.
-3. **Partially done.** A separately labelled engineering check for solver
+2. **Done.** Validate saved-input pairing and unchanged evaluator semantics on
+   synthetic cases; measure evaluation cost including the primary full-grid
+   calculation. See `milestone_4/tests/test_v2_preflight.py` (11 synthetic
+   tests: exact no-obstacle outcomes, Layout C two-rectangle occlusion, full-grid
+   replay monotonicity across all 12 scenes, and pairing-key collision checks)
+   and [gate2_cost_check.json](results/preflight/gate2_cost_check.json)
+   (measured ~0.26s/plan for the sampled evaluation plus the exact full-grid
+   replay together, on a realistic-scale synthetic trajectory; no planner call).
+3. **Done.** A separately labelled engineering check for solver
    feasibility/runtime was run on 5 blocks selected by geometry/gamma/prior-type
    criteria fixed before running (see the preflight report): one plan per
    obstacle layout, one at the tighter gamma bound, one confirming the true
@@ -287,12 +307,16 @@ count.
    collision-free, wall-clock 4.4-8.6s each. This does not itself justify or
    tune the formal suite's per-scene/per-family selection, and does not
    constitute a runtime check of the full 552-plan suite at scale.
-4. Review target-sampling precision requirements and resources; fix final seed
-   count and targets per seed, and record their justification. No optional
-   stopping based on whether a desired ranking has appeared.
-5. Freeze the manifest, calibrated vectors, source/dependency hashes, planned
-   contrasts, denominators and failure handling in a dedicated commit. Only
-   then launch the formal suite into a new output directory.
+4. **Done.** Review target-sampling precision requirements and resources; fix
+   final seed count and targets per seed, and record their justification. See
+   "Planner and evaluation invariants" above and
+   [gate4_seed_decision.json](results/preflight/gate4_seed_decision.json):
+   5 seeds x 256 targets, chosen from measured cost and pilot-observed
+   discrepancy magnitude, not from any v2 search outcome (none has been run).
+5. **Done.** Freeze the manifest, calibrated vectors, source/dependency hashes,
+   planned contrasts, denominators and failure handling in a dedicated commit.
+   See [PROTOCOL_V2_FROZEN_MANIFEST.json](results/frozen/PROTOCOL_V2_FROZEN_MANIFEST.json).
+   The formal suite itself has **not** been launched into a new output directory.
 
 The analysis accompanying this draft performs **zero new planning runs**, aside
 from the 5 declared engineering-only checks in gate item 3 above.

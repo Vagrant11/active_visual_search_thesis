@@ -1,7 +1,8 @@
 """Compose PROTOCOL_V2_PREFLIGHT_REPORT.md from the already-written preflight
-artifacts (candidate manifest, feasibility audit, JS reachability table,
-engineering-check results). Reads only; no planner import, zero planning.
-Run: python -m milestone_4.write_preflight_report
+and freeze artifacts (candidate manifest, feasibility audit, JS reachability
+table, Gate 2 synthetic tests/cost, engineering-check results, Gate 4 seed
+decision, and the Gate 5 frozen manifest once it exists). Reads only; no
+planner import, zero planning. Run: python -m milestone_4.write_preflight_report
 """
 
 import argparse
@@ -35,25 +36,37 @@ def family_headroom(reachability):
     return lines
 
 
-def write_report(out):
-    manifest = read_json(out / "candidate_scene_manifest.json")
-    feasibility = read_json(out / "feasibility_audit.json")
-    reachability = read_csv(out / "js_reachability_table.csv")
-    summary = read_json(out / "preflight_manifest_summary.json")
-    engineering_path = out / "engineering_check.json"
+def write_report(preflight_dir, frozen_dir):
+    manifest = read_json(preflight_dir / "candidate_scene_manifest.json")
+    feasibility = read_json(preflight_dir / "feasibility_audit.json")
+    reachability = read_csv(preflight_dir / "js_reachability_table.csv")
+    engineering_path = preflight_dir / "engineering_check.json"
     engineering = read_json(engineering_path) if engineering_path.exists() else None
+    cost_path = preflight_dir / "gate2_cost_check.json"
+    cost = read_json(cost_path) if cost_path.exists() else None
+    seed_path = preflight_dir / "gate4_seed_decision.json"
+    seed_decision = read_json(seed_path) if seed_path.exists() else None
+    frozen_path = frozen_dir / "PROTOCOL_V2_FROZEN_MANIFEST.json"
+    frozen = read_json(frozen_path) if frozen_path.exists() else None
 
-    lines = ["# Protocol v2 pre-freeze preflight report", "",
-             "**Status: preflight only. Protocol v2 is NOT frozen. The formal 552-plan suite has NOT "
-             "been launched.** This report covers manifest generation, geometry/support/feasibility "
-             "checks, JS reachability/calibration, the true uniform-prior planning-baseline definition, "
-             "primary/secondary/diagnostic metric declarations, and a small set of engineering-only "
-             "planner feasibility/runtime checks. The Milestone 3 planner source was not modified; no "
-             "check result was used to select or tune scenes, families, or gamma values.", "",
-             f"Generated from `{out.relative_to(ROOT)}`: `candidate_scene_manifest.json`, "
-             "`feasibility_audit.json`/`.csv`, `js_reachability_table.csv`, "
-             f"`{'engineering_check.json' if engineering else '(engineering check not yet run)'}`.", "",
-             "## 1. Candidate scene manifest", "",
+    status_line = (f"**Status: Protocol v2 is FROZEN as of {frozen['frozen_at_utc']} "
+                   f"(commit `{frozen['frozen_at_git_commit'][:12]}`). "
+                   "See PROTOCOL_V2_FROZEN_MANIFEST.json.** The formal 552-plan suite has "
+                   "still NOT been launched -- freezing the design and running it are separate, "
+                   "separately invoked steps." if frozen else
+                   "**Status: preflight only. Protocol v2 is NOT frozen. The formal 552-plan suite "
+                   "has NOT been launched.**")
+
+    lines = ["# Protocol v2 pre-freeze preflight report", "", status_line, "",
+             "This report covers manifest generation, geometry/support/feasibility checks, JS "
+             "reachability/calibration (Gate 1), synthetic evaluator-semantics tests and evaluation "
+             "cost (Gate 2), engineering-only planner feasibility/runtime checks (Gate 3), the final "
+             "sampled target-seed decision (Gate 4), and, once run, the frozen manifest (Gate 5). The "
+             "Milestone 3 planner source was not modified; no check or search-outcome result was used "
+             "to select or tune scenes, families, JS levels, or gamma values.", "",
+             f"Generated from `{preflight_dir.relative_to(ROOT)}` and "
+             f"`{frozen_dir.relative_to(ROOT)}`.", "",
+             "## 1. Candidate scene manifest (Gate 1)", "",
              f"**{manifest['scene_count']} scenes** = 4 true hotspot centers "
              "`(0.25,0.25)`, `(0.25,0.75)`, `(0.75,0.25)`, `(0.75,0.75)` x 3 obstacle layouts "
              "(A: none, B: one rectangle matching v1, C: two rectangles). Each scene carries two "
@@ -72,7 +85,7 @@ def write_report(out):
              "| Layout | Obstacles |", "|---|---|",
              "| A | none |", "| B | rectangle [0.43,0.57] x [0.43,0.57] (matches v1) |",
              "| C | rectangles [0.35,0.45] x [0.55,0.65] and [0.55,0.65] x [0.35,0.45] |", "",
-             "## 2. Geometry / support / feasibility audit", "",
+             "## 2. Geometry / support / feasibility audit (Gate 1)", "",
              f"**All {len(feasibility['scenes'])}/{len(feasibility['scenes'])} candidate scenes passed** "
              f"({'yes' if feasibility['all_scenes_passed'] else 'NO -- see below'}). Checks: obstacles "
              "within the unit workspace; nonempty true-prior support; supported free cells form one "
@@ -92,7 +105,7 @@ def write_report(out):
         lines += ["No scene failed any feasibility check; every candidate scene remains eligible.", ""]
 
     unattainable = [r for r in reachability if r["status"] != "matched"]
-    lines += ["## 3. JS reachability / calibration table", "",
+    lines += ["## 3. JS reachability / calibration table (Gate 1)", "",
               f"**{len(reachability)} scene x direction-block x family x JS-level rows "
               f"({manifest['scene_count']} scenes x 2 blocks x 3 direction-dependent families x 3 levels, "
               "plus 12 x 3 shared blur rows).** No planner import; the same brentq-bisection calibration "
@@ -115,7 +128,34 @@ def write_report(out):
                          f"JS={r['target_js_nats']}: {r['status']}")
         lines.append("")
 
-    lines += ["## 4. True uniform-prior planning baseline", "",
+    lines += ["## 4. Synthetic evaluator-semantics tests and evaluation cost (Gate 2)", ""]
+    lines += ["`milestone_4/tests/test_v2_preflight.py` validates that the frozen, unchanged "
+              "`milestone_3.experiment.evaluate`/`is_visible` generalize correctly to v2 geometries: "
+              "exact no-obstacle outcomes (target found at t=0; a target proven always out of range "
+              "times out), Layout C two-rectangle occlusion (occluded by rectangle 1 only, by rectangle "
+              "2 only, and a line-of-sight that clears both), full-grid replay monotonicity across all "
+              "12 candidate scenes, and pairing-key collision checks confirming the proposed "
+              "`(scene_id, seed, episode)` key does not conflate targets across scenes the way a bare "
+              "`(seed, episode)` key would. Run via `python -m unittest milestone_4.tests.test_v2_preflight`.", ""]
+    if cost is None:
+        lines += ["**Evaluation cost: not yet measured.**", ""]
+    else:
+        lines += [f"Evaluation cost was timed on a synthetic (non-optimized, non-planner) trajectory of "
+                  f"realistic shape and scale -- the planner's own deterministic initial-guess waypoints "
+                  f"at the mean tf observed across the Gate 3 engineering checks -- on scene "
+                  f"`{cost['scene_id']}` ({cost['grid_points']} grid points):", "",
+                  f"- Exact full-grid replay (`first_seen_grid`, the primary-endpoint calculation): "
+                  f"**{cost['full_grid_replay_seconds']*1000:.1f} ms**.",
+                  f"- Sampled evaluation (`evaluate`), {len(cost['seeds'])} seeds x "
+                  f"{cost['targets_per_seed']} targets = {cost['total_sampled_targets']} draws: "
+                  f"**{cost['sampled_evaluate_seconds']*1000:.1f} ms**.",
+                  f"- Combined per-plan evaluation cost: **{cost['per_plan_evaluation_seconds']*1000:.1f} ms**; "
+                  f"projected over {cost['projected_plan_count']} plans: "
+                  f"**{cost['projected_total_evaluation_seconds']:.0f}s "
+                  f"(~{cost['projected_total_evaluation_hours']*60:.1f} minutes)**, negligible next to "
+                  "the ~1-hour planning-time projection in section 8.", ""]
+
+    lines += ["## 5. True uniform-prior planning baseline", "",
               "Defined in `milestone_4/scene_manifest.py:uniform_prior_baseline` as a distinct planned "
               "condition per scene (shared across gamma and direction blocks, like oracle and blur): a "
               "uniform distribution over the scene's supported free-cell mask, handed to "
@@ -127,7 +167,7 @@ def write_report(out):
               "a planned condition was confirmed by the `layoutB_uniform_g010` engineering check below "
               "(valid, collision-free, 4.4s wall-clock). It adds one condition per scene/gamma (23 vs the "
               "draft's earlier 22), raising the projected plan count from 528 to 552.", "",
-              "## 5. Primary / secondary / diagnostic metric definitions", "",
+              "## 6. Primary / secondary / diagnostic metric definitions", "",
               "**Primary:** exact full-grid detection probability at budget, and its true-prior-weighted "
               "detection-time distribution / conditional mean / median, for every scene/geometry/JS/gamma "
               "block and family (plus oracle and the true uniform-prior planning baseline). Deterministic "
@@ -136,15 +176,15 @@ def write_report(out):
               "error-prior-outcome 2x2, plus both-success ΔT tail statistics); free-space coverage "
               "fraction; true-prior mass coverage; per-prior entropy (nats); trajectory length.", "",
               "**Diagnostic (not primary or secondary):** the uniform-weighted reweighting of an existing "
-              "planned trajectory (distinct from the true uniform-prior planning baseline in section 4).", "",
-              "## 6. Gamma and the family x gamma estimand", "",
+              "planned trajectory (distinct from the true uniform-prior planning baseline in section 5).", "",
+              "## 7. Gamma and the family x gamma estimand", "",
               "gamma=0.10 and gamma=0.05 are kept and reported separately throughout; primary contrasts "
               "are never pooled across gamma. The family x gamma interaction on the primary exact-grid "
               "endpoints is declared as part of the estimand from the outset (see PROTOCOL_V2_DRAFT.md's "
               "\"Contrasts and aggregation\"), not introduced post hoc from an observed pattern. No gamma "
               "value was added, dropped, or reweighted based on any preflight or engineering-check result.", ""]
 
-    lines += ["## 7. Engineering-only planner feasibility / runtime checks", ""]
+    lines += ["## 8. Engineering-only planner feasibility / runtime checks (Gate 3)", ""]
     if engineering is None:
         lines += ["**Not yet run.**", ""]
     else:
@@ -177,30 +217,59 @@ def write_report(out):
                   "families were not separately timed, though they solve the same problem structure with "
                   "a different prior weighting `phik`, not a different constraint set).", ""]
 
-    lines += ["## 8. Freeze recommendation", "",
-              "**Recommendation: do not freeze Protocol v2 yet.** Gate items 1 and 3 of "
-              "PROTOCOL_V2_DRAFT.md's \"Scale and freeze gates\" are satisfied by this preflight "
-              "(manifest/feasibility/JS-calibration preflight complete; a small geometry-selected "
-              "engineering check run). Gate items 2 (saved-input pairing and evaluator semantics on "
-              "synthetic cases, including full-grid evaluation cost), 4 (target-sampling precision, final "
-              "seed count and targets per seed) and 5 (freezing the manifest, calibrated vectors, "
-              "source/dependency hashes, planned contrasts and denominators in a dedicated commit) are "
-              "**not yet done** and remain required before launching the formal 552-plan suite.", "",
-              "No blocking finding surfaced: every candidate scene passed feasibility, every JS level is "
-              "attainable everywhere with comfortable headroom, the true uniform-prior planning baseline "
-              "is numerically feasible, and per-plan planning cost is small (~7s mean in the sampled "
-              "checks) relative to the 552-plan suite. Nothing here changes the 12-scene design or the "
-              "0.05/0.10/0.15 nat JS levels.", ""]
+    lines += ["## 9. Final evaluation sampling design (Gate 4)", ""]
+    if seed_decision is None:
+        lines += ["**Not yet decided.**", ""]
+    else:
+        d = seed_decision["final_decision"]
+        lines += [f"**Final: {d['seed_count']} seeds ({', '.join(map(str, d['seeds']))}), "
+                  f"{d['targets_per_seed']} targets per seed, "
+                  f"{d['total_draws_per_scene_per_condition']} draws per scene/condition.** Worst-case "
+                  f"binomial standard error ≈ {d['worst_case_se_percentage_points']:.2f} percentage "
+                  "points.", "", "Candidate seed counts considered:", "",
+                  "| Seeds | Total draws | Worst-case SE (pp) | Resolves pilot's 4.69pp discrepancy 3x+ |",
+                  "|---:|---:|---:|---|"]
+        for c in seed_decision["candidates"]:
+            lines.append(f"| {c['seed_count']} | {c['total_draws']} | "
+                         f"{c['worst_case_se_percentage_points']:.2f} | "
+                         f"{'yes' if c['resolves_pilot_discrepancy_with_margin'] else 'no'} |")
+        lines += [""] + [f"- {r}" for r in seed_decision["rationale"]] + [""]
 
-    (out / "PROTOCOL_V2_PREFLIGHT_REPORT.md").write_text("\n".join(lines) + "\n")
-    print(f"Report: {out / 'PROTOCOL_V2_PREFLIGHT_REPORT.md'}")
+    lines += ["## 10. Freeze status (Gate 5)", ""]
+    if frozen is None:
+        lines += ["**Not yet frozen.**", "",
+                  "**Recommendation: freeze once gates 1-4 above are all satisfied with no blocking "
+                  "finding**, which they are as of this report: every candidate scene passed feasibility; "
+                  "every JS level is attainable everywhere with comfortable headroom; the synthetic "
+                  "evaluator-semantics tests pass and evaluation cost is negligible; the true "
+                  "uniform-prior planning baseline is numerically feasible; per-plan planning cost is "
+                  "small (~7s mean) relative to the 552-plan suite; and the final 5-seed sampling design "
+                  "is set with an explicit, evidenced rationale. Nothing here changes the 12-scene design "
+                  "or the 0.05/0.10/0.15 nat JS levels. Run `python -m milestone_4.freeze_protocol_v2` to "
+                  "produce the frozen manifest and calibrated prior hashes, then commit.", ""]
+    else:
+        lines += [f"**Protocol v2 is frozen** as of `{frozen['frozen_at_utc']}` at git commit "
+                  f"`{frozen['frozen_at_git_commit'][:12]}`, frozen against Milestone 3 commit "
+                  f"`{frozen['frozen_milestone_3_commit'][:12]}`. See "
+                  "`results/frozen/PROTOCOL_V2_FROZEN_MANIFEST.json` and "
+                  f"`results/frozen/priors/` ({manifest['scene_count'] * manifest['conditions_per_scene_per_gamma']} "
+                  "calibrated prior vectors, sha256-hashed per scene).", "",
+                  "Planned contrasts and failure handling are frozen in the manifest under "
+                  "`planned_contrasts` and `failure_handling` (mirroring PROTOCOL_V2_DRAFT.md's "
+                  "\"Contrasts and aggregation\" and \"Invalid plans and missing conditions\" sections). "
+                  "**The formal 552-plan suite has not been launched**; that remains a separate, "
+                  "explicitly invoked step into a new output directory, per gate item 5.", ""]
+
+    (preflight_dir / "PROTOCOL_V2_PREFLIGHT_REPORT.md").write_text("\n".join(lines) + "\n")
+    print(f"Report: {preflight_dir / 'PROTOCOL_V2_PREFLIGHT_REPORT.md'}")
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=ROOT / "milestone_4/results/preflight")
+    parser.add_argument("--frozen", type=Path, default=ROOT / "milestone_4/results/frozen")
     args = parser.parse_args()
-    write_report(args.output.resolve())
+    write_report(args.output.resolve(), args.frozen.resolve())
 
 
 if __name__ == "__main__":

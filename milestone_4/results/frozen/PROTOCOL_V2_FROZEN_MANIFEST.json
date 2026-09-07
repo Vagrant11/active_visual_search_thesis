@@ -1,0 +1,2443 @@
+{
+  "protocol_id": "m4-controlled-prior-v2-frozen",
+  "frozen_at_utc": "2026-09-07T09:47:51.907502+00:00",
+  "frozen_at_git_commit": "7002141415f9b285d468f8754b0720fb65baebf6",
+  "frozen_milestone_3_commit": "6e0bce5977f15c0d2686aa1ba09b8c7fcc7ee547",
+  "preflight_source_sha256": {
+    "milestone_4/scene_manifest.py": "3ac9a87e4654708a75ef553b78084e0551ca54cd4a1676e5f74e1dab43178b11",
+    "milestone_4/run_preflight.py": "fb3e1f67115bc155ae63780de7a5b9a27ffc575758af6a33172862edfd623b33",
+    "milestone_4/run_engineering_check.py": "6e1f89e35691531d929d170b807d56dae222faf4ba9139b52d6e5ba13c7853f2",
+    "milestone_4/run_gate2_cost_check.py": "52b913d9c1b4d9ad8bc08224d1194accd97c9832656530713a3b145fa09ce439",
+    "milestone_4/gate4_seed_decision.py": "7af3a1885f9489cb7c1ed6175c8410015651158da13cfbf3bb043bc9eb4c2be0",
+    "milestone_4/freeze_protocol_v2.py": "6164110cb751de54db0e43fa65ceaa389d83f469d96c74fbbb1ca949a28283f2",
+    "milestone_4/tests/test_v2_preflight.py": "7f7a3f955ccbe2136530eda6d86561a57223391fef3c4cfeb4b6ec324e7c2017"
+  },
+  "candidate_manifest": {
+    "protocol_id": "m4-controlled-prior-v2-candidate",
+    "scenes": [
+      {
+        "scene_id": "cx0.25_cy0.25_layoutA",
+        "center": [
+          0.25,
+          0.25
+        ],
+        "layout": "A",
+        "obstacles": [],
+        "directions": {
+          "x": [
+            1.0,
+            0.0
+          ],
+          "y": [
+            0.0,
+            1.0
+          ]
+        },
+        "conditions": [
+          {
+            "prior_id": "oracle",
+            "family": "oracle",
+            "direction": null,
+            "target_js_nats": 0.0
+          },
+          {
+            "prior_id": "uniform_prior_baseline",
+            "family": "uniform_prior_baseline",
+            "direction": null,
+            "target_js_nats": null
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.05",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.1",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.15",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.05",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.1",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.15",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.05",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.1",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.15",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.05",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.1",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.15",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.05",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.1",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.15",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.15
+          }
+        ],
+        "conditions_per_gamma": 23
+      },
+      {
+        "scene_id": "cx0.25_cy0.25_layoutB",
+        "center": [
+          0.25,
+          0.25
+        ],
+        "layout": "B",
+        "obstacles": [
+          {
+            "xmin": 0.43,
+            "ymin": 0.43,
+            "xmax": 0.57,
+            "ymax": 0.57
+          }
+        ],
+        "directions": {
+          "x": [
+            1.0,
+            0.0
+          ],
+          "y": [
+            0.0,
+            1.0
+          ]
+        },
+        "conditions": [
+          {
+            "prior_id": "oracle",
+            "family": "oracle",
+            "direction": null,
+            "target_js_nats": 0.0
+          },
+          {
+            "prior_id": "uniform_prior_baseline",
+            "family": "uniform_prior_baseline",
+            "direction": null,
+            "target_js_nats": null
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.05",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.1",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.15",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.05",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.1",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.15",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.05",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.1",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.15",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.05",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.1",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.15",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.05",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.1",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.15",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.15
+          }
+        ],
+        "conditions_per_gamma": 23
+      },
+      {
+        "scene_id": "cx0.25_cy0.25_layoutC",
+        "center": [
+          0.25,
+          0.25
+        ],
+        "layout": "C",
+        "obstacles": [
+          {
+            "xmin": 0.35,
+            "ymin": 0.55,
+            "xmax": 0.45,
+            "ymax": 0.65
+          },
+          {
+            "xmin": 0.55,
+            "ymin": 0.35,
+            "xmax": 0.65,
+            "ymax": 0.45
+          }
+        ],
+        "directions": {
+          "x": [
+            1.0,
+            0.0
+          ],
+          "y": [
+            0.0,
+            1.0
+          ]
+        },
+        "conditions": [
+          {
+            "prior_id": "oracle",
+            "family": "oracle",
+            "direction": null,
+            "target_js_nats": 0.0
+          },
+          {
+            "prior_id": "uniform_prior_baseline",
+            "family": "uniform_prior_baseline",
+            "direction": null,
+            "target_js_nats": null
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.05",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.1",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.15",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.05",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.1",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.15",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.05",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.1",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.15",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.05",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.1",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.15",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.05",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.1",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.15",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.15
+          }
+        ],
+        "conditions_per_gamma": 23
+      },
+      {
+        "scene_id": "cx0.25_cy0.75_layoutA",
+        "center": [
+          0.25,
+          0.75
+        ],
+        "layout": "A",
+        "obstacles": [],
+        "directions": {
+          "x": [
+            1.0,
+            0.0
+          ],
+          "y": [
+            0.0,
+            -1.0
+          ]
+        },
+        "conditions": [
+          {
+            "prior_id": "oracle",
+            "family": "oracle",
+            "direction": null,
+            "target_js_nats": 0.0
+          },
+          {
+            "prior_id": "uniform_prior_baseline",
+            "family": "uniform_prior_baseline",
+            "direction": null,
+            "target_js_nats": null
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.05",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.1",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.15",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.05",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.1",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.15",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.05",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.1",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.15",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.05",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.1",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.15",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.05",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.1",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.15",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.15
+          }
+        ],
+        "conditions_per_gamma": 23
+      },
+      {
+        "scene_id": "cx0.25_cy0.75_layoutB",
+        "center": [
+          0.25,
+          0.75
+        ],
+        "layout": "B",
+        "obstacles": [
+          {
+            "xmin": 0.43,
+            "ymin": 0.43,
+            "xmax": 0.57,
+            "ymax": 0.57
+          }
+        ],
+        "directions": {
+          "x": [
+            1.0,
+            0.0
+          ],
+          "y": [
+            0.0,
+            -1.0
+          ]
+        },
+        "conditions": [
+          {
+            "prior_id": "oracle",
+            "family": "oracle",
+            "direction": null,
+            "target_js_nats": 0.0
+          },
+          {
+            "prior_id": "uniform_prior_baseline",
+            "family": "uniform_prior_baseline",
+            "direction": null,
+            "target_js_nats": null
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.05",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.1",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.15",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.05",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.1",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.15",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.05",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.1",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.15",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.05",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.1",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.15",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.05",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.1",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.15",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.15
+          }
+        ],
+        "conditions_per_gamma": 23
+      },
+      {
+        "scene_id": "cx0.25_cy0.75_layoutC",
+        "center": [
+          0.25,
+          0.75
+        ],
+        "layout": "C",
+        "obstacles": [
+          {
+            "xmin": 0.35,
+            "ymin": 0.55,
+            "xmax": 0.45,
+            "ymax": 0.65
+          },
+          {
+            "xmin": 0.55,
+            "ymin": 0.35,
+            "xmax": 0.65,
+            "ymax": 0.45
+          }
+        ],
+        "directions": {
+          "x": [
+            1.0,
+            0.0
+          ],
+          "y": [
+            0.0,
+            -1.0
+          ]
+        },
+        "conditions": [
+          {
+            "prior_id": "oracle",
+            "family": "oracle",
+            "direction": null,
+            "target_js_nats": 0.0
+          },
+          {
+            "prior_id": "uniform_prior_baseline",
+            "family": "uniform_prior_baseline",
+            "direction": null,
+            "target_js_nats": null
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.05",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.1",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.15",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.05",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.1",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.15",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.05",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.1",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.15",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.05",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.1",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.15",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.05",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.1",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.15",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.15
+          }
+        ],
+        "conditions_per_gamma": 23
+      },
+      {
+        "scene_id": "cx0.75_cy0.25_layoutA",
+        "center": [
+          0.75,
+          0.25
+        ],
+        "layout": "A",
+        "obstacles": [],
+        "directions": {
+          "x": [
+            -1.0,
+            0.0
+          ],
+          "y": [
+            0.0,
+            1.0
+          ]
+        },
+        "conditions": [
+          {
+            "prior_id": "oracle",
+            "family": "oracle",
+            "direction": null,
+            "target_js_nats": 0.0
+          },
+          {
+            "prior_id": "uniform_prior_baseline",
+            "family": "uniform_prior_baseline",
+            "direction": null,
+            "target_js_nats": null
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.05",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.1",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.15",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.05",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.1",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.15",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.05",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.1",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.15",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.05",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.1",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.15",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.05",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.1",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.15",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.15
+          }
+        ],
+        "conditions_per_gamma": 23
+      },
+      {
+        "scene_id": "cx0.75_cy0.25_layoutB",
+        "center": [
+          0.75,
+          0.25
+        ],
+        "layout": "B",
+        "obstacles": [
+          {
+            "xmin": 0.43,
+            "ymin": 0.43,
+            "xmax": 0.57,
+            "ymax": 0.57
+          }
+        ],
+        "directions": {
+          "x": [
+            -1.0,
+            0.0
+          ],
+          "y": [
+            0.0,
+            1.0
+          ]
+        },
+        "conditions": [
+          {
+            "prior_id": "oracle",
+            "family": "oracle",
+            "direction": null,
+            "target_js_nats": 0.0
+          },
+          {
+            "prior_id": "uniform_prior_baseline",
+            "family": "uniform_prior_baseline",
+            "direction": null,
+            "target_js_nats": null
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.05",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.1",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.15",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.05",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.1",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.15",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.05",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.1",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.15",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.05",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.1",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.15",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.05",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.1",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.15",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.15
+          }
+        ],
+        "conditions_per_gamma": 23
+      },
+      {
+        "scene_id": "cx0.75_cy0.25_layoutC",
+        "center": [
+          0.75,
+          0.25
+        ],
+        "layout": "C",
+        "obstacles": [
+          {
+            "xmin": 0.35,
+            "ymin": 0.55,
+            "xmax": 0.45,
+            "ymax": 0.65
+          },
+          {
+            "xmin": 0.55,
+            "ymin": 0.35,
+            "xmax": 0.65,
+            "ymax": 0.45
+          }
+        ],
+        "directions": {
+          "x": [
+            -1.0,
+            0.0
+          ],
+          "y": [
+            0.0,
+            1.0
+          ]
+        },
+        "conditions": [
+          {
+            "prior_id": "oracle",
+            "family": "oracle",
+            "direction": null,
+            "target_js_nats": 0.0
+          },
+          {
+            "prior_id": "uniform_prior_baseline",
+            "family": "uniform_prior_baseline",
+            "direction": null,
+            "target_js_nats": null
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.05",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.1",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.15",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.05",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.1",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.15",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.05",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.1",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.15",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.05",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.1",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.15",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.05",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.1",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.15",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.15
+          }
+        ],
+        "conditions_per_gamma": 23
+      },
+      {
+        "scene_id": "cx0.75_cy0.75_layoutA",
+        "center": [
+          0.75,
+          0.75
+        ],
+        "layout": "A",
+        "obstacles": [],
+        "directions": {
+          "x": [
+            -1.0,
+            0.0
+          ],
+          "y": [
+            0.0,
+            -1.0
+          ]
+        },
+        "conditions": [
+          {
+            "prior_id": "oracle",
+            "family": "oracle",
+            "direction": null,
+            "target_js_nats": 0.0
+          },
+          {
+            "prior_id": "uniform_prior_baseline",
+            "family": "uniform_prior_baseline",
+            "direction": null,
+            "target_js_nats": null
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.05",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.1",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.15",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.05",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.1",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.15",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.05",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.1",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.15",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.05",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.1",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.15",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.05",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.1",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.15",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.15
+          }
+        ],
+        "conditions_per_gamma": 23
+      },
+      {
+        "scene_id": "cx0.75_cy0.75_layoutB",
+        "center": [
+          0.75,
+          0.75
+        ],
+        "layout": "B",
+        "obstacles": [
+          {
+            "xmin": 0.43,
+            "ymin": 0.43,
+            "xmax": 0.57,
+            "ymax": 0.57
+          }
+        ],
+        "directions": {
+          "x": [
+            -1.0,
+            0.0
+          ],
+          "y": [
+            0.0,
+            -1.0
+          ]
+        },
+        "conditions": [
+          {
+            "prior_id": "oracle",
+            "family": "oracle",
+            "direction": null,
+            "target_js_nats": 0.0
+          },
+          {
+            "prior_id": "uniform_prior_baseline",
+            "family": "uniform_prior_baseline",
+            "direction": null,
+            "target_js_nats": null
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.05",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.1",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.15",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.05",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.1",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.15",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.05",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.1",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.15",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.05",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.1",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.15",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.05",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.1",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.15",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.15
+          }
+        ],
+        "conditions_per_gamma": 23
+      },
+      {
+        "scene_id": "cx0.75_cy0.75_layoutC",
+        "center": [
+          0.75,
+          0.75
+        ],
+        "layout": "C",
+        "obstacles": [
+          {
+            "xmin": 0.35,
+            "ymin": 0.55,
+            "xmax": 0.45,
+            "ymax": 0.65
+          },
+          {
+            "xmin": 0.55,
+            "ymin": 0.35,
+            "xmax": 0.65,
+            "ymax": 0.45
+          }
+        ],
+        "directions": {
+          "x": [
+            -1.0,
+            0.0
+          ],
+          "y": [
+            0.0,
+            -1.0
+          ]
+        },
+        "conditions": [
+          {
+            "prior_id": "oracle",
+            "family": "oracle",
+            "direction": null,
+            "target_js_nats": 0.0
+          },
+          {
+            "prior_id": "uniform_prior_baseline",
+            "family": "uniform_prior_baseline",
+            "direction": null,
+            "target_js_nats": null
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.05",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.1",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "diffuse_blur_js_0.15",
+            "family": "diffuse_blur",
+            "direction": null,
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.05",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.1",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_x_js_0.15",
+            "family": "spatial_shift",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.05",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.1",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_x_js_0.15",
+            "family": "false_hotspot",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_x_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "x",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.05",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.1",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "spatial_shift_y_js_0.15",
+            "family": "spatial_shift",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.05",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.1",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_hotspot_y_js_0.15",
+            "family": "false_hotspot",
+            "direction": "y",
+            "target_js_nats": 0.15
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.05",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.05
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.1",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.1
+          },
+          {
+            "prior_id": "false_negative_suppression_y_js_0.15",
+            "family": "false_negative_suppression",
+            "direction": "y",
+            "target_js_nats": 0.15
+          }
+        ],
+        "conditions_per_gamma": 23
+      }
+    ],
+    "scene_count": 12,
+    "gammas": [
+      0.1,
+      0.05
+    ],
+    "conditions_per_scene_per_gamma": 23,
+    "projected_plan_count": 552,
+    "js_levels": [
+      0.05,
+      0.1,
+      0.15
+    ],
+    "initial_state": [
+      0.1,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "terminal_state": [
+      0.9,
+      0.9,
+      0.0,
+      0.0
+    ],
+    "grid_size": 40,
+    "sigma": 0.13,
+    "background": 0.03,
+    "suppression_radius": 0.25,
+    "suppression_offset": 0.1,
+    "max_shift": 0.75,
+    "primary_endpoints": [
+      "exact_grid_weighted_detection_probability_at_budget",
+      "exact_grid_weighted_detection_time_distribution_conditional_mean_median"
+    ],
+    "secondary_endpoints": [
+      "sampled_success_timeout_rate",
+      "paired_outcomes",
+      "free_space_coverage",
+      "true_prior_mass_coverage",
+      "entropy_nats",
+      "trajectory_length"
+    ],
+    "diagnostic_endpoints": [
+      "uniform_weighted_reweighting_of_saved_trajectory"
+    ],
+    "estimand_note": "Primary contrasts are reported per (family, gamma) cell without pooling gamma; family x gamma interaction on the primary exact-grid endpoints is part of the declared estimand, not a post-hoc addition.",
+    "uniform_prior_baseline_note": "A distinct planned condition per scene/gamma: the planner receives a uniform prior over the scene's supported free-cell mask and produces its own trajectory, unlike the pilot's uniform-weighted diagnostic which reweights an existing oracle-conditioned trajectory."
+  },
+  "prior_sha256_by_scene": {
+    "cx0.25_cy0.25_layoutA": {
+      "oracle": "5198e6797e54c6efcf57bcd6b6c13ed0b8710f03d04adc2f58d3e8267b8068ba",
+      "spatial_shift_x_js_0.05": "5cbeaca851f3a3a843a28c55777dc6f597a5a8f9e7b36eaafc41ac9727827a7a",
+      "spatial_shift_x_js_0.1": "9ed73f7438d516442c676a538acc07cbd491b88fdef3ecaaea8bbbc684a6e86c",
+      "spatial_shift_x_js_0.15": "a84cdaf3a8ba2ab28399dd31799324d6dad1759d9f3f11cf6bb524553e7ddf3c",
+      "spatial_shift_y_js_0.05": "5cc5cb40c86653406f46bc0d1175b36d9b52c888a8c348585fee6c4b8f722d68",
+      "spatial_shift_y_js_0.1": "14e69ea8057b57fb0db742ce9e01d8ec21c18fe706c6560cf721c2b568b3ed0c",
+      "spatial_shift_y_js_0.15": "92c05483278d468794fad0b406ae07e70fa032efaa7c21c79c9c483b7dc21830",
+      "false_hotspot_x_js_0.05": "b52c4f680abb8763b0480ea6e8c8f51d1c45dc9ec7e8cba5e56bfefac813c77a",
+      "false_hotspot_x_js_0.1": "0f07725712cfe0ce54af20bf3112bf5d7797c17edab6da182acf1a520cc28f7e",
+      "false_hotspot_x_js_0.15": "9b42a2c1d04c12900d2627dc156ef51b035083a26792bfd1983cc952ca76746f",
+      "false_hotspot_y_js_0.05": "b0ba2e0baebcaa9dc79cbf856e2d8b9b04890e134a0971415eb4d8003526fc7f",
+      "false_hotspot_y_js_0.1": "ac4f9ba894664fbb9795be5abba5cf4f4e1a9357db6c8d5b5691bead82dcc7a2",
+      "false_hotspot_y_js_0.15": "8278d860a7e5deccc0d3a2e2d391d213d6a59b29a370ab7f6e43db6d320163fa",
+      "false_negative_suppression_x_js_0.05": "f86435f6a24eb55110051cc0ad76db825376f834cf23877a629abba8a7d8b9a0",
+      "false_negative_suppression_x_js_0.1": "a5e1daedfd4fb8e53336e0267b31c35fd2d7b1ee26e8f49089bb870f2f10068f",
+      "false_negative_suppression_x_js_0.15": "c367ab32e9009772a9323a2c9cc68751558936dff2ac0e8fa1f42366fae4cd91",
+      "false_negative_suppression_y_js_0.05": "f1e0969a20ba9279649f61c69556f128b1cfb45457ab369752a7676d23f79851",
+      "false_negative_suppression_y_js_0.1": "9f20764d3bc9bc583a962beb61ee426caa65d6d13d7fb3cfb2ccbdab64e40267",
+      "false_negative_suppression_y_js_0.15": "82b1109add8303b8edbd42e38c52212488c42c3ea74ba2b3915ac648a236e2fc",
+      "diffuse_blur_js_0.05": "517deb339702babb6a1be622ec4a4cceef9b65bd1ac91da9edbd56986cd0fcbb",
+      "diffuse_blur_js_0.1": "360ec342c6d6824746dc4b0839ed56731d97e11eacda853414cefe5d86af3849",
+      "diffuse_blur_js_0.15": "cba33bb1509b31ce2d099e747362c54719a838db4fa3eb75c4d2647eca681f8b",
+      "uniform_prior_baseline": "35ddffc586ee1f0ab143a8f2ecdab719171e73a7ed9267dcd3e5d3de86eb60ed"
+    },
+    "cx0.25_cy0.25_layoutB": {
+      "oracle": "77c0906a06a2f384c2a0cd89c369eac0e0984120a8b19657c9ed179a9f40ee67",
+      "spatial_shift_x_js_0.05": "a255ebd886f08f187ed0083e5e3fb316973f07dd5d6cae771b0a02690d62f155",
+      "spatial_shift_x_js_0.1": "43ceb332760223c129f1ea245fc6be7e79094e27d1776258efc71d30ed4ca6fe",
+      "spatial_shift_x_js_0.15": "6836995dcb772eaa85d2641dadedb1767f4a7faff5a61cd52dfe800ada8cfd71",
+      "spatial_shift_y_js_0.05": "b700f6cd6aae5e9fd73ea4970dbb469c12707b1a43dbfb594c1b3ae41982a7cd",
+      "spatial_shift_y_js_0.1": "d4f1fe3a1d35efb37aaf9d36a7627daeb993bffc6a8124eca33b70173a571291",
+      "spatial_shift_y_js_0.15": "13276a4a38862574344e4426a956dbcb96160f54899603cb121d408b9c3d96cd",
+      "false_hotspot_x_js_0.05": "e04ed50bad0a7c3ed1425823a2abbf67da26bbe5569cb72d7f5de668fbaf925e",
+      "false_hotspot_x_js_0.1": "031ddaecd7ea4a1cfea6b8896363f1285670fdfb8e8936f1aa3c4cff878583fd",
+      "false_hotspot_x_js_0.15": "e98e9426aa2eda80818d92113060b366366e1d73f01bcbdd6b644cf0bc5fee3d",
+      "false_hotspot_y_js_0.05": "532de8ddb7f486f3e77924106cdb7d5f3be0eef3e9fed2e8e077627b7b390d1d",
+      "false_hotspot_y_js_0.1": "0237e1b59884a684f5ea3131ee12d6b668310c2ea4c19638e105e24a72db518c",
+      "false_hotspot_y_js_0.15": "8f564c3afac43ccd81f4a38fb23a2d8ab6369cad86a6e8bc1486d94bfdc49ebb",
+      "false_negative_suppression_x_js_0.05": "6c6b32fd12a01bf5433082d7f56ea443e887df4e98d601f19d52601ad9fdc6af",
+      "false_negative_suppression_x_js_0.1": "b1cc8b574724e8f00a13219514e09aeb16d931304c844d35e337c2b13f84999f",
+      "false_negative_suppression_x_js_0.15": "dae1192cae24617cf3547219e7238751a9b352ffb6e7697a7487e6f551bb8640",
+      "false_negative_suppression_y_js_0.05": "9839d2906a26ec84d64a8be9a3367a444fbc6049ad6918d8a08a7b72fe82e388",
+      "false_negative_suppression_y_js_0.1": "308338d52d5615f05878e491ac4b57795543b2a1b3535b43a5f3c6937e7ca8ef",
+      "false_negative_suppression_y_js_0.15": "9febd16262c1ccbc4bf329e50a3ef3b3619a5fad6e9c2c88899913caed994b0a",
+      "diffuse_blur_js_0.05": "ef94db0bd774f4bc678f15f06da2b5ec598350b7a34e4976f1c4172794d26a54",
+      "diffuse_blur_js_0.1": "381363640070207152e19247e13ef9177919a94ef98bde2e51f46888db962e31",
+      "diffuse_blur_js_0.15": "e111de86f78fec4f0637b97154a386e8466f023e9ab6d241905f317c8c592ccc",
+      "uniform_prior_baseline": "d1111ba36818fd7b489c040f9fbfcf8467eb8faa582d4d4fd4ae296edabb36fb"
+    },
+    "cx0.25_cy0.25_layoutC": {
+      "oracle": "78fc606144bc77e91ee30dbf06cce1763b18a183679a70bfd4ba3e7f8b3b233b",
+      "spatial_shift_x_js_0.05": "6b6171c4441db73135e5d05de26266d18ef7b147233bd153d4c05905a60f6e1f",
+      "spatial_shift_x_js_0.1": "765cbb1bd875cd3d87b8a6dc47b3e299e9729d2103faf10009d84c5a3dccf0e2",
+      "spatial_shift_x_js_0.15": "4822f57990e6bf5555ec49377bf57369788cb1993691552b1c3c1b7644d7464d",
+      "spatial_shift_y_js_0.05": "2a07da8bf0344014705a791f6b0443d3665f59bd088d7866130c4836400c87b8",
+      "spatial_shift_y_js_0.1": "bc396fa63d55316689558af10d9032e36df06e12974d51a81e9807a98da4a304",
+      "spatial_shift_y_js_0.15": "603ae2f8a6d965869a8b50506ba48351bb93c81850ed6e8c777a7df60a48fd66",
+      "false_hotspot_x_js_0.05": "5cb8bee090d5805295322b92fffb486ba9e43476805fca7f2f21b84ed358351b",
+      "false_hotspot_x_js_0.1": "d0ea3e712f9cb77db2c4bf784aecdd97ec0d187ff08c2d41aa1af12dd4f9105d",
+      "false_hotspot_x_js_0.15": "afff641a2ece001937ed1536f7bed03b15bb6ef0dd329131df9ccbc8d07b5aec",
+      "false_hotspot_y_js_0.05": "b2d44516d183d77290962768d6176d0ecd39cb0df37eb8b73a68502bfd4dbb31",
+      "false_hotspot_y_js_0.1": "f46e7dd777c2e2ce3033fe13ad5ac5fa57fd3e4421cc804b6967e71f92bb8096",
+      "false_hotspot_y_js_0.15": "2013b37ce4a755f2ec4b52d95eaca570fa2879e2d5bb0ec0ef298c250746e59b",
+      "false_negative_suppression_x_js_0.05": "21adcc359033510e020c7ba68e015148f43c533cfb0d079b5fa6fb0dfc666591",
+      "false_negative_suppression_x_js_0.1": "c09dd0b4902c2d2ec680d674daf20fc38007d25a0dbaf330160fecacbe8d40ad",
+      "false_negative_suppression_x_js_0.15": "5c35235773e644e6dd083275f76749d5ed57b6989bb6bf2e878f185c600499e6",
+      "false_negative_suppression_y_js_0.05": "941e6c65cfeee251d6aaddf506c38fe57f462a2339986d0615ab8681ec270d3a",
+      "false_negative_suppression_y_js_0.1": "fa4737ea6d9d1e427dd39f86a002ae414c3273d3fc58ebb2ce411d4d43f167fc",
+      "false_negative_suppression_y_js_0.15": "7e0eda2505e41e4e5e54fbb554738839e5bb6991c539727dca29a07f78c36b84",
+      "diffuse_blur_js_0.05": "710a4ac2685d1d5b4940f0007b1ba31d67780c988c33e045b5031997ae0151c9",
+      "diffuse_blur_js_0.1": "ee31d9ee70fc53e6187126f2922df6f386a75815c546b9209520c4e4542cb080",
+      "diffuse_blur_js_0.15": "b9c6240f46ac7b80aff12d4fa4edc4a42c4c43b94ea5a9d495ea21ab321a8cd1",
+      "uniform_prior_baseline": "352efcd94349ce0606b06ced654143f5ee2c8ccd7c6f1a65659de8c5c1d03326"
+    },
+    "cx0.25_cy0.75_layoutA": {
+      "oracle": "d843b6ff48248587acdf95606f2c48bedb325980829aa9980f298291ad5a2c01",
+      "spatial_shift_x_js_0.05": "ef3a68b1cea6521db33085d80d9e7554eed22ad0a7ea6f9640070d846c03d8d9",
+      "spatial_shift_x_js_0.1": "80aeab44855f395920712a4737c69832a70265daa33e6f2a54d06b7a041c0eab",
+      "spatial_shift_x_js_0.15": "fe7f9f94cddd3736687dcd44fa2f317bf7d344c180d90d4adfd6a47af9e0a570",
+      "spatial_shift_y_js_0.05": "3df81d0aea3592465530268fabf69b890bb09b931156f1f2c9b1b86816fcfa28",
+      "spatial_shift_y_js_0.1": "f7a82b66646f03ba09a977f42abe6151c203a67005280ab53b8264542186bbeb",
+      "spatial_shift_y_js_0.15": "fe28095b8b4dd58143001331f362a0e62926ad2888f2e183b4fc67efc176a5a5",
+      "false_hotspot_x_js_0.05": "af1aac164fda16ef0d25fd6149dd809ae5ce64056ad8b7322daa47f6bf12807d",
+      "false_hotspot_x_js_0.1": "924e0380cc4800261fbb49f69995a1501524355847b22e4b4d3f481fff67466d",
+      "false_hotspot_x_js_0.15": "9d371df5b39ee107ebd2da0c79efd880efd7b1d463879af254e5bd6362b6251f",
+      "false_hotspot_y_js_0.05": "9274b38d1d954617f47888a461a1f3f38c0ae912bdfe07f900d954bc471dd509",
+      "false_hotspot_y_js_0.1": "7996f68f77315e1269d4a437a9fc58df2048dac51616bc9e26f5f75fd237b925",
+      "false_hotspot_y_js_0.15": "4ed88476758f67c21080500568c345bb05769a9ac2bf3366b182a818120526ce",
+      "false_negative_suppression_x_js_0.05": "e468fd698d038dda0a7d5ba49d8304b9a70f8c8fa2d691de3fdf04bce8e874ca",
+      "false_negative_suppression_x_js_0.1": "e992208ac8e34283a9cbe54847f72b621eb9c4965581df51c03c295c694fa972",
+      "false_negative_suppression_x_js_0.15": "fa515dd0697af332887569ce601d0b159f86cd59e7385954a096efa0e02d0c7a",
+      "false_negative_suppression_y_js_0.05": "06034f55969ac4f9dc9db13056ffb88132f5a2fa9e1afebaf12537a78d7731a7",
+      "false_negative_suppression_y_js_0.1": "425dc941ba9632c777da93fbb097a333fa9ce296f0f0f064c4fb3cf6e42dab65",
+      "false_negative_suppression_y_js_0.15": "5bd9ebde0c2f79899d8176c159aa98b1683ee245bbb9d58eb7747b764294e5be",
+      "diffuse_blur_js_0.05": "de33fc5b2345b7a431d4782dbbaddc2d5b3c8c77168d953f99106395b2031f6a",
+      "diffuse_blur_js_0.1": "97167cbaf505127174a09773c4829a19a318c1495500dba766095edbf2df4c5a",
+      "diffuse_blur_js_0.15": "eb33dd176d5bcc33e6b99b359c4bcbb44d82d7b57b3a2a87e0a173c8313ba8c7",
+      "uniform_prior_baseline": "35ddffc586ee1f0ab143a8f2ecdab719171e73a7ed9267dcd3e5d3de86eb60ed"
+    },
+    "cx0.25_cy0.75_layoutB": {
+      "oracle": "873117be1c87e7410bdfb0578ac77476bfdb3b7f2bbc9129c5fb2e55460e2d0c",
+      "spatial_shift_x_js_0.05": "7d87029fe9b19ec44143a749ce49fef09d13c329e200fdae24d569f481a067b3",
+      "spatial_shift_x_js_0.1": "8732bccec0e93da0acc00283c0f6a713c019486b284f57198d8ac5b5968df19c",
+      "spatial_shift_x_js_0.15": "44e87c45862f807cfc66cd144ba964077c97368476558f0e3335c4458cbd6aaf",
+      "spatial_shift_y_js_0.05": "9d238f548030e95051762c4764efd4a7b0fa374dd36da8df8ac4a36d289110c4",
+      "spatial_shift_y_js_0.1": "830b59f2d2a5f198dc10190236041bacf71fc9b0f38105302c4cc681390cd7e5",
+      "spatial_shift_y_js_0.15": "4be7f448c9f2edde672c5c06ce9fb4ad26169ac450f9ad6ae87ec036bf93fdec",
+      "false_hotspot_x_js_0.05": "58848ed53f90051ddaf01efe8e6154d498bdaffd4b51aa9e9be41f536019a0f0",
+      "false_hotspot_x_js_0.1": "edc6c67db3625f0be5ce9d1c2b5bc2d6682abafb3d895acc6fa2984e6361ae52",
+      "false_hotspot_x_js_0.15": "55d46b59eff3b2092a08f61f904958417dfdd93630d798a29fe4ef499f6ca1d2",
+      "false_hotspot_y_js_0.05": "350a039e34ef34ff6e1f22b303d4a4f4ef0e77f9341e260cb9f55cf0a6694611",
+      "false_hotspot_y_js_0.1": "cca5b694322ce10a50e0e47bc33f7cfdd13cf45b08a6dd4f13faa679d0ed2860",
+      "false_hotspot_y_js_0.15": "244316f1d4e9d843fb36165889842aabe58ca6045ecaba551470aaa8a78d40c5",
+      "false_negative_suppression_x_js_0.05": "7950efc3c254cf13381184cf9c5a1f9f27f6dd073f22d68b0e27f2f9b140c5d9",
+      "false_negative_suppression_x_js_0.1": "8dc52cad0c71088ded42d77b3f1888a430b13622d31db353afadd389b5343507",
+      "false_negative_suppression_x_js_0.15": "06ca9ec0d0c7e4c7590ac1f74d5c8c33af022468bbb0cc031c9c936938beb0cb",
+      "false_negative_suppression_y_js_0.05": "047f3ca56918e50be6f42015a9bef2e76e3c2e139f31fa08a968693d1858c867",
+      "false_negative_suppression_y_js_0.1": "6809147a6e15c701591b8e4357bd0573505c2612b70a20e53084c588aaa2d106",
+      "false_negative_suppression_y_js_0.15": "895d04be907cea2f36291a62ace5e6c0496c28406f8e901501130d54834d865a",
+      "diffuse_blur_js_0.05": "7ece056ea11ac99e8e6f4d0bebb43631d31bea9b2c208ed03effb4f37fdbc9fd",
+      "diffuse_blur_js_0.1": "0ffec9f6c64d669c66835fcfc731de4daea77cd8e3dd97efeea62942429d8c6a",
+      "diffuse_blur_js_0.15": "1c7505d12326d17c1981d99a4b6976cfa5df48fdb7366a3086a83148e6476395",
+      "uniform_prior_baseline": "d1111ba36818fd7b489c040f9fbfcf8467eb8faa582d4d4fd4ae296edabb36fb"
+    },
+    "cx0.25_cy0.75_layoutC": {
+      "oracle": "043d662ae36d8157da34626d45f8381e45faca6c67ff52ce31097410b242888e",
+      "spatial_shift_x_js_0.05": "086c68c67a5f0d182fbbc238f988bd05939e2d5e1e38d33c0924c6f7a116196a",
+      "spatial_shift_x_js_0.1": "c4bfa219b6b737c105dfedb6f6d9a5d94e1f8c48e14fd01d41ce60e96104601d",
+      "spatial_shift_x_js_0.15": "2de166e31a100ba6d7f3897595bb75ccf00ce1459ea588d561a50d68d3aad5e7",
+      "spatial_shift_y_js_0.05": "a04ef9c1cb751b3800e09f5011e51f04501f1791850a66b49c8cb9d3a7b10a2e",
+      "spatial_shift_y_js_0.1": "291caae1d97596288e2c05fc08281908006a66aebd3a648289715bc92e7f9908",
+      "spatial_shift_y_js_0.15": "2cc235dad010ab69c980b4baf304788abce66e7a9ca7aab1d1f4c5004a82df51",
+      "false_hotspot_x_js_0.05": "82f3f1230bf2a83d6a07e72cbef1cf95e7902075b12f3b152e6bf72e09555fe4",
+      "false_hotspot_x_js_0.1": "54e75958c6661cfe2090c41b0532ada7815da9a9a8804adad4d474a25ea916c8",
+      "false_hotspot_x_js_0.15": "89b36336986552d66ef20e3d14ddd6d90e7dde8907437a0ad9c57f89e3098638",
+      "false_hotspot_y_js_0.05": "d8bad2527e978e315b5ef9ccc3944dfcdb75185d7394153914d304a143fd0130",
+      "false_hotspot_y_js_0.1": "cbd4a5dbef660b9a068f6421452c5f14feb48e44cb5be241f4bf6a2c4bdb8113",
+      "false_hotspot_y_js_0.15": "6d930a233971e91670353024939bdcffe1abf9c602f0b7f444a8110f9b6a363f",
+      "false_negative_suppression_x_js_0.05": "7d7708b1e8d764d8e7e81eba1dcf367328ca989871795718b8260228992cbc43",
+      "false_negative_suppression_x_js_0.1": "b36e29ea87f9ea421c03bf8ab5ec282ffe6269b926f55c0ccc72ff73b3342f26",
+      "false_negative_suppression_x_js_0.15": "2494c34fef156f48c5f5d1b152fc5de478fd35b363cd272c727747d104ff3f4b",
+      "false_negative_suppression_y_js_0.05": "780160127036e6d3ea2e7e4f48df683efa568fd979e46bd119b3b507106bc51f",
+      "false_negative_suppression_y_js_0.1": "d612a2fb8e6d2591bc895c6bd94b6465a72959b6f23186ae7b784f69ac744399",
+      "false_negative_suppression_y_js_0.15": "f1ec04db5ad0b0e553be77ed043f8c1353206567b0a3b268d37584ca8ea26241",
+      "diffuse_blur_js_0.05": "b98a32be86198d1b734f627be31ca84f75e4cac0c2d609b3264743dbabb614be",
+      "diffuse_blur_js_0.1": "894f04aca82ba6394124818d93ef1e00d942a886c9cd5929d20f11f95a6131d3",
+      "diffuse_blur_js_0.15": "1136521bfc521d44349d4addb09d811d2645ac4b383cd825bea50a51502155bb",
+      "uniform_prior_baseline": "352efcd94349ce0606b06ced654143f5ee2c8ccd7c6f1a65659de8c5c1d03326"
+    },
+    "cx0.75_cy0.25_layoutA": {
+      "oracle": "f5cd3aeb9ed6c3a2cd087ba914562e1f5f7f8e9b2faf02610ea59b98678b9adf",
+      "spatial_shift_x_js_0.05": "e5f5568073393a4bd0ab1c4c90a93b064149caa143fbda807d5c4a205196b47b",
+      "spatial_shift_x_js_0.1": "7648ff17b774c4e2516b6b42406e4233d162f38eb1b8988bfc69769f6038d036",
+      "spatial_shift_x_js_0.15": "183965d18188f140be15b029957c1c7cf3e8e5ddae714e327ba05bdf764b5b7b",
+      "spatial_shift_y_js_0.05": "14ecc4715aef5faf9d48244663b0e603f696bcdb111429d692bb759558c58135",
+      "spatial_shift_y_js_0.1": "217f8b137636babe636751feaebac7faf0e9cd05d6ee35837193096da207b6ad",
+      "spatial_shift_y_js_0.15": "eee63d2df002cfaafccbde24fb85f31d381c2fabe054962e3f23d78de9e1949b",
+      "false_hotspot_x_js_0.05": "b415b8ddcece39cefc10a21c90f51ccc8d25245c0a6f13e0be3b4e61b017f9ed",
+      "false_hotspot_x_js_0.1": "e76c5e654a720ac2219d60b48cf55056f42333c04237c59b667d92143cb1db0b",
+      "false_hotspot_x_js_0.15": "1ddf6558635519647d366f03ee47509010fca008de343a4bcfc2feb4fcdbbca5",
+      "false_hotspot_y_js_0.05": "a727fd279a035c30850420af2ac14485ea9ea87e52cf9b243281181e295eb544",
+      "false_hotspot_y_js_0.1": "d6695e000bcb4b5e867f72f4cba0c2836cef2e2e378cf9f97dc2113842015b26",
+      "false_hotspot_y_js_0.15": "8c6db7ceca738e43f1c78073a27f8a72cb8c920cc3b7c234ad984bd5230b16b6",
+      "false_negative_suppression_x_js_0.05": "0f4fbd706cadc3669f46e2beaeead1b8919534a0aaa9ecbd47cf406b051ac656",
+      "false_negative_suppression_x_js_0.1": "01606301d3097e13bb4d2d76a4eaf1df9cd95fb3b7a724323bc5377adc84be4d",
+      "false_negative_suppression_x_js_0.15": "83f794dffd923479829af3fb7e950a3c7815d16c033812ef1a1dabdddbb474ab",
+      "false_negative_suppression_y_js_0.05": "4553b13f4cd16c289c34c9c11767929cbde925d27051edf906210d9d8daf7012",
+      "false_negative_suppression_y_js_0.1": "9ae8d304ab52b06d18e1793555fe1da4dda682de435dec237dc8654c96f7c77f",
+      "false_negative_suppression_y_js_0.15": "66f9019e852d85f3eebf7c5df71e8202ab7c695f7df5f06c2c6d6b20dc71dddc",
+      "diffuse_blur_js_0.05": "e19e95a956c2773a75fc574384d1b70657b723c435882b408908a6b83ec02d52",
+      "diffuse_blur_js_0.1": "5cc5d5c6e3fe9c95a2cc73a92c35bc21db36300d33ea321165105f0a237121ae",
+      "diffuse_blur_js_0.15": "d12108e6d683e4735803a1665b9399eff85d8d7f0ad8c314d697f076888f25dd",
+      "uniform_prior_baseline": "35ddffc586ee1f0ab143a8f2ecdab719171e73a7ed9267dcd3e5d3de86eb60ed"
+    },
+    "cx0.75_cy0.25_layoutB": {
+      "oracle": "5ca18c75a69b6b6b42c072a298734356903ae9f5e6d351c7fc192b990dab3345",
+      "spatial_shift_x_js_0.05": "0807064d0f72b87f46e56e2c4964aeb1ca359b3648af420ff455f3152486de6d",
+      "spatial_shift_x_js_0.1": "931658dafa4ccc0c68b701d9aa654356ef11450b4f832a78808a3de45c39c25e",
+      "spatial_shift_x_js_0.15": "c9c5910fdbc9f5cbe261ad37f3a09754b69ed3c48dd4c005a7c3cd8f831781d6",
+      "spatial_shift_y_js_0.05": "b66b6827f9b8840b626095417bb26d52c2457d01fc314790bfb44d295f9a839d",
+      "spatial_shift_y_js_0.1": "08f8655b759795cf8b57c32141f0372e1f0f6fe8e4280d735785a1d9b90c802f",
+      "spatial_shift_y_js_0.15": "e2e425395cb9c2a12c4da155121dfdd051963ee0a72d7878f721c08da259742e",
+      "false_hotspot_x_js_0.05": "931c557ba70c22901de4fdf2a337e4a68b66d5cc3b77ddeefbcefe4c2ad45019",
+      "false_hotspot_x_js_0.1": "1ecee7ad1f100dbbf845ca9829d64278d2e8a7aa1f6325b2611049a04fedc4ae",
+      "false_hotspot_x_js_0.15": "36eae5166a60ba13c072647ef3fdcb07324a26fa8cc31309de9917ce56eaa6b8",
+      "false_hotspot_y_js_0.05": "aa098ac8087c059282f88ee946f35edfde08f0d89cfbf369b1e71dcd206bd45f",
+      "false_hotspot_y_js_0.1": "6e64582c0acd05abad528dce192341ddc733e802e8f0af60e2f7eb0e0005d1de",
+      "false_hotspot_y_js_0.15": "49b657b9eb20ac52e8c9a21cc9c2e3419e8f2a50769a7a6af40de25d3ed494d6",
+      "false_negative_suppression_x_js_0.05": "daffcf2c3e7aa96b082e8178483db40d6928ca7aa46df65903090269be06f301",
+      "false_negative_suppression_x_js_0.1": "0139605fb5c71a93dcaf5d95096d4e3d6c3a467cdee96338c67d988c1cab587c",
+      "false_negative_suppression_x_js_0.15": "97ef772ed5fc2906bfc9159ce4424538de44ba46eebd22cfa1a6f806ed480844",
+      "false_negative_suppression_y_js_0.05": "256b3cb050db96dac704b88587f3f39c2bc3fabe38696231396e6a818457f608",
+      "false_negative_suppression_y_js_0.1": "a1098043a1c73a8ac464bd8779f2db57bf91a61cbc29803c1a4f57628f0ba27a",
+      "false_negative_suppression_y_js_0.15": "3e2b96e974ef0c83893bf6bf09d659e7092c1c43a762a5456127cbaf6e693a6b",
+      "diffuse_blur_js_0.05": "4bdafbc5783dbc66107fea9e67963df06f6f2a0a54bbb253c5ecf18af87ee9a5",
+      "diffuse_blur_js_0.1": "ba7fc7bd5b41559d052f3dcec81b5da731ba389091d69efeeab73dcddd10f699",
+      "diffuse_blur_js_0.15": "c9ec054ed23ce47b5e8503ab3d45ac98a0ff01377bcf2410859743ddff234033",
+      "uniform_prior_baseline": "d1111ba36818fd7b489c040f9fbfcf8467eb8faa582d4d4fd4ae296edabb36fb"
+    },
+    "cx0.75_cy0.25_layoutC": {
+      "oracle": "b1be104bbea45287d377d69d069c52a70ad95da3180f66b9a3c7aeec68e79528",
+      "spatial_shift_x_js_0.05": "75acf6052349bb82daac7fd8491cd3c5d34a28c20e5b523ad099b32ffa809fe7",
+      "spatial_shift_x_js_0.1": "d73e365dc490828c390742bae26abdb265b994391efccc822ac4a11a287c53b6",
+      "spatial_shift_x_js_0.15": "d62f0df44fd13fd004d02355560814e1c1323ef1f16c3df79bfd8995473d05d9",
+      "spatial_shift_y_js_0.05": "d48e089c9d0cf30d92182e1f9f17e27bdd0ea0f0adcb7b39180c5f358f986e1b",
+      "spatial_shift_y_js_0.1": "407525aa2865d81c93c0ca202ce2c68555acdf243996a0e572f970baffa9d053",
+      "spatial_shift_y_js_0.15": "bb8971cb8c66ddeda1f4e824b9491e114439cc7699440cd7b1e6c2d652cf1d5e",
+      "false_hotspot_x_js_0.05": "72c15aa350c51f8d53f42900e2c05fb45f1b767c7df933314ac8219719eac2f4",
+      "false_hotspot_x_js_0.1": "248d8ca17486bb7609c61dc5bb280298bedf04aa87e78541030e0421b5b069ed",
+      "false_hotspot_x_js_0.15": "2538e61cb5c324d486eab64cd97a0c1c8d098098f16153607a75c7b63db01246",
+      "false_hotspot_y_js_0.05": "d6e08fcab7f11a3b022dfff513e4ea5657ea6f7ff33c8aa51bdf6896c766c3e2",
+      "false_hotspot_y_js_0.1": "f7e865f6b790c0faa1e27a88e2b10504ab527f83c77e3c72c951e8b6058bdcd8",
+      "false_hotspot_y_js_0.15": "67b47f4d992dfed3e9e2b10307064edbb372f2378295562f114b3e739ab295b1",
+      "false_negative_suppression_x_js_0.05": "3cd3af5ee70aa249cc1240201f59df00c4471f7213c994c40bf0f9ab48d11999",
+      "false_negative_suppression_x_js_0.1": "a224dcfbfedabcf57948926c944a776c45e8eaa3af725d5eb079a0d547a3b00f",
+      "false_negative_suppression_x_js_0.15": "a4bcefe0ac855f3ad2e6098fa9c5a11b36189fbd10c9b81bc17cafaf8445d5b4",
+      "false_negative_suppression_y_js_0.05": "17f5bd156743a92afaf44c14813d3b7fa734d4223467b385df4ec6abe334304a",
+      "false_negative_suppression_y_js_0.1": "9cf2e5108192413a432bb01e418ef4cc758809e308e9d4388267b32f79f38d69",
+      "false_negative_suppression_y_js_0.15": "3215c7d440bf35bc0197299204967502cf0d02956b4ff278118429742a97344b",
+      "diffuse_blur_js_0.05": "53a72a1a4a23c53659da5165910b5495a0d330ff060979bc9138effa784dcc71",
+      "diffuse_blur_js_0.1": "7904c2f710a5a9abe0297a80206846d3634233f64e9328ce5c7f47c37bbe066f",
+      "diffuse_blur_js_0.15": "8e4c289a01a65a5e09f7117795a208ba4b3fc79ad24a2728653adc827f55bbe2",
+      "uniform_prior_baseline": "352efcd94349ce0606b06ced654143f5ee2c8ccd7c6f1a65659de8c5c1d03326"
+    },
+    "cx0.75_cy0.75_layoutA": {
+      "oracle": "ea6ec5e26dae28a15ab499e2b9b7bfe9b9c963df6efb24bd4606ae0b552ec84e",
+      "spatial_shift_x_js_0.05": "66c7a0af23e94acb26cc1995839ce344e4d57d405ff8297a80e8a89b50678b8d",
+      "spatial_shift_x_js_0.1": "aa241c77cd5e1bc31c3276411c20a981e17378bd4830a0e418fdc2d6ec9583d2",
+      "spatial_shift_x_js_0.15": "a7af1df019d3cb619bf713e0f9dbe2a19de29e973ec9d8a4f15dbec011be4acd",
+      "spatial_shift_y_js_0.05": "30198309a305a0ec4944e16eefeec2498cb6ca9deec26ab1012b7a15a1b61c57",
+      "spatial_shift_y_js_0.1": "5196108797e44eafc06ee18069481c21b3d438e5b4e5fa3fc1f31625ef5ededa",
+      "spatial_shift_y_js_0.15": "cc5afd7d8caf9a7978e4f1ef98317fd767be8dc162c7b4f3440d61be64da5df8",
+      "false_hotspot_x_js_0.05": "dd90f049e1435083d6eca3591714c7e2c1cf73dfbf3bf8b897a3077bf444854a",
+      "false_hotspot_x_js_0.1": "425ab4bef105e6aa9a45be2ce53bce0ae4b4e533f8e97d37915848fa8775b123",
+      "false_hotspot_x_js_0.15": "98b3da99ea913f0816f2aaa3a368319e5134bfa254238bb63468988820db087c",
+      "false_hotspot_y_js_0.05": "25e02af705dcc888f86b8b89f8fc62552e9a8d575bee8bcaf26bffb7c67a8920",
+      "false_hotspot_y_js_0.1": "4fadef00b3cf10732ca672fcf2a39e50a0725a39b4e7e5f7333403fbbd4058d8",
+      "false_hotspot_y_js_0.15": "ac67a37eed91f1403a4afdaaace2b179e8619423f1e0c65e44b13f670694c186",
+      "false_negative_suppression_x_js_0.05": "3eb2bc7ac4efeb24ba4173f199fba44c3ff47838c63cde972852d38fd76f972c",
+      "false_negative_suppression_x_js_0.1": "c27a3c809a6a013c2eec9cc352b18fb8ee29ae09f1d6a108a7b3194d7ed0c1fa",
+      "false_negative_suppression_x_js_0.15": "5850e594089b7f6f70f6e3b8fb87a34e7754a13c73430a6e565e2c40c4721baf",
+      "false_negative_suppression_y_js_0.05": "752d8daf1ceef845644c7a7678e0b34668e2bc85c6ec75782a873d942364d579",
+      "false_negative_suppression_y_js_0.1": "d6fb80c5793dbd36949e79119385e3a13120fe3760f71181c8a3a7c07b691ef1",
+      "false_negative_suppression_y_js_0.15": "b869fb785b0c6037522c166db52882c420265a3367ed896ebe195b58261042d9",
+      "diffuse_blur_js_0.05": "ad4b7efd90f3f503c371f175db26c7abd9e67e483b9aff83a6e5493da38f1c44",
+      "diffuse_blur_js_0.1": "87923cd2bcf8ce5df1f2f5567a40a48e92c054eca5ed78c0da9fa855cc4149e5",
+      "diffuse_blur_js_0.15": "145033d5698edad5b3115b3098d54c042c79c687b7e7805fb2e2e3e955a2126a",
+      "uniform_prior_baseline": "35ddffc586ee1f0ab143a8f2ecdab719171e73a7ed9267dcd3e5d3de86eb60ed"
+    },
+    "cx0.75_cy0.75_layoutB": {
+      "oracle": "76e106e48f471e03d9731e562e6a7f52646aecdf722c1020235cc0446e249c52",
+      "spatial_shift_x_js_0.05": "31d9184db6e791c0dc41d0be8c5af8bb16071e235e103a234f26b448f2f461fe",
+      "spatial_shift_x_js_0.1": "d7722d72abde4bab75d42edff83409d937d023aa927a054e40ac5b8156b8f310",
+      "spatial_shift_x_js_0.15": "7f4786af96f902b6e4b7395e5a8505161644e0f8202a0727aeabaf9a6ede51bf",
+      "spatial_shift_y_js_0.05": "b8bf9e24fa976e3b0df2f16c875d493903c362c2be966e4ed97ade3a5974763f",
+      "spatial_shift_y_js_0.1": "1cc7f1404dcdab9b2eea9642cd95e915a37694cce98842bcc2db041374750258",
+      "spatial_shift_y_js_0.15": "e8463b0817bbc3f8ec62ebe81cd1af6bc744fe263ed82f1c93120cd2a0478736",
+      "false_hotspot_x_js_0.05": "e8bf1e2fd0353a637fe26c05dd08cd31ca0709e5e4cf22af1b1c62afa38e0122",
+      "false_hotspot_x_js_0.1": "a82e03b633ca8a858d1bdb5eee5b50c8ed9f291902f9bf480730c4f88016b44b",
+      "false_hotspot_x_js_0.15": "3c285562079664bf99d4f79db3c619bb4376bf2aead8c08170ae4a0db7173b4c",
+      "false_hotspot_y_js_0.05": "84330ec665cdb9d1fe5ae3099b0a2375f63abc4cffe98bfb0b88d377df709811",
+      "false_hotspot_y_js_0.1": "ccb47a86063c6276bb79f9b4da10689c811cb600af01013120a50d0468297a3f",
+      "false_hotspot_y_js_0.15": "3dbe19e93ac1bf55b3189b029de618ff94f47b49b0a83f848d0f76a3e1a2f5d7",
+      "false_negative_suppression_x_js_0.05": "3d538c9a805f4b3b7dc82feffa5f431a849938d02d75268705629ff1b4e3d36b",
+      "false_negative_suppression_x_js_0.1": "ac109b16adf3333e58f26661a4976f16291da0df31682a6c9b9e3d811531355d",
+      "false_negative_suppression_x_js_0.15": "d5d04f3b845048311731c9c8b1854a5e392fefc962b03539883543ff49a65118",
+      "false_negative_suppression_y_js_0.05": "e3f48a3bf22df5c3b478749e756e71e2b5ba339b769b42ec182a5c8a93ae628b",
+      "false_negative_suppression_y_js_0.1": "a44a650ec8e25efa2683cf89658b5d167c7606c2576f34e4c1cb81941e2113f8",
+      "false_negative_suppression_y_js_0.15": "48b2311f92197e6ad9aa895e75a0e0f5385edbc7c215d841bd27f5be3ddcf6d1",
+      "diffuse_blur_js_0.05": "68e2482e6a6505eac9be9720fa0639971f823f78b2e82ce29a3eaec660d18147",
+      "diffuse_blur_js_0.1": "2de0436787010e7cbab099c931cf4ecf092262d881eb898b9d2cf31bee8bcfe5",
+      "diffuse_blur_js_0.15": "acd6257ae991322475efedb639b78462128059fdd7cf70faeeddc8b1086b8180",
+      "uniform_prior_baseline": "d1111ba36818fd7b489c040f9fbfcf8467eb8faa582d4d4fd4ae296edabb36fb"
+    },
+    "cx0.75_cy0.75_layoutC": {
+      "oracle": "0b7560fa593c803ea0857c3053b4b36b846e35375abb01d868f21f9927464811",
+      "spatial_shift_x_js_0.05": "ea6a145cd234a50a870b35c1418db598e98cd0eac5015dffbff77bdfdb75071e",
+      "spatial_shift_x_js_0.1": "fea3e98731395199f11c08e073f7b194b0a6ee3f2b1104a904bb4323db47b33f",
+      "spatial_shift_x_js_0.15": "129b3edce34026660bb8e2544a8ef40065934c33390c0a4198ce40f7f018a138",
+      "spatial_shift_y_js_0.05": "435a23a5e7f5588528b5599c6e0f624d24f624b3582fa5317a40a76e787289e1",
+      "spatial_shift_y_js_0.1": "29811ff84ce04ad45d16929c15f242c431e7a5300725fa82d1855702dd76a1be",
+      "spatial_shift_y_js_0.15": "451aefbe09da773b0947bc99cf710a9422644be4831bcec661efc3a7ee6cd1e1",
+      "false_hotspot_x_js_0.05": "8db908f3e90557ee5b5100bbd5c93fca7a33b8722762c8fccb0598d483eab309",
+      "false_hotspot_x_js_0.1": "8a40e5a1e92cf7f3f3ce75da76cb253bfce6e4a9253254e005a63601ab7154aa",
+      "false_hotspot_x_js_0.15": "8224bfb6fd05c1c6b88cc9cb3f1e078df9e2e5b4a00d3598ec264f5aa2b6916e",
+      "false_hotspot_y_js_0.05": "5e7b8b315fab243d096d75b39c76e0702d38185f16409d9b9874be61232ba347",
+      "false_hotspot_y_js_0.1": "a20815fee6a6c67e1e8c15ea5fbb06982429540bd8565f6774a96129eca62137",
+      "false_hotspot_y_js_0.15": "152f163f6befd7663e75e8d986833ebd58511aa1608d972e27d2a0a022955c4d",
+      "false_negative_suppression_x_js_0.05": "0b961e6ec69bc652428ae33290a4097ec82e18f0bad3a2df5e4fba01c4daa843",
+      "false_negative_suppression_x_js_0.1": "5e03817e16d894c3e9aa113b5e94e2e26ff3c4f498f29741d4e26e6842f40273",
+      "false_negative_suppression_x_js_0.15": "2225215c30c93fa6d197c6f9cd111df13ca633ba55f379f03d10f0616752595b",
+      "false_negative_suppression_y_js_0.05": "8dbd7b55862fa468b3612d3c62584c38f3fb5dffbda3291879916032742ca657",
+      "false_negative_suppression_y_js_0.1": "125de02bd18844c6814bd2d57e2f6df3a3d2d38fe632effeae88bf8c55b2161f",
+      "false_negative_suppression_y_js_0.15": "1b728233eeb33e1d91bbb5889f2e400661eb79f2a9a2c6026668114f2cfbf411",
+      "diffuse_blur_js_0.05": "3d7fefa3f2572317e52c1b3677e79374db7c8d93f556b4ffd81acdb7c705e959",
+      "diffuse_blur_js_0.1": "c9a732c6ec4c1a91d6831af701a3154c7766ed3643a16f019c012e6ca8c3b9ef",
+      "diffuse_blur_js_0.15": "6daad1ac5d74d2186761493c223a0cb358421c95f5e7e3dcf4caea1c44a73508",
+      "uniform_prior_baseline": "352efcd94349ce0606b06ced654143f5ee2c8ccd7c6f1a65659de8c5c1d03326"
+    }
+  },
+  "final_evaluation_sampling": {
+    "seed_count": 5,
+    "seeds": [
+      100,
+      101,
+      102,
+      103,
+      104
+    ],
+    "targets_per_seed": 256,
+    "total_draws_per_scene_per_condition": 1280,
+    "worst_case_se_percentage_points": 1.3975424859373686
+  },
+  "seed_decision_rationale": [
+    "Exact full-grid detection probability/weighted T_find are the primary endpoints and carry zero target-sampling noise; sampled success/timeout is declared secondary, used only as a precision-sensitivity sanity check against the exact value, never for a formal ranking or confidence interval on its own (PROTOCOL_V2_DRAFT.md, 'Primary endpoint declaration').",
+    "Measured evaluation cost is negligible regardless of seed count: the full candidate 10-seed design costs ~0.26s/plan (see gate2_cost_check.json), ~2.4 minutes across the whole 552-plan suite. Cost therefore does not drive this choice in either direction.",
+    "At least 3 independent seeds are needed to see a seed-to-seed spread at all; the pilot's own 2 seeds (7, 11) could only show two conditions differ, not characterize a distribution.",
+    "5 seeds x 256 targets = 1280 draws gives a worst-case binomial SE of 1.40 percentage points, resolving the pilot's largest observed exact-vs-sampled discrepancy (4.69 points, Observation 5) with more than 3x margin -- comfortably enough for a sanity check.",
+    "5 seeds is deliberately smaller than the draft's earlier 10-seed candidate: since cost is immaterial, the remaining reason to pick a number is to keep the sampled design's scale visibly matched to its declared secondary/sanity-check role, rather than an n large enough to look like it could support a confirmatory ranking, which the protocol explicitly forbids computing from sampled metrics alone."
+  ],
+  "planner_and_evaluation_invariants": {
+    "planner": {
+      "callable": "milestone_3.planner.plan",
+      "gammas": [
+        0.1,
+        0.05
+      ],
+      "nodes": 50,
+      "maxiter": 600,
+      "warm_start": false,
+      "initial_state": [
+        0.1,
+        0.1,
+        0,
+        0
+      ],
+      "terminal_state": [
+        0.9,
+        0.9,
+        0,
+        0
+      ]
+    },
+    "js_tolerance": 1e-06,
+    "camera_range": 0.25,
+    "camera_fov_degrees": 90.0,
+    "scan_rate_radians_per_s": "pi/2",
+    "budget_seconds": 15.0,
+    "observation_dt_seconds": 0.05
+  },
+  "planned_contrasts": {
+    "primary_oracle_vs_error": "Exact full-grid detection probability and true-prior-weighted mean/median T_find difference, error family minus oracle, per scene/direction-block/JS/gamma.",
+    "primary_oracle_vs_uniform_prior_baseline": "Exact full-grid detection probability and true-prior-weighted mean/median T_find difference, uniform-prior planning baseline minus oracle, per scene/gamma (direction-independent).",
+    "primary_family_pairs": "All six unordered pairs among the four error families, exact full-grid detection probability and weighted-T_find difference, at fixed scene/direction-block/JS/gamma.",
+    "diagnostic_uniform_weighted_reweighting": "Uniform-weighted reweighting of each planned trajectory (oracle and the four error families), reported alongside the primary true-prior- weighted result; not a ranking metric on its own.",
+    "secondary_paired_outcomes": "Oracle-outcome x error-prior-outcome 2x2 (success/timeout) table plus both-success paired \u0394T and its p75/p90/p95/max, per scene/direction-block/JS/gamma, sampled with the 5-seed/256-target design (Gate 4).",
+    "aggregation": "Average the two direction-block contrasts within each scene, then give each of the 12 scenes equal weight; never pool gamma. See PROTOCOL_V2_DRAFT.md, 'Contrasts and aggregation'."
+  },
+  "failure_handling": {
+    "invalid_plan_is_not_a_timeout": "An invalid plan (planner_diagnostics.valid == False) is a planner failure, not a search timeout; never assign it T_find=budget or success_rate=0.",
+    "denominators_reported": "Every report shows the planned and available condition denominators; only valid pairs enter conditional search comparisons.",
+    "no_silent_substitution": "A failed plan blocks the claim of a complete matched suite. Do not rank families on different retained scene sets, change solver settings for one family, choose the best retry, or drop scenes after viewing outcomes.",
+    "revision_path": "Diagnose failures and either report the incomplete suite explicitly, or freeze a revised common solver/protocol and rerun all affected comparisons under that revision -- never patch a single scene/family in isolation."
+  },
+  "gate_evidence": {
+    "gate1_feasibility_all_scenes_passed": true,
+    "gate1_js_reachability_all_matched": true,
+    "gate2_synthetic_tests": "milestone_4/tests/test_v2_preflight.py (27 tests incl. 16 v1, pass)",
+    "gate2_evaluation_cost_seconds_per_plan": 0.262868333,
+    "gate3_engineering_checks_valid": true,
+    "gate3_projected_planning_hours": 1.0570317766973332,
+    "gate4_final_seed_count": 5
+  },
+  "not_launched": "The formal 552-plan suite has not been run. This artifact freezes the design; a separate, explicitly invoked run is required to execute it."
+}
