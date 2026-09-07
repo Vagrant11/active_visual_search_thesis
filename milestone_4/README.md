@@ -91,6 +91,62 @@ they do not establish which error family is generally more harmful.
 - `inputs.npz`, `config.json`, `pilot_audit.json`: exact paired inputs, protocol
   snapshot and validation results.
 
+## Pilot analysis and protocol v2 draft
+
+Read the [pilot analysis report](results/analysis/REPORT.md) for per-gamma
+comparisons, separate target-seed results, pooled episode statistics, paired
+timing and spatial visibility gains/losses. Generate it from the saved pilot:
+
+```bash
+env MPLCONFIGDIR=/private/tmp/mplconfig XDG_CACHE_HOME=/private/tmp/xdg-cache \
+  /opt/miniconda3/envs/erg/bin/python -m milestone_4.analyze_pilot
+```
+
+This command imports no planner and performs zero planning runs. It replays
+visibility on the existing state trajectories and checks all 7,826 saved
+coverage time samples and 3,328 episode detection records. Input files remain
+unchanged; hashes and checks are saved in
+[analysis_audit.json](results/analysis/analysis_audit.json).
+It requires a complete valid v1 pilot and rejects missing/duplicate episodes,
+inconsistent pairing, invalid plans or mismatched saved metrics. Reruns replace
+analysis artifacts; `--output` can preserve an alternative analysis directory.
+
+The outputs in `results/analysis/` include:
+
+- `metrics_by_seed.csv` and `metrics_pooled.csv`: success/timeout and
+  successful-only timing statistics, coverage and oracle contrasts. Pooled
+  means and medians are calculated from raw episodes, not seed-summary averages.
+- `paired_summary_by_seed.csv`, `paired_summary_pooled.csv`, and
+  `paired_time_differences.csv`: four-outcome counts and error-minus-oracle
+  timing differences restricted to the same targets found by both policies.
+  Each common-success denominator is explicit; the subset differs by comparison.
+- `mechanism_summary.csv` and `visibility_replay.npz`: gained/lost visible
+  cells and true probability mass, plus incremental coverage after terminal
+  arrival `(N-1)*tf/N`. Infinity encodes unseen cells in the NPZ only; CSV
+  timeout detection times remain blank.
+- `metrics_gamma_*`, `paired_gamma_*`, `coverage_maps_gamma_*`, and
+  `mechanism_gamma_*` figures in PNG/PDF: metric curves, paired outcomes/timing,
+  spatial visibility comparisons and coverage versus sampled success.
+
+Two descriptive findings illustrate why these distinctions matter. At JS=0.10,
+spatial shift changes pooled success relative to oracle by +5.47 percentage
+points for gamma=0.10, but -13.28 points for gamma=0.05. At JS=0.15, gamma=0.05,
+false hotspot adds 15.08 points of visible free-cell coverage while losing 6.54
+points of true-prior mass coverage. These are conditional pilot observations,
+not a general family ranking.
+
+Under this grid distribution, ideal detector and shared observation times,
+true-prior mass covered is the distribution's budgeted detection probability.
+Its agreement with sampled success is not independent evidence that coverage
+is the sole causal pathway. Two target seeds also do not provide replication
+across scenes or optimization trials.
+
+The [protocol v2 draft](PROTOCOL_V2_DRAFT.md) proposes a finite 12-scene suite,
+two error-geometry blocks, common-JS preflight, paired contrasts and explicit
+failure handling. It is **not frozen or executed**. Scene feasibility, JS
+reachability, resources and target-sampling precision must be checked before
+freezing a formal experiment manifest. Existing v1 protocol/code remain fixed.
+
 ## Validation
 
 ```bash
