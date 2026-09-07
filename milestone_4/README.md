@@ -1,0 +1,105 @@
+# Milestone 4: Controlled prior-error design
+
+Four parameterized errors change only the prior supplied to the frozen
+Milestone 3 planner. The [fixed protocol](PROTOCOL.md) specifies the distributions,
+geometry, sampling, camera, planner and metrics. Milestone 3's current code,
+figures, CSVs and scoped conclusion are committed at `6e0bce5`.
+
+## Calibration first
+
+From the repository root, generate priors and calibration artifacts without
+importing or running the planner:
+
+```bash
+env MPLCONFIGDIR=/private/tmp/mplconfig XDG_CACHE_HOME=/private/tmp/xdg-cache \
+  /opt/miniconda3/envs/erg/bin/python -m milestone_4.calibrate_priors
+```
+
+The shared levels are **0.05, 0.10, 0.15 nats**, with absolute JS tolerance
+`1e-6`. The example level 0.30 is unattainable for the specified blur family:
+its uniform free-cell limit is about 0.17805 nats. This is recorded explicitly
+in [example_levels_audit.csv](results/calibration/example_levels_audit.csv).
+
+The [calibration table](results/calibration/calibration.csv) records each family,
+requested and actual JS, parameter, resolved geometry, numerical range, status,
+normalization and blocked mass. All 12 rows match; the largest absolute error
+is approximately **6.2e-14 nats**.
+
+| Parameter | JS 0.05 | JS 0.10 | JS 0.15 |
+|---|---:|---:|---:|
+| Spatial shift: distance `d` westward | 0.114118 | 0.166445 | 0.211541 |
+| Diffuse/blur: sigma multiplier `k` | 2.014885 | 3.171297 | 5.908290 |
+| False hotspot: mixture mass `alpha` | 0.252402 | 0.402660 | 0.524946 |
+| False-negative suppression: fraction removed inside region `alpha` | 0.732938 | 0.848722 | 0.908207 |
+
+These parameters are rounded for display; use the full precision CSV or saved
+vectors for evaluation. In the suppression row, `alpha` applies inside the
+fixed region, not to the whole prior's probability mass.
+
+Other calibration artifacts:
+
+- [priors.npz](results/calibration/priors.npz): points, fixed true prior, free mask
+  and 12 predicted priors, keyed by the CSV's `prior_id`.
+- [protocol.json](results/calibration/protocol.json): fixed settings, error
+  geometry, package versions, frozen source hashes and probability-vector hashes.
+- [calibrated_priors.png](results/calibration/calibrated_priors.png) and
+  [PDF](results/calibration/calibrated_priors.pdf): all families and levels on a
+  shared color scale; the cross marks the true hotspot.
+
+`--levels 0.05 0.15 0.30 --output /private/tmp/m4_example_calibration` writes the
+example's available vectors and unmatched rows, then exits nonzero. It never
+silently clips a requested JS level or passes an unmatched prior to planning.
+Calibration reruns replace their own output artifacts; use a new `--output`
+to retain an alternative design. M3 output paths are rejected.
+
+## Small pilot
+
+The pilot is a separate explicit command. It loads and verifies the saved
+calibration against the fixed protocol before importing the unchanged planner:
+
+```bash
+env MPLCONFIGDIR=/private/tmp/mplconfig XDG_CACHE_HOME=/private/tmp/xdg-cache \
+  /opt/miniconda3/envs/erg/bin/python -m milestone_4.run_pilot
+```
+
+This runs four families × three JS levels × two gamma values, plus one oracle
+reference per gamma: **26 plans**. Each is evaluated on two paired target sets
+(seeds 7 and 11, 64 targets each). The deterministic trajectory is reused across
+target seeds. Seed 7 and the true prior exactly reproduce the frozen M3 inputs.
+No formal experiment batch or scene expansion is run.
+
+The default output is `results/pilot/`. The runner requires an empty directory;
+use `--output milestone_4/results/pilot_repeat` for a repeat. It preserves
+per-plan checkpoints and exits nonzero if any plan or final audit is invalid.
+
+The saved pilot passed: **26/26 valid plans**, **3,328 episode records** and
+**3,072 paired outcomes**. Maximum equality residual is below `9e-13`, maximum
+inequality violation below `3e-10`. Pairing, episode counts and fixed endpoint
+checks all pass in [pilot_audit.json](results/pilot/pilot_audit.json). The saved
+oracle metrics for seed 7 also reproduce M3. These checks validate the pipeline;
+they do not establish which error family is generally more harmful.
+
+- `summary.csv`: per-condition, per-seed success/timeout counts and rates,
+  successful-only mean/median detection time, coverage and secondary capped-time
+  metrics. An invalid plan has zero evaluated episodes and blank search metrics.
+- `episodes.csv` and `paired_outcomes.csv`: individual detections/timeouts and
+  same-target oracle-versus-error comparisons.
+- `coverage_timeseries.csv` and `coverage_summary.csv`: the original visibility
+  union and true-prior mass coverage, once per plan.
+- `planner_diagnostics.csv`, `trajectory_*.npz`, `trajectories_gamma_*.png/.pdf`:
+  solver checks, states/controls and spatial trajectory comparisons.
+- `inputs.npz`, `config.json`, `pilot_audit.json`: exact paired inputs, protocol
+  snapshot and validation results.
+
+## Validation
+
+```bash
+env MPLCONFIGDIR=/private/tmp/mplconfig XDG_CACHE_HOME=/private/tmp/xdg-cache \
+  /opt/miniconda3/envs/erg/bin/python -m unittest discover milestone_4/tests -v
+```
+
+Tests cover matched JS, zero-error identity, legal support, distinct error
+structures, unreachable-level rejection, unchanged M3 inputs, artifact/protocol
+tampering and pairing across seeds (including zero-time detection and timeouts).
+The pilot is the integration check against the actual planner. Its purpose is
+to validate the controlled design and outputs before considering expansion.

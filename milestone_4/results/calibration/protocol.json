@@ -1,0 +1,147 @@
+{
+  "protocol_id": "m4-controlled-prior-v1",
+  "frozen_milestone_3_commit": "6e0bce5977f15c0d2686aa1ba09b8c7fcc7ee547",
+  "only_treatment": "predicted prior passed to milestone_3.planner.plan",
+  "environment": {
+    "obstacles": [
+      {
+        "xmin": 0.43,
+        "ymin": 0.43,
+        "xmax": 0.57,
+        "ymax": 0.57
+      }
+    ],
+    "camera": {
+      "sensing_radius": 0.25,
+      "fov_degrees": 90.0
+    },
+    "budget": 15.0,
+    "observation_dt": 0.05,
+    "scan_rate": 1.5707963267948966,
+    "clearance": 0.015
+  },
+  "ground_truth": {
+    "grid_size": 40,
+    "center": [
+      0.75,
+      0.7
+    ],
+    "sigma": 0.13,
+    "background_density": 0.03,
+    "mask": "outside collision disks"
+  },
+  "target_sampling": {
+    "method": "numpy.default_rng(seed).choice with oracle probabilities",
+    "seeds": [
+      7,
+      11
+    ],
+    "episodes_per_seed": 64,
+    "pair_key": [
+      "seed",
+      "episode"
+    ],
+    "shared_across_all_conditions": true
+  },
+  "planner": {
+    "callable": "milestone_3.planner.plan",
+    "gammas": [
+      0.1,
+      0.05
+    ],
+    "nodes": 50,
+    "maxiter": 600,
+    "warm_start": false,
+    "initial_state": [
+      0.1,
+      0.1,
+      0,
+      0
+    ],
+    "terminal_state": [
+      0.9,
+      0.9,
+      0,
+      0
+    ]
+  },
+  "evaluation": {
+    "callable": "milestone_3.experiment.evaluate",
+    "coverage_callable": "milestone_3.diagnostics.coverage_series",
+    "invalid_plans": "excluded; reported separately; pilot exits nonzero",
+    "metrics": [
+      "success_rate",
+      "timeout_rate",
+      "mean_t_find_success_only",
+      "median_t_find_success_only",
+      "visible_free_fraction",
+      "oracle_probability_mass_covered",
+      "paired_outcomes"
+    ]
+  },
+  "js": {
+    "units": "nats",
+    "levels": [
+      0.05,
+      0.1,
+      0.15
+    ],
+    "absolute_tolerance": 1e-06,
+    "reference": "unchanged oracle on masked 40x40 cell-center grid"
+  },
+  "source_sha256": {
+    "milestone_3/experiment.py": "04fc4009f0581d941b4c264783f20c89988d7fbf5b710417a4f6acc2722472a7",
+    "milestone_3/planner.py": "be4d9d4a8af8654e2b186121998983e809f54bd5699b180c4c819e163ce1b63c",
+    "milestone_3/diagnostics.py": "d5d13658038fc526d5f7920be964baaa7fe21e3362ea7f7b55ebf91789b6bc85",
+    "milestone_2/visibility.py": "77fbde425ec5d2e4f36f7ff5000f14e05fe2ee6157ce5474b3f5072c85f04429"
+  },
+  "points_sha256": "1fb793e5b79ddb786f23cbb7910173636263927aa37e28e1a0b61ae943c89285",
+  "true_prior_sha256": "cac3ba11aacd9bb89ddbd9f06d53c89f9d483a1d6936c4c0218af0f594ce9d98",
+  "versions": {
+    "numpy": "2.0.2",
+    "scipy": "1.13.1",
+    "jax": "0.4.30",
+    "matplotlib": "3.9.4"
+  },
+  "upstream_commit": "a243b3e8db2810e177667b8c822a6a3fff202d87",
+  "prior_errors": {
+    "design": {
+      "true_center": [
+        0.75,
+        0.7
+      ],
+      "sigma": 0.13,
+      "background": 0.03,
+      "shift_direction": [
+        -1.0,
+        0.0
+      ],
+      "max_shift": 0.75,
+      "max_sigma_scale": 1000.0,
+      "false_center": [
+        0.25,
+        0.7
+      ],
+      "false_sigma": 0.13,
+      "suppression_radius": 0.25
+    },
+    "scan_points_per_family": 513,
+    "root_solver": "scipy.optimize.brentq; first scanned crossing",
+    "blur_uniform_limit_js_nats": 0.17805172492048166
+  },
+  "calibration_passed": true,
+  "prior_sha256": {
+    "spatial_shift_js_0.05": "bda6d2e576a720437d6f462d85c72601287f37c11890fe366f26067018a13845",
+    "spatial_shift_js_0.1": "ffc86deeed612773f4569e3c3f0bc562c4e8038a85c593585b644d39bb9d53f7",
+    "spatial_shift_js_0.15": "a23f648dc1de4989d68504db63b7fb9b809140108fa806446f58ab9e4ab0637e",
+    "diffuse_blur_js_0.05": "f0c2f8f813235a0d06b800cabf0455b4a24249282d5704bf026bd67f3da52c75",
+    "diffuse_blur_js_0.1": "da35b23519e8b01825f4161d8410dcd7b9e7381b50e017716f555e24c3e1d20c",
+    "diffuse_blur_js_0.15": "742502f0c59a2c5b7bfd7240b6e62ca8dac1e64930901e6176b72ab0badcba42",
+    "false_hotspot_js_0.05": "d17c7aa333f6fcea9d3d13cc0f940802245d4f4e5f17b653c634dfb5e766cf1a",
+    "false_hotspot_js_0.1": "337aa357270640737da74f7fdb8b4eda63a703762b345445a471c36c2a2dbde8",
+    "false_hotspot_js_0.15": "78fc2f5698841c0b6724550d5c7d8316b9f5a6ce989582671c5eb8a613199ade",
+    "false_negative_suppression_js_0.05": "5ac33c100ed3704e6063d10f08580aaac625349eff39ec4a6998829fdc4fa8eb",
+    "false_negative_suppression_js_0.1": "3f59f63d0737f923bd552b6312c0884aef3894b872e3d7c050220d9588e2ec1c",
+    "false_negative_suppression_js_0.15": "55c7d6b0e5446a1c32d8efa5998cb3c27806d21a6441ddc625588ee2584df979"
+  }
+}

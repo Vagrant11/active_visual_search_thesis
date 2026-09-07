@@ -26,6 +26,10 @@ milestone_2/
 milestone_3/
     Connects the reference time-optimal ergodic formulation to target-blind
     camera execution and paired oracle-versus-biased-prior evaluation.
+
+milestone_4/
+    Generates four controlled prior-error families matched by JS divergence
+    under the frozen Milestone 3 protocol, with a separate small pilot.
 ```
 
 ## Setup
@@ -48,4 +52,11 @@ Run the new [Milestone 3 experiment](milestone_3/README.md):
 ```bash
 env MPLCONFIGDIR=/private/tmp/mplconfig XDG_CACHE_HOME=/private/tmp/xdg-cache \
   /opt/miniconda3/envs/erg/bin/python -m milestone_3.run_experiment
+```
+
+Generate [Milestone 4 calibrated priors](milestone_4/README.md) without planning:
+
+```bash
+env MPLCONFIGDIR=/private/tmp/mplconfig XDG_CACHE_HOME=/private/tmp/xdg-cache \
+  /opt/miniconda3/envs/erg/bin/python -m milestone_4.calibrate_priors
 ```

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": {
+    "all_26_plans_valid": true,
+    "paired_targets_match_saved_inputs": true,
+    "episode_counts_match_plan_validity": true,
+    "paired_outcome_count_correct": true,
+    "initial_states_match": true,
+    "terminal_states_match": true
+  },
+  "valid_plans": 26,
+  "total_plans": 26,
+  "episodes": 3328,
+  "paired_outcomes": 3072,
+  "note": "Seeds vary evaluation targets only; each deterministic plan is reused across target seeds."
+}
