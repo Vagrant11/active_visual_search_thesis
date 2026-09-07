@@ -1,0 +1,197 @@
+{
+  "scenes": [
+    {
+      "scene_id": "cx0.25_cy0.25_layoutA",
+      "center": [
+        0.25,
+        0.25
+      ],
+      "layout": "A",
+      "obstacles_within_workspace": true,
+      "nonempty_support": true,
+      "support_connected": true,
+      "start_state_feasible": true,
+      "terminal_state_feasible": true,
+      "start_terminal_connected_via_free_space": true,
+      "error_geometry_valid": true,
+      "passed": true
+    },
+    {
+      "scene_id": "cx0.25_cy0.25_layoutB",
+      "center": [
+        0.25,
+        0.25
+      ],
+      "layout": "B",
+      "obstacles_within_workspace": true,
+      "nonempty_support": true,
+      "support_connected": true,
+      "start_state_feasible": true,
+      "terminal_state_feasible": true,
+      "start_terminal_connected_via_free_space": true,
+      "error_geometry_valid": true,
+      "passed": true
+    },
+    {
+      "scene_id": "cx0.25_cy0.25_layoutC",
+      "center": [
+        0.25,
+        0.25
+      ],
+      "layout": "C",
+      "obstacles_within_workspace": true,
+      "nonempty_support": true,
+      "support_connected": true,
+      "start_state_feasible": true,
+      "terminal_state_feasible": true,
+      "start_terminal_connected_via_free_space": true,
+      "error_geometry_valid": true,
+      "passed": true
+    },
+    {
+      "scene_id": "cx0.25_cy0.75_layoutA",
+      "center": [
+        0.25,
+        0.75
+      ],
+      "layout": "A",
+      "obstacles_within_workspace": true,
+      "nonempty_support": true,
+      "support_connected": true,
+      "start_state_feasible": true,
+      "terminal_state_feasible": true,
+      "start_terminal_connected_via_free_space": true,
+      "error_geometry_valid": true,
+      "passed": true
+    },
+    {
+      "scene_id": "cx0.25_cy0.75_layoutB",
+      "center": [
+        0.25,
+        0.75
+      ],
+      "layout": "B",
+      "obstacles_within_workspace": true,
+      "nonempty_support": true,
+      "support_connected": true,
+      "start_state_feasible": true,
+      "terminal_state_feasible": true,
+      "start_terminal_connected_via_free_space": true,
+      "error_geometry_valid": true,
+      "passed": true
+    },
+    {
+      "scene_id": "cx0.25_cy0.75_layoutC",
+      "center": [
+        0.25,
+        0.75
+      ],
+      "layout": "C",
+      "obstacles_within_workspace": true,
+      "nonempty_support": true,
+      "support_connected": true,
+      "start_state_feasible": true,
+      "terminal_state_feasible": true,
+      "start_terminal_connected_via_free_space": true,
+      "error_geometry_valid": true,
+      "passed": true
+    },
+    {
+      "scene_id": "cx0.75_cy0.25_layoutA",
+      "center": [
+        0.75,
+        0.25
+      ],
+      "layout": "A",
+      "obstacles_within_workspace": true,
+      "nonempty_support": true,
+      "support_connected": true,
+      "start_state_feasible": true,
+      "terminal_state_feasible": true,
+      "start_terminal_connected_via_free_space": true,
+      "error_geometry_valid": true,
+      "passed": true
+    },
+    {
+      "scene_id": "cx0.75_cy0.25_layoutB",
+      "center": [
+        0.75,
+        0.25
+      ],
+      "layout": "B",
+      "obstacles_within_workspace": true,
+      "nonempty_support": true,
+      "support_connected": true,
+      "start_state_feasible": true,
+      "terminal_state_feasible": true,
+      "start_terminal_connected_via_free_space": true,
+      "error_geometry_valid": true,
+      "passed": true
+    },
+    {
+      "scene_id": "cx0.75_cy0.25_layoutC",
+      "center": [
+        0.75,
+        0.25
+      ],
+      "layout": "C",
+      "obstacles_within_workspace": true,
+      "nonempty_support": true,
+      "support_connected": true,
+      "start_state_feasible": true,
+      "terminal_state_feasible": true,
+      "start_terminal_connected_via_free_space": true,
+      "error_geometry_valid": true,
+      "passed": true
+    },
+    {
+      "scene_id": "cx0.75_cy0.75_layoutA",
+      "center": [
+        0.75,
+        0.75
+      ],
+      "layout": "A",
+      "obstacles_within_workspace": true,
+      "nonempty_support": true,
+      "support_connected": true,
+      "start_state_feasible": true,
+      "terminal_state_feasible": true,
+      "start_terminal_connected_via_free_space": true,
+      "error_geometry_valid": true,
+      "passed": true
+    },
+    {
+      "scene_id": "cx0.75_cy0.75_layoutB",
+      "center": [
+        0.75,
+        0.75
+      ],
+      "layout": "B",
+      "obstacles_within_workspace": true,
+      "nonempty_support": true,
+      "support_connected": true,
+      "start_state_feasible": true,
+      "terminal_state_feasible": true,
+      "start_terminal_connected_via_free_space": true,
+      "error_geometry_valid": true,
+      "passed": true
+    },
+    {
+      "scene_id": "cx0.75_cy0.75_layoutC",
+      "center": [
+        0.75,
+        0.75
+      ],
+      "layout": "C",
+      "obstacles_within_workspace": true,
+      "nonempty_support": true,
+      "support_connected": true,
+      "start_state_feasible": true,
+      "terminal_state_feasible": true,
+      "start_terminal_connected_via_free_space": true,
+      "error_geometry_valid": true,
+      "passed": true
+    }
+  ],
+  "all_scenes_passed": true
+}

@@ -1,0 +1,2052 @@
+{
+  "protocol_id": "m4-controlled-prior-v2-candidate",
+  "scenes": [
+    {
+      "scene_id": "cx0.25_cy0.25_layoutA",
+      "center": [
+        0.25,
+        0.25
+      ],
+      "layout": "A",
+      "obstacles": [],
+      "directions": {
+        "x": [
+          1.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          1.0
+        ]
+      },
+      "conditions": [
+        {
+          "prior_id": "oracle",
+          "family": "oracle",
+          "direction": null,
+          "target_js_nats": 0.0
+        },
+        {
+          "prior_id": "uniform_prior_baseline",
+          "family": "uniform_prior_baseline",
+          "direction": null,
+          "target_js_nats": null
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.05",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.1",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.15",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.05",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.1",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.15",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.05",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.1",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.15",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.05",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.1",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.15",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.05",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.1",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.15",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.15
+        }
+      ],
+      "conditions_per_gamma": 23
+    },
+    {
+      "scene_id": "cx0.25_cy0.25_layoutB",
+      "center": [
+        0.25,
+        0.25
+      ],
+      "layout": "B",
+      "obstacles": [
+        {
+          "xmin": 0.43,
+          "ymin": 0.43,
+          "xmax": 0.57,
+          "ymax": 0.57
+        }
+      ],
+      "directions": {
+        "x": [
+          1.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          1.0
+        ]
+      },
+      "conditions": [
+        {
+          "prior_id": "oracle",
+          "family": "oracle",
+          "direction": null,
+          "target_js_nats": 0.0
+        },
+        {
+          "prior_id": "uniform_prior_baseline",
+          "family": "uniform_prior_baseline",
+          "direction": null,
+          "target_js_nats": null
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.05",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.1",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.15",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.05",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.1",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.15",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.05",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.1",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.15",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.05",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.1",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.15",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.05",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.1",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.15",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.15
+        }
+      ],
+      "conditions_per_gamma": 23
+    },
+    {
+      "scene_id": "cx0.25_cy0.25_layoutC",
+      "center": [
+        0.25,
+        0.25
+      ],
+      "layout": "C",
+      "obstacles": [
+        {
+          "xmin": 0.35,
+          "ymin": 0.55,
+          "xmax": 0.45,
+          "ymax": 0.65
+        },
+        {
+          "xmin": 0.55,
+          "ymin": 0.35,
+          "xmax": 0.65,
+          "ymax": 0.45
+        }
+      ],
+      "directions": {
+        "x": [
+          1.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          1.0
+        ]
+      },
+      "conditions": [
+        {
+          "prior_id": "oracle",
+          "family": "oracle",
+          "direction": null,
+          "target_js_nats": 0.0
+        },
+        {
+          "prior_id": "uniform_prior_baseline",
+          "family": "uniform_prior_baseline",
+          "direction": null,
+          "target_js_nats": null
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.05",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.1",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.15",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.05",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.1",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.15",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.05",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.1",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.15",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.05",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.1",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.15",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.05",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.1",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.15",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.15
+        }
+      ],
+      "conditions_per_gamma": 23
+    },
+    {
+      "scene_id": "cx0.25_cy0.75_layoutA",
+      "center": [
+        0.25,
+        0.75
+      ],
+      "layout": "A",
+      "obstacles": [],
+      "directions": {
+        "x": [
+          1.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          -1.0
+        ]
+      },
+      "conditions": [
+        {
+          "prior_id": "oracle",
+          "family": "oracle",
+          "direction": null,
+          "target_js_nats": 0.0
+        },
+        {
+          "prior_id": "uniform_prior_baseline",
+          "family": "uniform_prior_baseline",
+          "direction": null,
+          "target_js_nats": null
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.05",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.1",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.15",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.05",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.1",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.15",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.05",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.1",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.15",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.05",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.1",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.15",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.05",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.1",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.15",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.15
+        }
+      ],
+      "conditions_per_gamma": 23
+    },
+    {
+      "scene_id": "cx0.25_cy0.75_layoutB",
+      "center": [
+        0.25,
+        0.75
+      ],
+      "layout": "B",
+      "obstacles": [
+        {
+          "xmin": 0.43,
+          "ymin": 0.43,
+          "xmax": 0.57,
+          "ymax": 0.57
+        }
+      ],
+      "directions": {
+        "x": [
+          1.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          -1.0
+        ]
+      },
+      "conditions": [
+        {
+          "prior_id": "oracle",
+          "family": "oracle",
+          "direction": null,
+          "target_js_nats": 0.0
+        },
+        {
+          "prior_id": "uniform_prior_baseline",
+          "family": "uniform_prior_baseline",
+          "direction": null,
+          "target_js_nats": null
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.05",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.1",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.15",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.05",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.1",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.15",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.05",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.1",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.15",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.05",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.1",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.15",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.05",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.1",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.15",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.15
+        }
+      ],
+      "conditions_per_gamma": 23
+    },
+    {
+      "scene_id": "cx0.25_cy0.75_layoutC",
+      "center": [
+        0.25,
+        0.75
+      ],
+      "layout": "C",
+      "obstacles": [
+        {
+          "xmin": 0.35,
+          "ymin": 0.55,
+          "xmax": 0.45,
+          "ymax": 0.65
+        },
+        {
+          "xmin": 0.55,
+          "ymin": 0.35,
+          "xmax": 0.65,
+          "ymax": 0.45
+        }
+      ],
+      "directions": {
+        "x": [
+          1.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          -1.0
+        ]
+      },
+      "conditions": [
+        {
+          "prior_id": "oracle",
+          "family": "oracle",
+          "direction": null,
+          "target_js_nats": 0.0
+        },
+        {
+          "prior_id": "uniform_prior_baseline",
+          "family": "uniform_prior_baseline",
+          "direction": null,
+          "target_js_nats": null
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.05",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.1",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.15",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.05",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.1",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.15",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.05",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.1",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.15",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.05",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.1",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.15",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.05",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.1",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.15",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.15
+        }
+      ],
+      "conditions_per_gamma": 23
+    },
+    {
+      "scene_id": "cx0.75_cy0.25_layoutA",
+      "center": [
+        0.75,
+        0.25
+      ],
+      "layout": "A",
+      "obstacles": [],
+      "directions": {
+        "x": [
+          -1.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          1.0
+        ]
+      },
+      "conditions": [
+        {
+          "prior_id": "oracle",
+          "family": "oracle",
+          "direction": null,
+          "target_js_nats": 0.0
+        },
+        {
+          "prior_id": "uniform_prior_baseline",
+          "family": "uniform_prior_baseline",
+          "direction": null,
+          "target_js_nats": null
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.05",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.1",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.15",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.05",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.1",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.15",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.05",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.1",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.15",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.05",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.1",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.15",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.05",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.1",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.15",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.15
+        }
+      ],
+      "conditions_per_gamma": 23
+    },
+    {
+      "scene_id": "cx0.75_cy0.25_layoutB",
+      "center": [
+        0.75,
+        0.25
+      ],
+      "layout": "B",
+      "obstacles": [
+        {
+          "xmin": 0.43,
+          "ymin": 0.43,
+          "xmax": 0.57,
+          "ymax": 0.57
+        }
+      ],
+      "directions": {
+        "x": [
+          -1.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          1.0
+        ]
+      },
+      "conditions": [
+        {
+          "prior_id": "oracle",
+          "family": "oracle",
+          "direction": null,
+          "target_js_nats": 0.0
+        },
+        {
+          "prior_id": "uniform_prior_baseline",
+          "family": "uniform_prior_baseline",
+          "direction": null,
+          "target_js_nats": null
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.05",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.1",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.15",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.05",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.1",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.15",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.05",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.1",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.15",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.05",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.1",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.15",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.05",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.1",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.15",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.15
+        }
+      ],
+      "conditions_per_gamma": 23
+    },
+    {
+      "scene_id": "cx0.75_cy0.25_layoutC",
+      "center": [
+        0.75,
+        0.25
+      ],
+      "layout": "C",
+      "obstacles": [
+        {
+          "xmin": 0.35,
+          "ymin": 0.55,
+          "xmax": 0.45,
+          "ymax": 0.65
+        },
+        {
+          "xmin": 0.55,
+          "ymin": 0.35,
+          "xmax": 0.65,
+          "ymax": 0.45
+        }
+      ],
+      "directions": {
+        "x": [
+          -1.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          1.0
+        ]
+      },
+      "conditions": [
+        {
+          "prior_id": "oracle",
+          "family": "oracle",
+          "direction": null,
+          "target_js_nats": 0.0
+        },
+        {
+          "prior_id": "uniform_prior_baseline",
+          "family": "uniform_prior_baseline",
+          "direction": null,
+          "target_js_nats": null
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.05",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.1",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.15",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.05",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.1",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.15",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.05",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.1",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.15",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.05",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.1",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.15",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.05",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.1",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.15",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.15
+        }
+      ],
+      "conditions_per_gamma": 23
+    },
+    {
+      "scene_id": "cx0.75_cy0.75_layoutA",
+      "center": [
+        0.75,
+        0.75
+      ],
+      "layout": "A",
+      "obstacles": [],
+      "directions": {
+        "x": [
+          -1.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          -1.0
+        ]
+      },
+      "conditions": [
+        {
+          "prior_id": "oracle",
+          "family": "oracle",
+          "direction": null,
+          "target_js_nats": 0.0
+        },
+        {
+          "prior_id": "uniform_prior_baseline",
+          "family": "uniform_prior_baseline",
+          "direction": null,
+          "target_js_nats": null
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.05",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.1",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.15",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.05",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.1",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.15",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.05",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.1",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.15",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.05",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.1",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.15",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.05",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.1",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.15",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.15
+        }
+      ],
+      "conditions_per_gamma": 23
+    },
+    {
+      "scene_id": "cx0.75_cy0.75_layoutB",
+      "center": [
+        0.75,
+        0.75
+      ],
+      "layout": "B",
+      "obstacles": [
+        {
+          "xmin": 0.43,
+          "ymin": 0.43,
+          "xmax": 0.57,
+          "ymax": 0.57
+        }
+      ],
+      "directions": {
+        "x": [
+          -1.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          -1.0
+        ]
+      },
+      "conditions": [
+        {
+          "prior_id": "oracle",
+          "family": "oracle",
+          "direction": null,
+          "target_js_nats": 0.0
+        },
+        {
+          "prior_id": "uniform_prior_baseline",
+          "family": "uniform_prior_baseline",
+          "direction": null,
+          "target_js_nats": null
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.05",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.1",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.15",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.05",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.1",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.15",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.05",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.1",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.15",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.05",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.1",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.15",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.05",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.1",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.15",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.15
+        }
+      ],
+      "conditions_per_gamma": 23
+    },
+    {
+      "scene_id": "cx0.75_cy0.75_layoutC",
+      "center": [
+        0.75,
+        0.75
+      ],
+      "layout": "C",
+      "obstacles": [
+        {
+          "xmin": 0.35,
+          "ymin": 0.55,
+          "xmax": 0.45,
+          "ymax": 0.65
+        },
+        {
+          "xmin": 0.55,
+          "ymin": 0.35,
+          "xmax": 0.65,
+          "ymax": 0.45
+        }
+      ],
+      "directions": {
+        "x": [
+          -1.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          -1.0
+        ]
+      },
+      "conditions": [
+        {
+          "prior_id": "oracle",
+          "family": "oracle",
+          "direction": null,
+          "target_js_nats": 0.0
+        },
+        {
+          "prior_id": "uniform_prior_baseline",
+          "family": "uniform_prior_baseline",
+          "direction": null,
+          "target_js_nats": null
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.05",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.1",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "diffuse_blur_js_0.15",
+          "family": "diffuse_blur",
+          "direction": null,
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.05",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.1",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_x_js_0.15",
+          "family": "spatial_shift",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.05",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.1",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_x_js_0.15",
+          "family": "false_hotspot",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_x_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "x",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.05",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.1",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "spatial_shift_y_js_0.15",
+          "family": "spatial_shift",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.05",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.1",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_hotspot_y_js_0.15",
+          "family": "false_hotspot",
+          "direction": "y",
+          "target_js_nats": 0.15
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.05",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.05
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.1",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.1
+        },
+        {
+          "prior_id": "false_negative_suppression_y_js_0.15",
+          "family": "false_negative_suppression",
+          "direction": "y",
+          "target_js_nats": 0.15
+        }
+      ],
+      "conditions_per_gamma": 23
+    }
+  ],
+  "scene_count": 12,
+  "gammas": [
+    0.1,
+    0.05
+  ],
+  "conditions_per_scene_per_gamma": 23,
+  "projected_plan_count": 552,
+  "js_levels": [
+    0.05,
+    0.1,
+    0.15
+  ],
+  "initial_state": [
+    0.1,
+    0.1,
+    0.0,
+    0.0
+  ],
+  "terminal_state": [
+    0.9,
+    0.9,
+    0.0,
+    0.0
+  ],
+  "grid_size": 40,
+  "sigma": 0.13,
+  "background": 0.03,
+  "suppression_radius": 0.25,
+  "suppression_offset": 0.1,
+  "max_shift": 0.75,
+  "primary_endpoints": [
+    "exact_grid_weighted_detection_probability_at_budget",
+    "exact_grid_weighted_detection_time_distribution_conditional_mean_median"
+  ],
+  "secondary_endpoints": [
+    "sampled_success_timeout_rate",
+    "paired_outcomes",
+    "free_space_coverage",
+    "true_prior_mass_coverage",
+    "entropy_nats",
+    "trajectory_length"
+  ],
+  "diagnostic_endpoints": [
+    "uniform_weighted_reweighting_of_saved_trajectory"
+  ],
+  "estimand_note": "Primary contrasts are reported per (family, gamma) cell without pooling gamma; family x gamma interaction on the primary exact-grid endpoints is part of the declared estimand, not a post-hoc addition.",
+  "uniform_prior_baseline_note": "A distinct planned condition per scene/gamma: the planner receives a uniform prior over the scene's supported free-cell mask and produces its own trajectory, unlike the pilot's uniform-weighted diagnostic which reweights an existing oracle-conditioned trajectory."
+}

@@ -5,6 +5,13 @@ suite. It does not change `protocol.py`, the v1 generator, the frozen planner,
 or existing results. The final scene manifest, common JS levels and evaluation
 sample size must pass the gates below before a formal run is launched.
 
+**Preflight status:** the manifest/feasibility/JS-calibration preflight and a small
+set of geometry-selected engineering-only planner checks have been run; see
+[PROTOCOL_V2_PREFLIGHT_REPORT.md](results/preflight/PROTOCOL_V2_PREFLIGHT_REPORT.md).
+This updates the plan count below (23 conditions/scene/gamma, including the true
+uniform-prior planning baseline) and gate items 1 and 3. The formal 552-plan suite
+itself has **not** been launched.
+
 ## Question and motivation
 
 At matched JS divergence, how do error structures change search success and
@@ -120,8 +127,21 @@ trajectory, isolates which cells a trajectory physically visited from how much t
 probability mass it captured. Report it alongside the primary true-prior-weighted result for
 every block, but do not treat it as a confirmatory or ranking metric on its own. It is not a
 true uniform-prior baseline: that would require planning a fresh trajectory under a uniform
-prior rather than reweighting the existing one, and is deferred to a future formal-suite
-preflight or design revision, not computed by this reweighting.
+prior rather than reweighting the existing one.
+
+**A distinct planned condition: the true uniform-prior planning baseline.** Every scene now
+carries an explicit `uniform_prior_baseline` condition (`milestone_4/scene_manifest.py:uniform_prior_baseline`):
+a uniform distribution over the scene's supported free-cell mask, handed to
+`milestone_3.planner.plan` the same way the oracle and error priors are, producing its own
+planned trajectory rather than reweighting an existing one. It is direction-independent and
+shared per scene/gamma like oracle and blur, adding one condition per scene/gamma (23 total,
+see "Scale and freeze gates"). Its own exact full-grid detection probability and
+true-prior-weighted T_find should be reported per scene/gamma alongside oracle's, as a
+planned-trajectory contrast distinct from the reweighting diagnostic above. Numerical
+feasibility (solver validity, collision-free, wall-clock cost) for this condition was
+confirmed by one geometry-selected engineering check (`layoutB_uniform_g010`); see
+[PROTOCOL_V2_PREFLIGHT_REPORT.md](results/preflight/PROTOCOL_V2_PREFLIGHT_REPORT.md). This is a
+feasibility check only, not a comparison of which condition performs better.
 
 This ordering reverses the v1 pilot draft's original stance (which held sampled metrics
 primary and full-grid evaluation supplemental). The reversal is justified directly by the
@@ -174,12 +194,18 @@ reported output. This is not continuous-space ground truth or an extra
 independent replicate; it separates sampling discrepancies from trajectory
 effects using the same saved trajectory the sampled metrics are computed from.
 
+**Estimand.** The primary contrasts are the exact full-grid detection probability and
+true-prior-weighted T_find, per (family, gamma) cell, never pooled across gamma (see item 3
+below). The family × gamma interaction on these primary endpoints is therefore part of the
+declared estimand from the outset, not a post-hoc addition motivated by an observed pattern.
+
 ## Contrasts and aggregation
 
-1. For every scene/geometry/JS/gamma block, report all four families plus oracle:
+1. For every scene/geometry/JS/gamma block, report all four families plus oracle and the
+   true uniform-prior planning baseline (see "Primary endpoint declaration"):
    exact full-grid detection probability and true-prior-weighted mean/median
-   T_find (primary; see "Primary endpoint declaration"); the uniform-weighted
-   diagnostic of both; success/timeout rate and successful-only
+   T_find (primary); the uniform-weighted diagnostic of both (for the four
+   error families and oracle); success/timeout rate and successful-only
    mean/median T_find (secondary, sampled); coverage fraction; trajectory
    length; prior entropy; and planner validity.
 2. Reconstruct oracle-versus-error pairs and all six unordered family-pair
@@ -238,19 +264,29 @@ affected comparisons under that revision.
 ## Scale and freeze gates
 
 With two geometry blocks, each scene has, per gamma: 18 distinct shift/hotspot/
-suppression priors (3 families × 3 levels × 2 geometries), three blur priors and
-one oracle, or 22 distinct plans. The proposed suite therefore has
-**12 × 2 × 22 = 528 plans**. Sharing blur/oracle plans avoids artificial
-replication. Target seeds change evaluation workload, not this plan count.
+suppression priors (3 families × 3 levels × 2 geometries), three blur priors,
+one oracle and one true uniform-prior planning baseline, or 23 distinct plans.
+The proposed suite therefore has **12 × 2 × 23 = 552 plans**. Sharing
+blur/oracle/uniform-prior-baseline plans across both direction blocks avoids
+artificial replication. Target seeds change evaluation workload, not this plan
+count.
 
-1. Implement v2 scene/error manifests and run calibration/geometry preflight
-   only. Finalize common JS levels before viewing any new search outcomes.
+1. **Done.** Implement v2 scene/error manifests and run calibration/geometry
+   preflight only, before viewing any new search outcomes: see
+   [PROTOCOL_V2_PREFLIGHT_REPORT.md](results/preflight/PROTOCOL_V2_PREFLIGHT_REPORT.md).
+   All 12 candidate scenes passed the geometry/support/feasibility audit; all 252
+   scene/direction-block/family/level JS-calibration rows matched at the existing
+   0.05/0.10/0.15 nat levels, so no level revision was needed.
 2. Validate saved-input pairing and unchanged evaluator semantics on synthetic
    cases. Measure evaluation cost, including the primary full-grid calculation.
-3. Use a separately labelled engineering check for solver feasibility/runtime;
-   select any checked blocks by geometry criteria, not pilot performance.
-   Archive the check and exclude any data used to tune the design from later
-   confirmatory claims. The present draft does not launch this check.
+3. **Partially done.** A separately labelled engineering check for solver
+   feasibility/runtime was run on 5 blocks selected by geometry/gamma/prior-type
+   criteria fixed before running (see the preflight report): one plan per
+   obstacle layout, one at the tighter gamma bound, one confirming the true
+   uniform-prior planning baseline is feasible. All 5 were valid and
+   collision-free, wall-clock 4.4-8.6s each. This does not itself justify or
+   tune the formal suite's per-scene/per-family selection, and does not
+   constitute a runtime check of the full 552-plan suite at scale.
 4. Review target-sampling precision requirements and resources; fix final seed
    count and targets per seed, and record their justification. No optional
    stopping based on whether a desired ranking has appeared.
@@ -258,4 +294,5 @@ replication. Target seeds change evaluation workload, not this plan count.
    contrasts, denominators and failure handling in a dedicated commit. Only
    then launch the formal suite into a new output directory.
 
-The analysis accompanying this draft performs **zero new planning runs**.
+The analysis accompanying this draft performs **zero new planning runs**, aside
+from the 5 declared engineering-only checks in gate item 3 above.

@@ -1,0 +1,13 @@
+scene_id,center,layout,obstacles_within_workspace,nonempty_support,support_connected,start_state_feasible,terminal_state_feasible,start_terminal_connected_via_free_space,error_geometry_valid,passed
+cx0.25_cy0.25_layoutA,"(0.25, 0.25)",A,True,True,True,True,True,True,True,True
+cx0.25_cy0.25_layoutB,"(0.25, 0.25)",B,True,True,True,True,True,True,True,True
+cx0.25_cy0.25_layoutC,"(0.25, 0.25)",C,True,True,True,True,True,True,True,True
+cx0.25_cy0.75_layoutA,"(0.25, 0.75)",A,True,True,True,True,True,True,True,True
+cx0.25_cy0.75_layoutB,"(0.25, 0.75)",B,True,True,True,True,True,True,True,True
+cx0.25_cy0.75_layoutC,"(0.25, 0.75)",C,True,True,True,True,True,True,True,True
+cx0.75_cy0.25_layoutA,"(0.75, 0.25)",A,True,True,True,True,True,True,True,True
+cx0.75_cy0.25_layoutB,"(0.75, 0.25)",B,True,True,True,True,True,True,True,True
+cx0.75_cy0.25_layoutC,"(0.75, 0.25)",C,True,True,True,True,True,True,True,True
+cx0.75_cy0.75_layoutA,"(0.75, 0.75)",A,True,True,True,True,True,True,True,True
+cx0.75_cy0.75_layoutB,"(0.75, 0.75)",B,True,True,True,True,True,True,True,True
+cx0.75_cy0.75_layoutC,"(0.75, 0.75)",C,True,True,True,True,True,True,True,True

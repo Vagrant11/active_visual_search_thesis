@@ -1,0 +1,128 @@
+{
+  "declared_checks": [
+    {
+      "check_id": "layoutA_oracle_g010",
+      "scene_id": "cx0.25_cy0.25_layoutA",
+      "prior": "oracle",
+      "gamma": 0.1,
+      "rationale": "no-obstacle geometry baseline"
+    },
+    {
+      "check_id": "layoutB_oracle_g010",
+      "scene_id": "cx0.25_cy0.25_layoutB",
+      "prior": "oracle",
+      "gamma": 0.1,
+      "rationale": "single-rectangle geometry, matches v1's obstacle shape"
+    },
+    {
+      "check_id": "layoutC_oracle_g010",
+      "scene_id": "cx0.25_cy0.25_layoutC",
+      "prior": "oracle",
+      "gamma": 0.1,
+      "rationale": "two-rectangle geometry, hardest collision constraint set"
+    },
+    {
+      "check_id": "layoutB_oracle_g005",
+      "scene_id": "cx0.25_cy0.25_layoutB",
+      "prior": "oracle",
+      "gamma": 0.05,
+      "rationale": "tighter ergodicity bound, same scene as layoutB_oracle_g010"
+    },
+    {
+      "check_id": "layoutB_uniform_g010",
+      "scene_id": "cx0.25_cy0.25_layoutB",
+      "prior": "uniform_prior_baseline",
+      "gamma": 0.1,
+      "rationale": "true uniform-prior planning-baseline feasibility, same scene as layoutB_oracle_g010"
+    }
+  ],
+  "results": [
+    {
+      "check_id": "layoutA_oracle_g010",
+      "scene_id": "cx0.25_cy0.25_layoutA",
+      "prior": "oracle",
+      "gamma": 0.1,
+      "rationale": "no-obstacle geometry baseline",
+      "wall_seconds": 6.284234625,
+      "optimization_seconds": 5.150525915999999,
+      "planning_seconds_including_compile": 6.280719917,
+      "valid": true,
+      "solver_success": true,
+      "iterations": 148,
+      "max_equality_residual": 2.742361893126599e-12,
+      "max_inequality_violation": 3.87608833918307e-11,
+      "collision_free": true,
+      "tf": 3.3287601056735165
+    },
+    {
+      "check_id": "layoutB_oracle_g010",
+      "scene_id": "cx0.25_cy0.25_layoutB",
+      "prior": "oracle",
+      "gamma": 0.1,
+      "rationale": "single-rectangle geometry, matches v1's obstacle shape",
+      "wall_seconds": 7.790215291999999,
+      "optimization_seconds": 6.647761750000001,
+      "planning_seconds_including_compile": 7.786959083000001,
+      "valid": true,
+      "solver_success": true,
+      "iterations": 179,
+      "max_equality_residual": 1.992850329202156e-14,
+      "max_inequality_violation": 4.088493432696794e-12,
+      "collision_free": true,
+      "tf": 3.5296588200233967
+    },
+    {
+      "check_id": "layoutC_oracle_g010",
+      "scene_id": "cx0.25_cy0.25_layoutC",
+      "prior": "oracle",
+      "gamma": 0.1,
+      "rationale": "two-rectangle geometry, hardest collision constraint set",
+      "wall_seconds": 7.421840584,
+      "optimization_seconds": 7.181012082999999,
+      "planning_seconds_including_compile": 7.418482375,
+      "valid": true,
+      "solver_success": true,
+      "iterations": 182,
+      "max_equality_residual": 1.4988010832439613e-15,
+      "max_inequality_violation": 5.917488721252084e-14,
+      "collision_free": true,
+      "tf": 3.8534305188635116
+    },
+    {
+      "check_id": "layoutB_oracle_g005",
+      "scene_id": "cx0.25_cy0.25_layoutB",
+      "prior": "oracle",
+      "gamma": 0.05,
+      "rationale": "tighter ergodicity bound, same scene as layoutB_oracle_g010",
+      "wall_seconds": 8.613911457999999,
+      "optimization_seconds": 8.400372125,
+      "planning_seconds_including_compile": 8.6115325,
+      "valid": true,
+      "solver_success": true,
+      "iterations": 229,
+      "max_equality_residual": 3.3306690738754696e-15,
+      "max_inequality_violation": 8.551021002389803e-12,
+      "collision_free": true,
+      "tf": 4.375367568309029
+    },
+    {
+      "check_id": "layoutB_uniform_g010",
+      "scene_id": "cx0.25_cy0.25_layoutB",
+      "prior": "uniform_prior_baseline",
+      "gamma": 0.1,
+      "rationale": "true uniform-prior planning-baseline feasibility, same scene as layoutB_oracle_g010",
+      "wall_seconds": 4.358225542,
+      "optimization_seconds": 4.145849583,
+      "planning_seconds_including_compile": 4.355707292000002,
+      "valid": true,
+      "solver_success": true,
+      "iterations": 110,
+      "max_equality_residual": 6.661338147750939e-16,
+      "max_inequality_violation": 2.3144222649484902e-11,
+      "collision_free": true,
+      "tf": 3.994932261844465
+    }
+  ],
+  "complete": true,
+  "note": "Engineering-only feasibility/runtime checks; not a formal-suite result, not used to select or tune research conditions."
+}

@@ -1,0 +1,12 @@
+{
+  "frozen_m3_commit": "6e0bce5977f15c0d2686aa1ba09b8c7fcc7ee547",
+  "scene_count": 12,
+  "conditions_per_scene_per_gamma": 23,
+  "projected_plan_count": 552,
+  "feasibility_all_scenes_passed": true,
+  "js_reachability_rows": 252,
+  "js_reachability_all_matched": true,
+  "js_reachability_unattainable_rows": [],
+  "planner_imported": false,
+  "planner_calls": 0
+}
