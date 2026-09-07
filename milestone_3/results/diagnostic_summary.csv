@@ -1,0 +1,5 @@
+prior,gamma,episodes,successes,failures,timeout_count,success_rate,failure_rate,mean_t_find_success_only,median_t_find_success_only
+oracle,0.1,64,44,20,20,0.6875,0.3125,1.8295454545454546,1.35
+biased,0.1,64,54,10,10,0.84375,0.15625,4.149074074074074,3.625
+oracle,0.05,64,50,14,14,0.78125,0.21875,2.081,1.3
+biased,0.05,64,57,7,7,0.890625,0.109375,4.624561403508773,3.85

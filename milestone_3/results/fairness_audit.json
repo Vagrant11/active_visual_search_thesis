@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "checks": {
+    "same_target_for_each_episode_across_all_conditions": true,
+    "every_condition_has_all_paired_episode_ids": true,
+    "same_initial_robot_state_in_saved_trajectories": true,
+    "initial_state_matches_protocol": true,
+    "same_terminal_robot_state_in_saved_trajectories": true,
+    "same_obstacles": true,
+    "same_sensing_radius": true,
+    "same_fov": true,
+    "same_camera_scan_rate_and_initial_phase": true,
+    "single_target_sampling_seed_recorded": true
+  },
+  "conditions": [
+    {
+      "prior": "oracle",
+      "gamma": 0.1
+    },
+    {
+      "prior": "biased",
+      "gamma": 0.1
+    },
+    {
+      "prior": "oracle",
+      "gamma": 0.05
+    },
+    {
+      "prior": "biased",
+      "gamma": 0.05
+    }
+  ],
+  "recorded_seed": 7,
+  "environment": {
+    "obstacles": [
+      {
+        "xmin": 0.43,
+        "ymin": 0.43,
+        "xmax": 0.57,
+        "ymax": 0.57
+      }
+    ],
+    "camera": {
+      "sensing_radius": 0.25,
+      "fov_degrees": 90.0
+    },
+    "budget": 15.0,
+    "observation_dt": 0.05,
+    "scan_rate": 1.5707963267948966,
+    "clearance": 0.015
+  },
+  "saved_start_states": [
+    [
+      0.1,
+      0.1,
+      0.0,
+      0.0
+    ],
+    [
+      0.1,
+      0.1,
+      0.0,
+      0.0
+    ],
+    [
+      0.1,
+      0.1,
+      0.0,
+      0.0
+    ],
+    [
+      0.1,
+      0.1,
+      0.0,
+      0.0
+    ]
+  ],
+  "note": "Targets are sampled once before all plans and paired by episode ID. Trajectory differences are the intended consequence of changing the prior."
+}

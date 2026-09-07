@@ -22,6 +22,10 @@ milestone_1/
 milestone_2/
     Defines a simple 2D visibility simulator and computes first detection time
     for a target along a known camera trajectory.
+
+milestone_3/
+    Connects the reference time-optimal ergodic formulation to target-blind
+    camera execution and paired oracle-versus-biased-prior evaluation.
 ```
 
 ## Setup
@@ -37,4 +41,11 @@ Milestone 1 currently uses the local conda environment that has JAX installed:
 ```bash
 env MPLCONFIGDIR=/private/tmp/mplconfig XDG_CACHE_HOME=/private/tmp/xdg-cache \
   /opt/miniconda3/envs/erg/bin/python milestone_1/run_gamma_sweep.py
+```
+
+Run the new [Milestone 3 experiment](milestone_3/README.md):
+
+```bash
+env MPLCONFIGDIR=/private/tmp/mplconfig XDG_CACHE_HOME=/private/tmp/xdg-cache \
+  /opt/miniconda3/envs/erg/bin/python -m milestone_3.run_experiment
 ```

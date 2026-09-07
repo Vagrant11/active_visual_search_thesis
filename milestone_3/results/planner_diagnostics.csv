@@ -1,0 +1,5 @@
+prior,gamma,valid,feasible,solver_success,solver_message,iterations,finite,max_equality_residual,max_inequality_violation,collision_free,ergodicity,optimization_seconds,planning_seconds_including_compile,backend
+oracle,0.1,True,True,True,Optimization terminated successfully,262,True,5.271477698798321e-13,3.678307658461222e-13,True,0.10000000000036784,9.505492167,10.643016042,scipy-SLSQP / upstream formulation
+biased,0.1,True,True,True,Optimization terminated successfully,195,True,2.7769453403436728e-14,8.504856541247108e-11,True,0.10000000008504857,7.609393000000001,7.815778125000001,scipy-SLSQP / upstream formulation
+oracle,0.05,True,True,True,Optimization terminated successfully,258,True,2.665923037881157e-14,3.95422791732436e-11,True,0.05000000003954228,9.448530124999998,9.673858125000002,scipy-SLSQP / upstream formulation
+biased,0.05,True,True,True,Optimization terminated successfully,248,True,1.0135989270132484e-14,5.068708647248954e-11,True,0.05000000005068707,9.234461916,9.475099041,scipy-SLSQP / upstream formulation

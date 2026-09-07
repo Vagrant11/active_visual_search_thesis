@@ -1,0 +1,40 @@
+{
+  "seed": 7,
+  "episodes": 64,
+  "gammas": [
+    0.1,
+    0.05
+  ],
+  "nodes": 50,
+  "maxiter": 600,
+  "budget": 15.0,
+  "observation_dt": 0.05,
+  "output": "/Users/leofang/Desktop/active_visual_search_thesis/milestone_3/results",
+  "environment": {
+    "obstacles": [
+      {
+        "xmin": 0.43,
+        "ymin": 0.43,
+        "xmax": 0.57,
+        "ymax": 0.57
+      }
+    ],
+    "camera": {
+      "sensing_radius": 0.25,
+      "fov_degrees": 90.0
+    },
+    "budget": 15.0,
+    "observation_dt": 0.05,
+    "scan_rate": 1.5707963267948966,
+    "clearance": 0.015
+  },
+  "upstream_commit": "a243b3e8db2810e177667b8c822a6a3fff202d87",
+  "protocol": "fixed prior; pan theta(t)=pi*t/2; hold endpoint until budget",
+  "notes": "single scene; discrete target-cell probabilities; oracle knows distribution, not target",
+  "versions": {
+    "jax": "0.4.30",
+    "numpy": "2.0.2",
+    "scipy": "1.13.1",
+    "matplotlib": "3.9.4"
+  }
+}
