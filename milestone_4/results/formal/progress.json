@@ -1,0 +1,11 @@
+{
+  "updated_at_utc": "2026-09-08T08:15:31.922621+00:00",
+  "expected_plans": 552,
+  "completed_plans": 552,
+  "counts": {
+    "valid": 546,
+    "invalid": 6
+  },
+  "current_plan_id": "cx0.75_cy0.75_layoutC__gamma_0.05__false_negative_suppression_y_js_0.15",
+  "session_elapsed_seconds": 4662.7066445
+}

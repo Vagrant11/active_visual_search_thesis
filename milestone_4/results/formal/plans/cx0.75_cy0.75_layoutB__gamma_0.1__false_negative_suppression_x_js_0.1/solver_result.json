@@ -1,0 +1,19 @@
+{
+  "diagnostics": {
+    "valid": true,
+    "feasible": true,
+    "solver_success": true,
+    "solver_message": "Optimization terminated successfully",
+    "iterations": 302,
+    "finite": true,
+    "max_equality_residual": 1.2434497875801753e-14,
+    "max_inequality_violation": 2.47079093296243e-11,
+    "collision_free": true,
+    "ergodicity": 0.10000000002358991,
+    "optimization_seconds": 10.615219791,
+    "planning_seconds_including_compile": 11.662931125,
+    "backend": "scipy-SLSQP / upstream formulation"
+  },
+  "trajectory_sha256": "571f9e836f796d9e2d7247a9d398c9dfd0f801476e4775066b0d2bebb4d14668",
+  "saved_at_utc": "2026-09-08T08:04:08.173830+00:00"
+}

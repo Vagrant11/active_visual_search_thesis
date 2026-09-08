@@ -1,0 +1,12 @@
+{
+  "exact_detection_probability": 0.8895450705366621,
+  "exact_weighted_mean_t_find": 2.1670549602945957,
+  "exact_weighted_median_t_find": 2.2,
+  "uniform_detection_probability": 0.5822454308093994,
+  "uniform_weighted_mean_t_find": 2.140526905829597,
+  "uniform_weighted_median_t_find": 2.0,
+  "visible_free_fraction": 0.5822454308093994,
+  "oracle_probability_mass_covered": 0.8895450705366621,
+  "trajectory_length": 2.2722492184275658,
+  "prior_entropy_nats": 6.782370292068332
+}

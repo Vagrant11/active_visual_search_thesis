@@ -1,0 +1,13 @@
+{
+  "scene_id": "cx0.75_cy0.75_layoutB",
+  "gamma": 0.05,
+  "prior_id": "false_negative_suppression_x_js_0.1",
+  "family": "false_negative_suppression",
+  "direction": "x",
+  "target_js_nats": 0.1,
+  "plan_id": "cx0.75_cy0.75_layoutB__gamma_0.05__false_negative_suppression_x_js_0.1",
+  "started_at_utc": "2026-09-08T08:07:14.833712+00:00",
+  "attempt_count": 1,
+  "frozen_manifest_sha256": "76d6146d53d499b6965733154921070b9b05ae2aa326044838486a2b7bbab3a3",
+  "prior_sha256": "ac109b16adf3333e58f26661a4976f16291da0df31682a6c9b9e3d811531355d"
+}

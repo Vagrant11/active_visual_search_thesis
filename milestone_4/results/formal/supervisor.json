@@ -1,0 +1,4 @@
+{
+  "pid": 64255,
+  "command": "/opt/miniconda3/envs/erg/bin/python -u -m milestone_4.run_formal && /opt/miniconda3/envs/erg/bin/python -u -m milestone_4.audit_formal && /opt/miniconda3/envs/erg/bin/python -u -m milestone_4.analyze_formal"
+}

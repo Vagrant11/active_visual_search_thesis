@@ -1,0 +1,13 @@
+{
+  "scene_id": "cx0.75_cy0.25_layoutC",
+  "gamma": 0.1,
+  "prior_id": "oracle",
+  "family": "oracle",
+  "direction": null,
+  "target_js_nats": 0.0,
+  "plan_id": "cx0.75_cy0.25_layoutC__gamma_0.1__oracle",
+  "started_at_utc": "2026-09-08T07:49:32.935745+00:00",
+  "attempt_count": 1,
+  "frozen_manifest_sha256": "76d6146d53d499b6965733154921070b9b05ae2aa326044838486a2b7bbab3a3",
+  "prior_sha256": "b1be104bbea45287d377d69d069c52a70ad95da3180f66b9a3c7aeec68e79528"
+}

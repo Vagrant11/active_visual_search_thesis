@@ -1,0 +1,13 @@
+{
+  "scene_id": "cx0.75_cy0.75_layoutB",
+  "gamma": 0.1,
+  "prior_id": "false_hotspot_y_js_0.05",
+  "family": "false_hotspot",
+  "direction": "y",
+  "target_js_nats": 0.05,
+  "plan_id": "cx0.75_cy0.75_layoutB__gamma_0.1__false_hotspot_y_js_0.05",
+  "started_at_utc": "2026-09-08T08:04:38.633047+00:00",
+  "attempt_count": 1,
+  "frozen_manifest_sha256": "76d6146d53d499b6965733154921070b9b05ae2aa326044838486a2b7bbab3a3",
+  "prior_sha256": "84330ec665cdb9d1fe5ae3099b0a2375f63abc4cffe98bfb0b88d377df709811"
+}

@@ -1,0 +1,19 @@
+{
+  "diagnostics": {
+    "valid": false,
+    "feasible": false,
+    "solver_success": false,
+    "solver_message": "Positive directional derivative for linesearch",
+    "iterations": 167,
+    "finite": true,
+    "max_equality_residual": 0.14154796103887005,
+    "max_inequality_violation": 30.96653046453126,
+    "collision_free": true,
+    "ergodicity": 0.3711877295348989,
+    "optimization_seconds": 11.070321292000001,
+    "planning_seconds_including_compile": 12.053901708,
+    "backend": "scipy-SLSQP / upstream formulation"
+  },
+  "trajectory_sha256": "824d90446ce257f70f29a537a4607d57c7172916f5332ae51a4d6d1ae7eef7b0",
+  "saved_at_utc": "2026-09-08T07:31:13.480486+00:00"
+}

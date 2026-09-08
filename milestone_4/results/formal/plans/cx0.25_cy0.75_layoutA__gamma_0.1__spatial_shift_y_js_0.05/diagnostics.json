@@ -1,0 +1,15 @@
+{
+  "valid": true,
+  "feasible": true,
+  "solver_success": true,
+  "solver_message": "Optimization terminated successfully",
+  "iterations": 142,
+  "finite": true,
+  "max_equality_residual": 3.3688329903469594e-15,
+  "max_inequality_violation": 8.467893053420994e-12,
+  "collision_free": true,
+  "ergodicity": 0.10000000000846788,
+  "optimization_seconds": 4.702766416,
+  "planning_seconds_including_compile": 5.685835375,
+  "backend": "scipy-SLSQP / upstream formulation"
+}

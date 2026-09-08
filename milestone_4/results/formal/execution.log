@@ -1,0 +1,1179 @@
+[1/552] START cx0.25_cy0.25_layoutA__gamma_0.1__oracle
+[1/552] VALID counts={'valid': 1} elapsed=6.9s
+[2/552] START cx0.25_cy0.25_layoutA__gamma_0.1__uniform_prior_baseline
+[2/552] VALID counts={'valid': 2} elapsed=12.7s
+[3/552] START cx0.25_cy0.25_layoutA__gamma_0.1__diffuse_blur_js_0.05
+[3/552] VALID counts={'valid': 3} elapsed=19.8s
+[4/552] START cx0.25_cy0.25_layoutA__gamma_0.1__diffuse_blur_js_0.1
+[4/552] VALID counts={'valid': 4} elapsed=26.1s
+[5/552] START cx0.25_cy0.25_layoutA__gamma_0.1__diffuse_blur_js_0.15
+[5/552] VALID counts={'valid': 5} elapsed=33.1s
+[6/552] START cx0.25_cy0.25_layoutA__gamma_0.1__spatial_shift_x_js_0.05
+[6/552] VALID counts={'valid': 6} elapsed=39.1s
+[7/552] START cx0.25_cy0.25_layoutA__gamma_0.1__spatial_shift_x_js_0.1
+[7/552] VALID counts={'valid': 7} elapsed=47.0s
+[8/552] START cx0.25_cy0.25_layoutA__gamma_0.1__spatial_shift_x_js_0.15
+[8/552] VALID counts={'valid': 8} elapsed=55.2s
+[9/552] START cx0.25_cy0.25_layoutA__gamma_0.1__false_hotspot_x_js_0.05
+[9/552] VALID counts={'valid': 9} elapsed=62.5s
+[10/552] START cx0.25_cy0.25_layoutA__gamma_0.1__false_hotspot_x_js_0.1
+[10/552] VALID counts={'valid': 10} elapsed=69.1s
+[11/552] START cx0.25_cy0.25_layoutA__gamma_0.1__false_hotspot_x_js_0.15
+[11/552] VALID counts={'valid': 11} elapsed=77.9s
+[12/552] START cx0.25_cy0.25_layoutA__gamma_0.1__false_negative_suppression_x_js_0.05
+[12/552] VALID counts={'valid': 12} elapsed=86.1s
+[13/552] START cx0.25_cy0.25_layoutA__gamma_0.1__false_negative_suppression_x_js_0.1
+[13/552] VALID counts={'valid': 13} elapsed=93.1s
+[14/552] START cx0.25_cy0.25_layoutA__gamma_0.1__false_negative_suppression_x_js_0.15
+[14/552] VALID counts={'valid': 14} elapsed=100.3s
+[15/552] START cx0.25_cy0.25_layoutA__gamma_0.1__spatial_shift_y_js_0.05
+[15/552] VALID counts={'valid': 15} elapsed=107.5s
+[16/552] START cx0.25_cy0.25_layoutA__gamma_0.1__spatial_shift_y_js_0.1
+[16/552] VALID counts={'valid': 16} elapsed=113.4s
+[17/552] START cx0.25_cy0.25_layoutA__gamma_0.1__spatial_shift_y_js_0.15
+[17/552] VALID counts={'valid': 17} elapsed=119.4s
+[18/552] START cx0.25_cy0.25_layoutA__gamma_0.1__false_hotspot_y_js_0.05
+[18/552] VALID counts={'valid': 18} elapsed=126.5s
+[19/552] START cx0.25_cy0.25_layoutA__gamma_0.1__false_hotspot_y_js_0.1
+[19/552] VALID counts={'valid': 19} elapsed=133.1s
+[20/552] START cx0.25_cy0.25_layoutA__gamma_0.1__false_hotspot_y_js_0.15
+[20/552] VALID counts={'valid': 20} elapsed=141.9s
+[21/552] START cx0.25_cy0.25_layoutA__gamma_0.1__false_negative_suppression_y_js_0.05
+[21/552] VALID counts={'valid': 21} elapsed=150.7s
+[22/552] START cx0.25_cy0.25_layoutA__gamma_0.1__false_negative_suppression_y_js_0.1
+[22/552] VALID counts={'valid': 22} elapsed=158.4s
+[23/552] START cx0.25_cy0.25_layoutA__gamma_0.1__false_negative_suppression_y_js_0.15
+[23/552] VALID counts={'valid': 23} elapsed=165.6s
+[24/552] START cx0.25_cy0.25_layoutA__gamma_0.05__oracle
+[24/552] VALID counts={'valid': 24} elapsed=172.7s
+[25/552] START cx0.25_cy0.25_layoutA__gamma_0.05__uniform_prior_baseline
+[25/552] VALID counts={'valid': 25} elapsed=178.3s
+[26/552] START cx0.25_cy0.25_layoutA__gamma_0.05__diffuse_blur_js_0.05
+[26/552] VALID counts={'valid': 26} elapsed=184.2s
+[27/552] START cx0.25_cy0.25_layoutA__gamma_0.05__diffuse_blur_js_0.1
+[27/552] VALID counts={'valid': 27} elapsed=189.5s
+[28/552] START cx0.25_cy0.25_layoutA__gamma_0.05__diffuse_blur_js_0.15
+[28/552] VALID counts={'valid': 28} elapsed=194.9s
+[29/552] START cx0.25_cy0.25_layoutA__gamma_0.05__spatial_shift_x_js_0.05
+[29/552] VALID counts={'valid': 29} elapsed=202.6s
+[30/552] START cx0.25_cy0.25_layoutA__gamma_0.05__spatial_shift_x_js_0.1
+[30/552] VALID counts={'valid': 30} elapsed=212.7s
+[31/552] START cx0.25_cy0.25_layoutA__gamma_0.05__spatial_shift_x_js_0.15
+[31/552] VALID counts={'valid': 31} elapsed=223.6s
+[32/552] START cx0.25_cy0.25_layoutA__gamma_0.05__false_hotspot_x_js_0.05
+[32/552] VALID counts={'valid': 32} elapsed=230.0s
+[33/552] START cx0.25_cy0.25_layoutA__gamma_0.05__false_hotspot_x_js_0.1
+[33/552] VALID counts={'valid': 33} elapsed=237.4s
+[34/552] START cx0.25_cy0.25_layoutA__gamma_0.05__false_hotspot_x_js_0.15
+[34/552] VALID counts={'valid': 34} elapsed=243.2s
+[35/552] START cx0.25_cy0.25_layoutA__gamma_0.05__false_negative_suppression_x_js_0.05
+[35/552] VALID counts={'valid': 35} elapsed=249.0s
+[36/552] START cx0.25_cy0.25_layoutA__gamma_0.05__false_negative_suppression_x_js_0.1
+[36/552] VALID counts={'valid': 36} elapsed=254.4s
+[37/552] START cx0.25_cy0.25_layoutA__gamma_0.05__false_negative_suppression_x_js_0.15
+[37/552] VALID counts={'valid': 37} elapsed=266.2s
+[38/552] START cx0.25_cy0.25_layoutA__gamma_0.05__spatial_shift_y_js_0.05
+[38/552] VALID counts={'valid': 38} elapsed=273.8s
+[39/552] START cx0.25_cy0.25_layoutA__gamma_0.05__spatial_shift_y_js_0.1
+[39/552] VALID counts={'valid': 39} elapsed=282.7s
+[40/552] START cx0.25_cy0.25_layoutA__gamma_0.05__spatial_shift_y_js_0.15
+[40/552] VALID counts={'valid': 40} elapsed=294.8s
+[41/552] START cx0.25_cy0.25_layoutA__gamma_0.05__false_hotspot_y_js_0.05
+[41/552] VALID counts={'valid': 41} elapsed=303.1s
+[42/552] START cx0.25_cy0.25_layoutA__gamma_0.05__false_hotspot_y_js_0.1
+[42/552] VALID counts={'valid': 42} elapsed=310.3s
+[43/552] START cx0.25_cy0.25_layoutA__gamma_0.05__false_hotspot_y_js_0.15
+[43/552] VALID counts={'valid': 43} elapsed=320.3s
+[44/552] START cx0.25_cy0.25_layoutA__gamma_0.05__false_negative_suppression_y_js_0.05
+[44/552] VALID counts={'valid': 44} elapsed=327.0s
+[45/552] START cx0.25_cy0.25_layoutA__gamma_0.05__false_negative_suppression_y_js_0.1
+[45/552] VALID counts={'valid': 45} elapsed=334.8s
+[46/552] START cx0.25_cy0.25_layoutA__gamma_0.05__false_negative_suppression_y_js_0.15
+[46/552] VALID counts={'valid': 46} elapsed=344.2s
+[47/552] START cx0.25_cy0.25_layoutB__gamma_0.1__oracle
+[47/552] VALID counts={'valid': 47} elapsed=352.2s
+[48/552] START cx0.25_cy0.25_layoutB__gamma_0.1__uniform_prior_baseline
+[48/552] VALID counts={'valid': 48} elapsed=357.9s
+[49/552] START cx0.25_cy0.25_layoutB__gamma_0.1__diffuse_blur_js_0.05
+[49/552] VALID counts={'valid': 49} elapsed=366.0s
+[50/552] START cx0.25_cy0.25_layoutB__gamma_0.1__diffuse_blur_js_0.1
+[50/552] VALID counts={'valid': 50} elapsed=372.1s
+[51/552] START cx0.25_cy0.25_layoutB__gamma_0.1__diffuse_blur_js_0.15
+[51/552] VALID counts={'valid': 51} elapsed=380.3s
+[52/552] START cx0.25_cy0.25_layoutB__gamma_0.1__spatial_shift_x_js_0.05
+[52/552] VALID counts={'valid': 52} elapsed=390.1s
+[53/552] START cx0.25_cy0.25_layoutB__gamma_0.1__spatial_shift_x_js_0.1
+[53/552] VALID counts={'valid': 53} elapsed=396.5s
+[54/552] START cx0.25_cy0.25_layoutB__gamma_0.1__spatial_shift_x_js_0.15
+[54/552] VALID counts={'valid': 54} elapsed=402.7s
+[55/552] START cx0.25_cy0.25_layoutB__gamma_0.1__false_hotspot_x_js_0.05
+[55/552] VALID counts={'valid': 55} elapsed=410.3s
+[56/552] START cx0.25_cy0.25_layoutB__gamma_0.1__false_hotspot_x_js_0.1
+[56/552] VALID counts={'valid': 56} elapsed=416.6s
+[57/552] START cx0.25_cy0.25_layoutB__gamma_0.1__false_hotspot_x_js_0.15
+[57/552] VALID counts={'valid': 57} elapsed=426.2s
+[58/552] START cx0.25_cy0.25_layoutB__gamma_0.1__false_negative_suppression_x_js_0.05
+[58/552] VALID counts={'valid': 58} elapsed=432.9s
+[59/552] START cx0.25_cy0.25_layoutB__gamma_0.1__false_negative_suppression_x_js_0.1
+[59/552] VALID counts={'valid': 59} elapsed=440.3s
+[60/552] START cx0.25_cy0.25_layoutB__gamma_0.1__false_negative_suppression_x_js_0.15
+[60/552] VALID counts={'valid': 60} elapsed=448.2s
+[61/552] START cx0.25_cy0.25_layoutB__gamma_0.1__spatial_shift_y_js_0.05
+[61/552] VALID counts={'valid': 61} elapsed=458.2s
+[62/552] START cx0.25_cy0.25_layoutB__gamma_0.1__spatial_shift_y_js_0.1
+[62/552] VALID counts={'valid': 62} elapsed=467.7s
+[63/552] START cx0.25_cy0.25_layoutB__gamma_0.1__spatial_shift_y_js_0.15
+[63/552] VALID counts={'valid': 63} elapsed=478.8s
+[64/552] START cx0.25_cy0.25_layoutB__gamma_0.1__false_hotspot_y_js_0.05
+[64/552] VALID counts={'valid': 64} elapsed=489.8s
+[65/552] START cx0.25_cy0.25_layoutB__gamma_0.1__false_hotspot_y_js_0.1
+[65/552] VALID counts={'valid': 65} elapsed=497.0s
+[66/552] START cx0.25_cy0.25_layoutB__gamma_0.1__false_hotspot_y_js_0.15
+[66/552] VALID counts={'valid': 66} elapsed=505.3s
+[67/552] START cx0.25_cy0.25_layoutB__gamma_0.1__false_negative_suppression_y_js_0.05
+[67/552] VALID counts={'valid': 67} elapsed=514.3s
+[68/552] START cx0.25_cy0.25_layoutB__gamma_0.1__false_negative_suppression_y_js_0.1
+[68/552] VALID counts={'valid': 68} elapsed=523.4s
+[69/552] START cx0.25_cy0.25_layoutB__gamma_0.1__false_negative_suppression_y_js_0.15
+[69/552] VALID counts={'valid': 69} elapsed=531.6s
+[70/552] START cx0.25_cy0.25_layoutB__gamma_0.05__oracle
+[70/552] VALID counts={'valid': 70} elapsed=541.7s
+[71/552] START cx0.25_cy0.25_layoutB__gamma_0.05__uniform_prior_baseline
+[71/552] VALID counts={'valid': 71} elapsed=547.0s
+[72/552] START cx0.25_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.05
+[72/552] VALID counts={'valid': 72} elapsed=560.2s
+[73/552] START cx0.25_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.1
+[73/552] VALID counts={'valid': 73} elapsed=566.5s
+[74/552] START cx0.25_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.15
+[74/552] VALID counts={'valid': 74} elapsed=572.9s
+[75/552] START cx0.25_cy0.25_layoutB__gamma_0.05__spatial_shift_x_js_0.05
+[75/552] VALID counts={'valid': 75} elapsed=581.0s
+[76/552] START cx0.25_cy0.25_layoutB__gamma_0.05__spatial_shift_x_js_0.1
+[76/552] VALID counts={'valid': 76} elapsed=590.8s
+[77/552] START cx0.25_cy0.25_layoutB__gamma_0.05__spatial_shift_x_js_0.15
+[77/552] VALID counts={'valid': 77} elapsed=600.7s
+[78/552] START cx0.25_cy0.25_layoutB__gamma_0.05__false_hotspot_x_js_0.05
+[78/552] VALID counts={'valid': 78} elapsed=608.4s
+[79/552] START cx0.25_cy0.25_layoutB__gamma_0.05__false_hotspot_x_js_0.1
+[79/552] VALID counts={'valid': 79} elapsed=615.6s
+[80/552] START cx0.25_cy0.25_layoutB__gamma_0.05__false_hotspot_x_js_0.15
+[80/552] VALID counts={'valid': 80} elapsed=626.5s
+[81/552] START cx0.25_cy0.25_layoutB__gamma_0.05__false_negative_suppression_x_js_0.05
+[81/552] VALID counts={'valid': 81} elapsed=636.2s
+[82/552] START cx0.25_cy0.25_layoutB__gamma_0.05__false_negative_suppression_x_js_0.1
+[82/552] VALID counts={'valid': 82} elapsed=642.9s
+[83/552] START cx0.25_cy0.25_layoutB__gamma_0.05__false_negative_suppression_x_js_0.15
+[83/552] VALID counts={'valid': 83} elapsed=648.4s
+[84/552] START cx0.25_cy0.25_layoutB__gamma_0.05__spatial_shift_y_js_0.05
+[84/552] VALID counts={'valid': 84} elapsed=660.7s
+[85/552] START cx0.25_cy0.25_layoutB__gamma_0.05__spatial_shift_y_js_0.1
+[85/552] VALID counts={'valid': 85} elapsed=667.5s
+[86/552] START cx0.25_cy0.25_layoutB__gamma_0.05__spatial_shift_y_js_0.15
+[86/552] VALID counts={'valid': 86} elapsed=677.8s
+[87/552] START cx0.25_cy0.25_layoutB__gamma_0.05__false_hotspot_y_js_0.05
+[87/552] VALID counts={'valid': 87} elapsed=687.5s
+[88/552] START cx0.25_cy0.25_layoutB__gamma_0.05__false_hotspot_y_js_0.1
+[88/552] VALID counts={'valid': 88} elapsed=693.9s
+[89/552] START cx0.25_cy0.25_layoutB__gamma_0.05__false_hotspot_y_js_0.15
+[89/552] VALID counts={'valid': 89} elapsed=702.1s
+[90/552] START cx0.25_cy0.25_layoutB__gamma_0.05__false_negative_suppression_y_js_0.05
+[90/552] VALID counts={'valid': 90} elapsed=708.2s
+[91/552] START cx0.25_cy0.25_layoutB__gamma_0.05__false_negative_suppression_y_js_0.1
+[91/552] VALID counts={'valid': 91} elapsed=713.4s
+[92/552] START cx0.25_cy0.25_layoutB__gamma_0.05__false_negative_suppression_y_js_0.15
+[92/552] VALID counts={'valid': 92} elapsed=720.2s
+[93/552] START cx0.25_cy0.25_layoutC__gamma_0.1__oracle
+[93/552] VALID counts={'valid': 93} elapsed=728.8s
+[94/552] START cx0.25_cy0.25_layoutC__gamma_0.1__uniform_prior_baseline
+[94/552] VALID counts={'valid': 94} elapsed=734.5s
+[95/552] START cx0.25_cy0.25_layoutC__gamma_0.1__diffuse_blur_js_0.05
+[95/552] VALID counts={'valid': 95} elapsed=742.3s
+[96/552] START cx0.25_cy0.25_layoutC__gamma_0.1__diffuse_blur_js_0.1
+[96/552] VALID counts={'valid': 96} elapsed=751.2s
+[97/552] START cx0.25_cy0.25_layoutC__gamma_0.1__diffuse_blur_js_0.15
+[97/552] VALID counts={'valid': 97} elapsed=759.1s
+[98/552] START cx0.25_cy0.25_layoutC__gamma_0.1__spatial_shift_x_js_0.05
+[98/552] VALID counts={'valid': 98} elapsed=770.1s
+[99/552] START cx0.25_cy0.25_layoutC__gamma_0.1__spatial_shift_x_js_0.1
+[99/552] VALID counts={'valid': 99} elapsed=780.3s
+[100/552] START cx0.25_cy0.25_layoutC__gamma_0.1__spatial_shift_x_js_0.15
+[100/552] VALID counts={'valid': 100} elapsed=788.4s
+[101/552] START cx0.25_cy0.25_layoutC__gamma_0.1__false_hotspot_x_js_0.05
+[101/552] VALID counts={'valid': 101} elapsed=796.4s
+[102/552] START cx0.25_cy0.25_layoutC__gamma_0.1__false_hotspot_x_js_0.1
+[102/552] VALID counts={'valid': 102} elapsed=803.3s
+[103/552] START cx0.25_cy0.25_layoutC__gamma_0.1__false_hotspot_x_js_0.15
+[103/552] VALID counts={'valid': 103} elapsed=812.7s
+[104/552] START cx0.25_cy0.25_layoutC__gamma_0.1__false_negative_suppression_x_js_0.05
+[104/552] VALID counts={'valid': 104} elapsed=821.2s
+[105/552] START cx0.25_cy0.25_layoutC__gamma_0.1__false_negative_suppression_x_js_0.1
+[105/552] VALID counts={'valid': 105} elapsed=831.0s
+[106/552] START cx0.25_cy0.25_layoutC__gamma_0.1__false_negative_suppression_x_js_0.15
+[106/552] VALID counts={'valid': 106} elapsed=839.2s
+[107/552] START cx0.25_cy0.25_layoutC__gamma_0.1__spatial_shift_y_js_0.05
+[107/552] VALID counts={'valid': 107} elapsed=853.2s
+[108/552] START cx0.25_cy0.25_layoutC__gamma_0.1__spatial_shift_y_js_0.1
+[108/552] VALID counts={'valid': 108} elapsed=863.5s
+[109/552] START cx0.25_cy0.25_layoutC__gamma_0.1__spatial_shift_y_js_0.15
+[109/552] INVALID counts={'valid': 108, 'invalid': 1} elapsed=867.3s
+[110/552] START cx0.25_cy0.25_layoutC__gamma_0.1__false_hotspot_y_js_0.05
+[110/552] VALID counts={'valid': 109, 'invalid': 1} elapsed=879.9s
+[111/552] START cx0.25_cy0.25_layoutC__gamma_0.1__false_hotspot_y_js_0.1
+[111/552] VALID counts={'valid': 110, 'invalid': 1} elapsed=888.5s
+[112/552] START cx0.25_cy0.25_layoutC__gamma_0.1__false_hotspot_y_js_0.15
+[112/552] VALID counts={'valid': 111, 'invalid': 1} elapsed=906.1s
+[113/552] START cx0.25_cy0.25_layoutC__gamma_0.1__false_negative_suppression_y_js_0.05
+[113/552] VALID counts={'valid': 112, 'invalid': 1} elapsed=915.3s
+[114/552] START cx0.25_cy0.25_layoutC__gamma_0.1__false_negative_suppression_y_js_0.1
+[114/552] VALID counts={'valid': 113, 'invalid': 1} elapsed=922.4s
+[115/552] START cx0.25_cy0.25_layoutC__gamma_0.1__false_negative_suppression_y_js_0.15
+[115/552] VALID counts={'valid': 114, 'invalid': 1} elapsed=928.8s
+[116/552] START cx0.25_cy0.25_layoutC__gamma_0.05__oracle
+[116/552] VALID counts={'valid': 115, 'invalid': 1} elapsed=944.3s
+[117/552] START cx0.25_cy0.25_layoutC__gamma_0.05__uniform_prior_baseline
+[117/552] VALID counts={'valid': 116, 'invalid': 1} elapsed=949.9s
+[118/552] START cx0.25_cy0.25_layoutC__gamma_0.05__diffuse_blur_js_0.05
+[118/552] VALID counts={'valid': 117, 'invalid': 1} elapsed=962.0s
+[119/552] START cx0.25_cy0.25_layoutC__gamma_0.05__diffuse_blur_js_0.1
+[119/552] VALID counts={'valid': 118, 'invalid': 1} elapsed=970.0s
+[120/552] START cx0.25_cy0.25_layoutC__gamma_0.05__diffuse_blur_js_0.15
+[120/552] VALID counts={'valid': 119, 'invalid': 1} elapsed=977.5s
+[121/552] START cx0.25_cy0.25_layoutC__gamma_0.05__spatial_shift_x_js_0.05
+[121/552] VALID counts={'valid': 120, 'invalid': 1} elapsed=987.4s
+[122/552] START cx0.25_cy0.25_layoutC__gamma_0.05__spatial_shift_x_js_0.1
+[122/552] VALID counts={'valid': 121, 'invalid': 1} elapsed=995.6s
+[123/552] START cx0.25_cy0.25_layoutC__gamma_0.05__spatial_shift_x_js_0.15
+[123/552] VALID counts={'valid': 122, 'invalid': 1} elapsed=1005.1s
+[124/552] START cx0.25_cy0.25_layoutC__gamma_0.05__false_hotspot_x_js_0.05
+[124/552] VALID counts={'valid': 123, 'invalid': 1} elapsed=1012.5s
+[125/552] START cx0.25_cy0.25_layoutC__gamma_0.05__false_hotspot_x_js_0.1
+[125/552] VALID counts={'valid': 124, 'invalid': 1} elapsed=1021.9s
+[126/552] START cx0.25_cy0.25_layoutC__gamma_0.05__false_hotspot_x_js_0.15
+[126/552] VALID counts={'valid': 125, 'invalid': 1} elapsed=1029.5s
+[127/552] START cx0.25_cy0.25_layoutC__gamma_0.05__false_negative_suppression_x_js_0.05
+[127/552] VALID counts={'valid': 126, 'invalid': 1} elapsed=1037.0s
+[128/552] START cx0.25_cy0.25_layoutC__gamma_0.05__false_negative_suppression_x_js_0.1
+[128/552] VALID counts={'valid': 127, 'invalid': 1} elapsed=1042.8s
+[129/552] START cx0.25_cy0.25_layoutC__gamma_0.05__false_negative_suppression_x_js_0.15
+[129/552] VALID counts={'valid': 128, 'invalid': 1} elapsed=1049.4s
+[130/552] START cx0.25_cy0.25_layoutC__gamma_0.05__spatial_shift_y_js_0.05
+[130/552] VALID counts={'valid': 129, 'invalid': 1} elapsed=1059.1s
+[131/552] START cx0.25_cy0.25_layoutC__gamma_0.05__spatial_shift_y_js_0.1
+[131/552] VALID counts={'valid': 130, 'invalid': 1} elapsed=1067.8s
+[132/552] START cx0.25_cy0.25_layoutC__gamma_0.05__spatial_shift_y_js_0.15
+[132/552] VALID counts={'valid': 131, 'invalid': 1} elapsed=1077.4s
+[133/552] START cx0.25_cy0.25_layoutC__gamma_0.05__false_hotspot_y_js_0.05
+[133/552] VALID counts={'valid': 132, 'invalid': 1} elapsed=1088.7s
+[134/552] START cx0.25_cy0.25_layoutC__gamma_0.05__false_hotspot_y_js_0.1
+[134/552] VALID counts={'valid': 133, 'invalid': 1} elapsed=1096.8s
+[135/552] START cx0.25_cy0.25_layoutC__gamma_0.05__false_hotspot_y_js_0.15
+[135/552] VALID counts={'valid': 134, 'invalid': 1} elapsed=1105.9s
+[136/552] START cx0.25_cy0.25_layoutC__gamma_0.05__false_negative_suppression_y_js_0.05
+[136/552] VALID counts={'valid': 135, 'invalid': 1} elapsed=1112.7s
+[137/552] START cx0.25_cy0.25_layoutC__gamma_0.05__false_negative_suppression_y_js_0.1
+[137/552] VALID counts={'valid': 136, 'invalid': 1} elapsed=1118.9s
+[138/552] START cx0.25_cy0.25_layoutC__gamma_0.05__false_negative_suppression_y_js_0.15
+[138/552] VALID counts={'valid': 137, 'invalid': 1} elapsed=1127.4s
+[139/552] START cx0.25_cy0.75_layoutA__gamma_0.1__oracle
+[139/552] VALID counts={'valid': 138, 'invalid': 1} elapsed=1135.9s
+[140/552] START cx0.25_cy0.75_layoutA__gamma_0.1__uniform_prior_baseline
+[140/552] VALID counts={'valid': 139, 'invalid': 1} elapsed=1142.0s
+[141/552] START cx0.25_cy0.75_layoutA__gamma_0.1__diffuse_blur_js_0.05
+[141/552] VALID counts={'valid': 140, 'invalid': 1} elapsed=1149.6s
+[142/552] START cx0.25_cy0.75_layoutA__gamma_0.1__diffuse_blur_js_0.1
+[142/552] VALID counts={'valid': 141, 'invalid': 1} elapsed=1155.8s
+[143/552] START cx0.25_cy0.75_layoutA__gamma_0.1__diffuse_blur_js_0.15
+[143/552] VALID counts={'valid': 142, 'invalid': 1} elapsed=1162.4s
+[144/552] START cx0.25_cy0.75_layoutA__gamma_0.1__spatial_shift_x_js_0.05
+[144/552] VALID counts={'valid': 143, 'invalid': 1} elapsed=1169.3s
+[145/552] START cx0.25_cy0.75_layoutA__gamma_0.1__spatial_shift_x_js_0.1
+[145/552] VALID counts={'valid': 144, 'invalid': 1} elapsed=1176.4s
+[146/552] START cx0.25_cy0.75_layoutA__gamma_0.1__spatial_shift_x_js_0.15
+[146/552] VALID counts={'valid': 145, 'invalid': 1} elapsed=1182.3s
+[147/552] START cx0.25_cy0.75_layoutA__gamma_0.1__false_hotspot_x_js_0.05
+[147/552] VALID counts={'valid': 146, 'invalid': 1} elapsed=1189.9s
+[148/552] START cx0.25_cy0.75_layoutA__gamma_0.1__false_hotspot_x_js_0.1
+[148/552] VALID counts={'valid': 147, 'invalid': 1} elapsed=1199.2s
+[149/552] START cx0.25_cy0.75_layoutA__gamma_0.1__false_hotspot_x_js_0.15
+[149/552] VALID counts={'valid': 148, 'invalid': 1} elapsed=1208.3s
+[150/552] START cx0.25_cy0.75_layoutA__gamma_0.1__false_negative_suppression_x_js_0.05
+[150/552] VALID counts={'valid': 149, 'invalid': 1} elapsed=1214.6s
+[151/552] START cx0.25_cy0.75_layoutA__gamma_0.1__false_negative_suppression_x_js_0.1
+[151/552] VALID counts={'valid': 150, 'invalid': 1} elapsed=1219.9s
+[152/552] START cx0.25_cy0.75_layoutA__gamma_0.1__false_negative_suppression_x_js_0.15
+[152/552] VALID counts={'valid': 151, 'invalid': 1} elapsed=1225.2s
+[153/552] START cx0.25_cy0.75_layoutA__gamma_0.1__spatial_shift_y_js_0.05
+[153/552] VALID counts={'valid': 152, 'invalid': 1} elapsed=1231.6s
+[154/552] START cx0.25_cy0.75_layoutA__gamma_0.1__spatial_shift_y_js_0.1
+[154/552] VALID counts={'valid': 153, 'invalid': 1} elapsed=1237.7s
+[155/552] START cx0.25_cy0.75_layoutA__gamma_0.1__spatial_shift_y_js_0.15
+[155/552] VALID counts={'valid': 154, 'invalid': 1} elapsed=1242.2s
+[156/552] START cx0.25_cy0.75_layoutA__gamma_0.1__false_hotspot_y_js_0.05
+[156/552] VALID counts={'valid': 155, 'invalid': 1} elapsed=1248.0s
+[157/552] START cx0.25_cy0.75_layoutA__gamma_0.1__false_hotspot_y_js_0.1
+[157/552] VALID counts={'valid': 156, 'invalid': 1} elapsed=1254.3s
+[158/552] START cx0.25_cy0.75_layoutA__gamma_0.1__false_hotspot_y_js_0.15
+[158/552] VALID counts={'valid': 157, 'invalid': 1} elapsed=1260.8s
+[159/552] START cx0.25_cy0.75_layoutA__gamma_0.1__false_negative_suppression_y_js_0.05
+[159/552] VALID counts={'valid': 158, 'invalid': 1} elapsed=1267.6s
+[160/552] START cx0.25_cy0.75_layoutA__gamma_0.1__false_negative_suppression_y_js_0.1
+[160/552] VALID counts={'valid': 159, 'invalid': 1} elapsed=1274.8s
+[161/552] START cx0.25_cy0.75_layoutA__gamma_0.1__false_negative_suppression_y_js_0.15
+[161/552] VALID counts={'valid': 160, 'invalid': 1} elapsed=1280.8s
+[162/552] START cx0.25_cy0.75_layoutA__gamma_0.05__oracle
+[162/552] VALID counts={'valid': 161, 'invalid': 1} elapsed=1293.3s
+[163/552] START cx0.25_cy0.75_layoutA__gamma_0.05__uniform_prior_baseline
+[163/552] VALID counts={'valid': 162, 'invalid': 1} elapsed=1298.8s
+[164/552] START cx0.25_cy0.75_layoutA__gamma_0.05__diffuse_blur_js_0.05
+[164/552] VALID counts={'valid': 163, 'invalid': 1} elapsed=1306.5s
+[165/552] START cx0.25_cy0.75_layoutA__gamma_0.05__diffuse_blur_js_0.1
+[165/552] VALID counts={'valid': 164, 'invalid': 1} elapsed=1311.7s
+[166/552] START cx0.25_cy0.75_layoutA__gamma_0.05__diffuse_blur_js_0.15
+[166/552] VALID counts={'valid': 165, 'invalid': 1} elapsed=1316.8s
+[167/552] START cx0.25_cy0.75_layoutA__gamma_0.05__spatial_shift_x_js_0.05
+[167/552] VALID counts={'valid': 166, 'invalid': 1} elapsed=1326.4s
+[168/552] START cx0.25_cy0.75_layoutA__gamma_0.05__spatial_shift_x_js_0.1
+[168/552] VALID counts={'valid': 167, 'invalid': 1} elapsed=1338.6s
+[169/552] START cx0.25_cy0.75_layoutA__gamma_0.05__spatial_shift_x_js_0.15
+[169/552] VALID counts={'valid': 168, 'invalid': 1} elapsed=1350.5s
+[170/552] START cx0.25_cy0.75_layoutA__gamma_0.05__false_hotspot_x_js_0.05
+[170/552] VALID counts={'valid': 169, 'invalid': 1} elapsed=1357.7s
+[171/552] START cx0.25_cy0.75_layoutA__gamma_0.05__false_hotspot_x_js_0.1
+[171/552] VALID counts={'valid': 170, 'invalid': 1} elapsed=1366.0s
+[172/552] START cx0.25_cy0.75_layoutA__gamma_0.05__false_hotspot_x_js_0.15
+[172/552] VALID counts={'valid': 171, 'invalid': 1} elapsed=1374.6s
+[173/552] START cx0.25_cy0.75_layoutA__gamma_0.05__false_negative_suppression_x_js_0.05
+[173/552] VALID counts={'valid': 172, 'invalid': 1} elapsed=1385.8s
+[174/552] START cx0.25_cy0.75_layoutA__gamma_0.05__false_negative_suppression_x_js_0.1
+[174/552] VALID counts={'valid': 173, 'invalid': 1} elapsed=1392.8s
+[175/552] START cx0.25_cy0.75_layoutA__gamma_0.05__false_negative_suppression_x_js_0.15
+[175/552] VALID counts={'valid': 174, 'invalid': 1} elapsed=1400.9s
+[176/552] START cx0.25_cy0.75_layoutA__gamma_0.05__spatial_shift_y_js_0.05
+[176/552] VALID counts={'valid': 175, 'invalid': 1} elapsed=1410.8s
+[177/552] START cx0.25_cy0.75_layoutA__gamma_0.05__spatial_shift_y_js_0.1
+[177/552] VALID counts={'valid': 176, 'invalid': 1} elapsed=1421.5s
+[178/552] START cx0.25_cy0.75_layoutA__gamma_0.05__spatial_shift_y_js_0.15
+[178/552] VALID counts={'valid': 177, 'invalid': 1} elapsed=1430.7s
+[179/552] START cx0.25_cy0.75_layoutA__gamma_0.05__false_hotspot_y_js_0.05
+[179/552] VALID counts={'valid': 178, 'invalid': 1} elapsed=1442.0s
+[180/552] START cx0.25_cy0.75_layoutA__gamma_0.05__false_hotspot_y_js_0.1
+[180/552] VALID counts={'valid': 179, 'invalid': 1} elapsed=1451.6s
+[181/552] START cx0.25_cy0.75_layoutA__gamma_0.05__false_hotspot_y_js_0.15
+[181/552] VALID counts={'valid': 180, 'invalid': 1} elapsed=1459.6s
+[182/552] START cx0.25_cy0.75_layoutA__gamma_0.05__false_negative_suppression_y_js_0.05
+[182/552] VALID counts={'valid': 181, 'invalid': 1} elapsed=1470.0s
+[183/552] START cx0.25_cy0.75_layoutA__gamma_0.05__false_negative_suppression_y_js_0.1
+[183/552] VALID counts={'valid': 182, 'invalid': 1} elapsed=1476.6s
+[184/552] START cx0.25_cy0.75_layoutA__gamma_0.05__false_negative_suppression_y_js_0.15
+[184/552] VALID counts={'valid': 183, 'invalid': 1} elapsed=1482.4s
+[185/552] START cx0.25_cy0.75_layoutB__gamma_0.1__oracle
+[185/552] VALID counts={'valid': 184, 'invalid': 1} elapsed=1494.9s
+[186/552] START cx0.25_cy0.75_layoutB__gamma_0.1__uniform_prior_baseline
+[186/552] VALID counts={'valid': 185, 'invalid': 1} elapsed=1500.5s
+[187/552] START cx0.25_cy0.75_layoutB__gamma_0.1__diffuse_blur_js_0.05
+[187/552] VALID counts={'valid': 186, 'invalid': 1} elapsed=1506.1s
+[188/552] START cx0.25_cy0.75_layoutB__gamma_0.1__diffuse_blur_js_0.1
+[188/552] VALID counts={'valid': 187, 'invalid': 1} elapsed=1511.5s
+[189/552] START cx0.25_cy0.75_layoutB__gamma_0.1__diffuse_blur_js_0.15
+[189/552] VALID counts={'valid': 188, 'invalid': 1} elapsed=1516.8s
+[190/552] START cx0.25_cy0.75_layoutB__gamma_0.1__spatial_shift_x_js_0.05
+[190/552] VALID counts={'valid': 189, 'invalid': 1} elapsed=1526.6s
+[191/552] START cx0.25_cy0.75_layoutB__gamma_0.1__spatial_shift_x_js_0.1
+[191/552] VALID counts={'valid': 190, 'invalid': 1} elapsed=1535.8s
+[192/552] START cx0.25_cy0.75_layoutB__gamma_0.1__spatial_shift_x_js_0.15
+[192/552] VALID counts={'valid': 191, 'invalid': 1} elapsed=1545.6s
+[193/552] START cx0.25_cy0.75_layoutB__gamma_0.1__false_hotspot_x_js_0.05
+[193/552] VALID counts={'valid': 192, 'invalid': 1} elapsed=1552.7s
+[194/552] START cx0.25_cy0.75_layoutB__gamma_0.1__false_hotspot_x_js_0.1
+[194/552] VALID counts={'valid': 193, 'invalid': 1} elapsed=1561.4s
+[195/552] START cx0.25_cy0.75_layoutB__gamma_0.1__false_hotspot_x_js_0.15
+[195/552] VALID counts={'valid': 194, 'invalid': 1} elapsed=1570.5s
+[196/552] START cx0.25_cy0.75_layoutB__gamma_0.1__false_negative_suppression_x_js_0.05
+[196/552] VALID counts={'valid': 195, 'invalid': 1} elapsed=1579.2s
+[197/552] START cx0.25_cy0.75_layoutB__gamma_0.1__false_negative_suppression_x_js_0.1
+[197/552] VALID counts={'valid': 196, 'invalid': 1} elapsed=1587.8s
+[198/552] START cx0.25_cy0.75_layoutB__gamma_0.1__false_negative_suppression_x_js_0.15
+[198/552] VALID counts={'valid': 197, 'invalid': 1} elapsed=1595.6s
+[199/552] START cx0.25_cy0.75_layoutB__gamma_0.1__spatial_shift_y_js_0.05
+[199/552] VALID counts={'valid': 198, 'invalid': 1} elapsed=1606.1s
+[200/552] START cx0.25_cy0.75_layoutB__gamma_0.1__spatial_shift_y_js_0.1
+[200/552] INVALID counts={'valid': 198, 'invalid': 2} elapsed=1628.8s
+[201/552] START cx0.25_cy0.75_layoutB__gamma_0.1__spatial_shift_y_js_0.15
+[201/552] VALID counts={'valid': 199, 'invalid': 2} elapsed=1638.9s
+[202/552] START cx0.25_cy0.75_layoutB__gamma_0.1__false_hotspot_y_js_0.05
+[202/552] VALID counts={'valid': 200, 'invalid': 2} elapsed=1649.5s
+[203/552] START cx0.25_cy0.75_layoutB__gamma_0.1__false_hotspot_y_js_0.1
+[203/552] VALID counts={'valid': 201, 'invalid': 2} elapsed=1657.9s
+[204/552] START cx0.25_cy0.75_layoutB__gamma_0.1__false_hotspot_y_js_0.15
+[204/552] VALID counts={'valid': 202, 'invalid': 2} elapsed=1667.1s
+[205/552] START cx0.25_cy0.75_layoutB__gamma_0.1__false_negative_suppression_y_js_0.05
+[205/552] VALID counts={'valid': 203, 'invalid': 2} elapsed=1673.6s
+[206/552] START cx0.25_cy0.75_layoutB__gamma_0.1__false_negative_suppression_y_js_0.1
+[206/552] VALID counts={'valid': 204, 'invalid': 2} elapsed=1681.2s
+[207/552] START cx0.25_cy0.75_layoutB__gamma_0.1__false_negative_suppression_y_js_0.15
+[207/552] VALID counts={'valid': 205, 'invalid': 2} elapsed=1689.2s
+[208/552] START cx0.25_cy0.75_layoutB__gamma_0.05__oracle
+[208/552] VALID counts={'valid': 206, 'invalid': 2} elapsed=1701.0s
+[209/552] START cx0.25_cy0.75_layoutB__gamma_0.05__uniform_prior_baseline
+[209/552] VALID counts={'valid': 207, 'invalid': 2} elapsed=1706.1s
+[210/552] START cx0.25_cy0.75_layoutB__gamma_0.05__diffuse_blur_js_0.05
+[210/552] VALID counts={'valid': 208, 'invalid': 2} elapsed=1716.6s
+[211/552] START cx0.25_cy0.75_layoutB__gamma_0.05__diffuse_blur_js_0.1
+[211/552] VALID counts={'valid': 209, 'invalid': 2} elapsed=1722.8s
+[212/552] START cx0.25_cy0.75_layoutB__gamma_0.05__diffuse_blur_js_0.15
+[212/552] VALID counts={'valid': 210, 'invalid': 2} elapsed=1728.1s
+[213/552] START cx0.25_cy0.75_layoutB__gamma_0.05__spatial_shift_x_js_0.05
+[213/552] VALID counts={'valid': 211, 'invalid': 2} elapsed=1743.2s
+[214/552] START cx0.25_cy0.75_layoutB__gamma_0.05__spatial_shift_x_js_0.1
+[214/552] VALID counts={'valid': 212, 'invalid': 2} elapsed=1753.8s
+[215/552] START cx0.25_cy0.75_layoutB__gamma_0.05__spatial_shift_x_js_0.15
+[215/552] VALID counts={'valid': 213, 'invalid': 2} elapsed=1764.9s
+[216/552] START cx0.25_cy0.75_layoutB__gamma_0.05__false_hotspot_x_js_0.05
+[216/552] VALID counts={'valid': 214, 'invalid': 2} elapsed=1773.9s
+[217/552] START cx0.25_cy0.75_layoutB__gamma_0.05__false_hotspot_x_js_0.1
+[217/552] VALID counts={'valid': 215, 'invalid': 2} elapsed=1782.0s
+[218/552] START cx0.25_cy0.75_layoutB__gamma_0.05__false_hotspot_x_js_0.15
+[218/552] VALID counts={'valid': 216, 'invalid': 2} elapsed=1790.7s
+[219/552] START cx0.25_cy0.75_layoutB__gamma_0.05__false_negative_suppression_x_js_0.05
+[219/552] VALID counts={'valid': 217, 'invalid': 2} elapsed=1799.8s
+[220/552] START cx0.25_cy0.75_layoutB__gamma_0.05__false_negative_suppression_x_js_0.1
+[220/552] VALID counts={'valid': 218, 'invalid': 2} elapsed=1805.6s
+[221/552] START cx0.25_cy0.75_layoutB__gamma_0.05__false_negative_suppression_x_js_0.15
+[221/552] VALID counts={'valid': 219, 'invalid': 2} elapsed=1811.3s
+[222/552] START cx0.25_cy0.75_layoutB__gamma_0.05__spatial_shift_y_js_0.05
+[222/552] VALID counts={'valid': 220, 'invalid': 2} elapsed=1819.7s
+[223/552] START cx0.25_cy0.75_layoutB__gamma_0.05__spatial_shift_y_js_0.1
+[223/552] VALID counts={'valid': 221, 'invalid': 2} elapsed=1829.9s
+[224/552] START cx0.25_cy0.75_layoutB__gamma_0.05__spatial_shift_y_js_0.15
+[224/552] VALID counts={'valid': 222, 'invalid': 2} elapsed=1836.9s
+[225/552] START cx0.25_cy0.75_layoutB__gamma_0.05__false_hotspot_y_js_0.05
+[225/552] VALID counts={'valid': 223, 'invalid': 2} elapsed=1844.1s
+[226/552] START cx0.25_cy0.75_layoutB__gamma_0.05__false_hotspot_y_js_0.1
+[226/552] VALID counts={'valid': 224, 'invalid': 2} elapsed=1849.9s
+[227/552] START cx0.25_cy0.75_layoutB__gamma_0.05__false_hotspot_y_js_0.15
+[227/552] VALID counts={'valid': 225, 'invalid': 2} elapsed=1858.8s
+[228/552] START cx0.25_cy0.75_layoutB__gamma_0.05__false_negative_suppression_y_js_0.05
+[228/552] VALID counts={'valid': 226, 'invalid': 2} elapsed=1870.7s
+[229/552] START cx0.25_cy0.75_layoutB__gamma_0.05__false_negative_suppression_y_js_0.1
+[229/552] VALID counts={'valid': 227, 'invalid': 2} elapsed=1882.2s
+[230/552] START cx0.25_cy0.75_layoutB__gamma_0.05__false_negative_suppression_y_js_0.15
+[230/552] VALID counts={'valid': 228, 'invalid': 2} elapsed=1889.1s
+[231/552] START cx0.25_cy0.75_layoutC__gamma_0.1__oracle
+[231/552] VALID counts={'valid': 229, 'invalid': 2} elapsed=1899.7s
+[232/552] START cx0.25_cy0.75_layoutC__gamma_0.1__uniform_prior_baseline
+[232/552] VALID counts={'valid': 230, 'invalid': 2} elapsed=1905.7s
+[233/552] START cx0.25_cy0.75_layoutC__gamma_0.1__diffuse_blur_js_0.05
+[233/552] VALID counts={'valid': 231, 'invalid': 2} elapsed=1913.2s
+[234/552] START cx0.25_cy0.75_layoutC__gamma_0.1__diffuse_blur_js_0.1
+[234/552] VALID counts={'valid': 232, 'invalid': 2} elapsed=1920.5s
+[235/552] START cx0.25_cy0.75_layoutC__gamma_0.1__diffuse_blur_js_0.15
+[235/552] VALID counts={'valid': 233, 'invalid': 2} elapsed=1927.7s
+[236/552] START cx0.25_cy0.75_layoutC__gamma_0.1__spatial_shift_x_js_0.05
+[236/552] VALID counts={'valid': 234, 'invalid': 2} elapsed=1940.0s
+[237/552] START cx0.25_cy0.75_layoutC__gamma_0.1__spatial_shift_x_js_0.1
+[237/552] INVALID counts={'valid': 234, 'invalid': 3} elapsed=1966.7s
+[238/552] START cx0.25_cy0.75_layoutC__gamma_0.1__spatial_shift_x_js_0.15
+[238/552] VALID counts={'valid': 235, 'invalid': 3} elapsed=1977.4s
+[239/552] START cx0.25_cy0.75_layoutC__gamma_0.1__false_hotspot_x_js_0.05
+[239/552] VALID counts={'valid': 236, 'invalid': 3} elapsed=1986.0s
+[240/552] START cx0.25_cy0.75_layoutC__gamma_0.1__false_hotspot_x_js_0.1
+[240/552] VALID counts={'valid': 237, 'invalid': 3} elapsed=1995.8s
+[241/552] START cx0.25_cy0.75_layoutC__gamma_0.1__false_hotspot_x_js_0.15
+[241/552] VALID counts={'valid': 238, 'invalid': 3} elapsed=2005.7s
+[242/552] START cx0.25_cy0.75_layoutC__gamma_0.1__false_negative_suppression_x_js_0.05
+[242/552] VALID counts={'valid': 239, 'invalid': 3} elapsed=2014.8s
+[243/552] START cx0.25_cy0.75_layoutC__gamma_0.1__false_negative_suppression_x_js_0.1
+[243/552] VALID counts={'valid': 240, 'invalid': 3} elapsed=2025.9s
+[244/552] START cx0.25_cy0.75_layoutC__gamma_0.1__false_negative_suppression_x_js_0.15
+[244/552] VALID counts={'valid': 241, 'invalid': 3} elapsed=2034.9s
+[245/552] START cx0.25_cy0.75_layoutC__gamma_0.1__spatial_shift_y_js_0.05
+[245/552] INVALID counts={'valid': 241, 'invalid': 4} elapsed=2047.6s
+[246/552] START cx0.25_cy0.75_layoutC__gamma_0.1__spatial_shift_y_js_0.1
+[246/552] VALID counts={'valid': 242, 'invalid': 4} elapsed=2057.3s
+[247/552] START cx0.25_cy0.75_layoutC__gamma_0.1__spatial_shift_y_js_0.15
+[247/552] VALID counts={'valid': 243, 'invalid': 4} elapsed=2075.9s
+[248/552] START cx0.25_cy0.75_layoutC__gamma_0.1__false_hotspot_y_js_0.05
+[248/552] VALID counts={'valid': 244, 'invalid': 4} elapsed=2085.4s
+[249/552] START cx0.25_cy0.75_layoutC__gamma_0.1__false_hotspot_y_js_0.1
+[249/552] VALID counts={'valid': 245, 'invalid': 4} elapsed=2092.6s
+[250/552] START cx0.25_cy0.75_layoutC__gamma_0.1__false_hotspot_y_js_0.15
+[250/552] VALID counts={'valid': 246, 'invalid': 4} elapsed=2100.6s
+[251/552] START cx0.25_cy0.75_layoutC__gamma_0.1__false_negative_suppression_y_js_0.05
+[251/552] VALID counts={'valid': 247, 'invalid': 4} elapsed=2106.2s
+[252/552] START cx0.25_cy0.75_layoutC__gamma_0.1__false_negative_suppression_y_js_0.1
+[252/552] VALID counts={'valid': 248, 'invalid': 4} elapsed=2115.3s
+[253/552] START cx0.25_cy0.75_layoutC__gamma_0.1__false_negative_suppression_y_js_0.15
+[253/552] INVALID counts={'valid': 248, 'invalid': 5} elapsed=2117.0s
+[254/552] START cx0.25_cy0.75_layoutC__gamma_0.05__oracle
+[254/552] VALID counts={'valid': 249, 'invalid': 5} elapsed=2127.0s
+[255/552] START cx0.25_cy0.75_layoutC__gamma_0.05__uniform_prior_baseline
+[255/552] VALID counts={'valid': 250, 'invalid': 5} elapsed=2132.7s
+[256/552] START cx0.25_cy0.75_layoutC__gamma_0.05__diffuse_blur_js_0.05
+[256/552] VALID counts={'valid': 251, 'invalid': 5} elapsed=2143.1s
+[257/552] START cx0.25_cy0.75_layoutC__gamma_0.05__diffuse_blur_js_0.1
+[257/552] VALID counts={'valid': 252, 'invalid': 5} elapsed=2148.7s
+[258/552] START cx0.25_cy0.75_layoutC__gamma_0.05__diffuse_blur_js_0.15
+[258/552] VALID counts={'valid': 253, 'invalid': 5} elapsed=2154.1s
+[259/552] START cx0.25_cy0.75_layoutC__gamma_0.05__spatial_shift_x_js_0.05
+[259/552] VALID counts={'valid': 254, 'invalid': 5} elapsed=2165.5s
+[260/552] START cx0.25_cy0.75_layoutC__gamma_0.05__spatial_shift_x_js_0.1
+[260/552] VALID counts={'valid': 255, 'invalid': 5} elapsed=2176.2s
+[261/552] START cx0.25_cy0.75_layoutC__gamma_0.05__spatial_shift_x_js_0.15
+[261/552] VALID counts={'valid': 256, 'invalid': 5} elapsed=2192.2s
+[262/552] START cx0.25_cy0.75_layoutC__gamma_0.05__false_hotspot_x_js_0.05
+[262/552] VALID counts={'valid': 257, 'invalid': 5} elapsed=2204.8s
+[263/552] START cx0.25_cy0.75_layoutC__gamma_0.05__false_hotspot_x_js_0.1
+[263/552] VALID counts={'valid': 258, 'invalid': 5} elapsed=2216.2s
+[264/552] START cx0.25_cy0.75_layoutC__gamma_0.05__false_hotspot_x_js_0.15
+[264/552] VALID counts={'valid': 259, 'invalid': 5} elapsed=2229.8s
+[265/552] START cx0.25_cy0.75_layoutC__gamma_0.05__false_negative_suppression_x_js_0.05
+[265/552] VALID counts={'valid': 260, 'invalid': 5} elapsed=2238.4s
+[266/552] START cx0.25_cy0.75_layoutC__gamma_0.05__false_negative_suppression_x_js_0.1
+[266/552] VALID counts={'valid': 261, 'invalid': 5} elapsed=2244.7s
+[267/552] START cx0.25_cy0.75_layoutC__gamma_0.05__false_negative_suppression_x_js_0.15
+[267/552] VALID counts={'valid': 262, 'invalid': 5} elapsed=2251.4s
+[268/552] START cx0.25_cy0.75_layoutC__gamma_0.05__spatial_shift_y_js_0.05
+[268/552] VALID counts={'valid': 263, 'invalid': 5} elapsed=2259.1s
+[269/552] START cx0.25_cy0.75_layoutC__gamma_0.05__spatial_shift_y_js_0.1
+[269/552] VALID counts={'valid': 264, 'invalid': 5} elapsed=2268.7s
+[270/552] START cx0.25_cy0.75_layoutC__gamma_0.05__spatial_shift_y_js_0.15
+[270/552] VALID counts={'valid': 265, 'invalid': 5} elapsed=2276.1s
+[271/552] START cx0.25_cy0.75_layoutC__gamma_0.05__false_hotspot_y_js_0.05
+[271/552] VALID counts={'valid': 266, 'invalid': 5} elapsed=2284.4s
+[272/552] START cx0.25_cy0.75_layoutC__gamma_0.05__false_hotspot_y_js_0.1
+[272/552] VALID counts={'valid': 267, 'invalid': 5} elapsed=2292.0s
+[273/552] START cx0.25_cy0.75_layoutC__gamma_0.05__false_hotspot_y_js_0.15
+[273/552] VALID counts={'valid': 268, 'invalid': 5} elapsed=2302.1s
+[274/552] START cx0.25_cy0.75_layoutC__gamma_0.05__false_negative_suppression_y_js_0.05
+[274/552] VALID counts={'valid': 269, 'invalid': 5} elapsed=2312.2s
+[275/552] START cx0.25_cy0.75_layoutC__gamma_0.05__false_negative_suppression_y_js_0.1
+[275/552] INVALID counts={'valid': 269, 'invalid': 6} elapsed=2336.1s
+[276/552] START cx0.25_cy0.75_layoutC__gamma_0.05__false_negative_suppression_y_js_0.15
+[276/552] VALID counts={'valid': 270, 'invalid': 6} elapsed=2342.4s
+[277/552] START cx0.75_cy0.25_layoutA__gamma_0.1__oracle
+[277/552] VALID counts={'valid': 271, 'invalid': 6} elapsed=2352.0s
+[278/552] START cx0.75_cy0.25_layoutA__gamma_0.1__uniform_prior_baseline
+[278/552] VALID counts={'valid': 272, 'invalid': 6} elapsed=2360.7s
+[279/552] START cx0.75_cy0.25_layoutA__gamma_0.1__diffuse_blur_js_0.05
+[279/552] VALID counts={'valid': 273, 'invalid': 6} elapsed=2370.4s
+[280/552] START cx0.75_cy0.25_layoutA__gamma_0.1__diffuse_blur_js_0.1
+[280/552] VALID counts={'valid': 274, 'invalid': 6} elapsed=2378.1s
+[281/552] START cx0.75_cy0.25_layoutA__gamma_0.1__diffuse_blur_js_0.15
+[281/552] VALID counts={'valid': 275, 'invalid': 6} elapsed=2384.8s
+[282/552] START cx0.75_cy0.25_layoutA__gamma_0.1__spatial_shift_x_js_0.05
+[282/552] VALID counts={'valid': 276, 'invalid': 6} elapsed=2391.5s
+[283/552] START cx0.75_cy0.25_layoutA__gamma_0.1__spatial_shift_x_js_0.1
+[283/552] VALID counts={'valid': 277, 'invalid': 6} elapsed=2397.4s
+[284/552] START cx0.75_cy0.25_layoutA__gamma_0.1__spatial_shift_x_js_0.15
+[284/552] VALID counts={'valid': 278, 'invalid': 6} elapsed=2401.6s
+[285/552] START cx0.75_cy0.25_layoutA__gamma_0.1__false_hotspot_x_js_0.05
+[285/552] VALID counts={'valid': 279, 'invalid': 6} elapsed=2407.5s
+[286/552] START cx0.75_cy0.25_layoutA__gamma_0.1__false_hotspot_x_js_0.1
+[286/552] VALID counts={'valid': 280, 'invalid': 6} elapsed=2413.9s
+[287/552] START cx0.75_cy0.25_layoutA__gamma_0.1__false_hotspot_x_js_0.15
+[287/552] VALID counts={'valid': 281, 'invalid': 6} elapsed=2420.7s
+[288/552] START cx0.75_cy0.25_layoutA__gamma_0.1__false_negative_suppression_x_js_0.05
+[288/552] VALID counts={'valid': 282, 'invalid': 6} elapsed=2427.7s
+[289/552] START cx0.75_cy0.25_layoutA__gamma_0.1__false_negative_suppression_x_js_0.1
+[289/552] VALID counts={'valid': 283, 'invalid': 6} elapsed=2433.7s
+[290/552] START cx0.75_cy0.25_layoutA__gamma_0.1__false_negative_suppression_x_js_0.15
+[290/552] VALID counts={'valid': 284, 'invalid': 6} elapsed=2439.2s
+[291/552] START cx0.75_cy0.25_layoutA__gamma_0.1__spatial_shift_y_js_0.05
+[291/552] VALID counts={'valid': 285, 'invalid': 6} elapsed=2445.9s
+[292/552] START cx0.75_cy0.25_layoutA__gamma_0.1__spatial_shift_y_js_0.1
+[292/552] VALID counts={'valid': 286, 'invalid': 6} elapsed=2452.9s
+[293/552] START cx0.75_cy0.25_layoutA__gamma_0.1__spatial_shift_y_js_0.15
+[293/552] VALID counts={'valid': 287, 'invalid': 6} elapsed=2458.9s
+[294/552] START cx0.75_cy0.25_layoutA__gamma_0.1__false_hotspot_y_js_0.05
+[294/552] VALID counts={'valid': 288, 'invalid': 6} elapsed=2468.5s
+[295/552] START cx0.75_cy0.25_layoutA__gamma_0.1__false_hotspot_y_js_0.1
+[295/552] VALID counts={'valid': 289, 'invalid': 6} elapsed=2477.3s
+[296/552] START cx0.75_cy0.25_layoutA__gamma_0.1__false_hotspot_y_js_0.15
+[296/552] VALID counts={'valid': 290, 'invalid': 6} elapsed=2485.4s
+[297/552] START cx0.75_cy0.25_layoutA__gamma_0.1__false_negative_suppression_y_js_0.05
+[297/552] VALID counts={'valid': 291, 'invalid': 6} elapsed=2492.5s
+[298/552] START cx0.75_cy0.25_layoutA__gamma_0.1__false_negative_suppression_y_js_0.1
+[298/552] VALID counts={'valid': 292, 'invalid': 6} elapsed=2498.3s
+[299/552] START cx0.75_cy0.25_layoutA__gamma_0.1__false_negative_suppression_y_js_0.15
+[299/552] VALID counts={'valid': 293, 'invalid': 6} elapsed=2503.6s
+[300/552] START cx0.75_cy0.25_layoutA__gamma_0.05__oracle
+[300/552] VALID counts={'valid': 294, 'invalid': 6} elapsed=2516.4s
+[301/552] START cx0.75_cy0.25_layoutA__gamma_0.05__uniform_prior_baseline
+[301/552] VALID counts={'valid': 295, 'invalid': 6} elapsed=2521.8s
+[302/552] START cx0.75_cy0.25_layoutA__gamma_0.05__diffuse_blur_js_0.05
+[302/552] VALID counts={'valid': 296, 'invalid': 6} elapsed=2528.7s
+[303/552] START cx0.75_cy0.25_layoutA__gamma_0.05__diffuse_blur_js_0.1
+[303/552] VALID counts={'valid': 297, 'invalid': 6} elapsed=2533.7s
+[304/552] START cx0.75_cy0.25_layoutA__gamma_0.05__diffuse_blur_js_0.15
+[304/552] VALID counts={'valid': 298, 'invalid': 6} elapsed=2539.2s
+[305/552] START cx0.75_cy0.25_layoutA__gamma_0.05__spatial_shift_x_js_0.05
+[305/552] VALID counts={'valid': 299, 'invalid': 6} elapsed=2550.5s
+[306/552] START cx0.75_cy0.25_layoutA__gamma_0.05__spatial_shift_x_js_0.1
+[306/552] VALID counts={'valid': 300, 'invalid': 6} elapsed=2561.5s
+[307/552] START cx0.75_cy0.25_layoutA__gamma_0.05__spatial_shift_x_js_0.15
+[307/552] VALID counts={'valid': 301, 'invalid': 6} elapsed=2571.6s
+[308/552] START cx0.75_cy0.25_layoutA__gamma_0.05__false_hotspot_x_js_0.05
+[308/552] VALID counts={'valid': 302, 'invalid': 6} elapsed=2578.5s
+[309/552] START cx0.75_cy0.25_layoutA__gamma_0.05__false_hotspot_x_js_0.1
+[309/552] VALID counts={'valid': 303, 'invalid': 6} elapsed=2585.5s
+[310/552] START cx0.75_cy0.25_layoutA__gamma_0.05__false_hotspot_x_js_0.15
+[310/552] VALID counts={'valid': 304, 'invalid': 6} elapsed=2592.0s
+[311/552] START cx0.75_cy0.25_layoutA__gamma_0.05__false_negative_suppression_x_js_0.05
+[311/552] VALID counts={'valid': 305, 'invalid': 6} elapsed=2600.4s
+[312/552] START cx0.75_cy0.25_layoutA__gamma_0.05__false_negative_suppression_x_js_0.1
+[312/552] VALID counts={'valid': 306, 'invalid': 6} elapsed=2609.9s
+[313/552] START cx0.75_cy0.25_layoutA__gamma_0.05__false_negative_suppression_x_js_0.15
+[313/552] VALID counts={'valid': 307, 'invalid': 6} elapsed=2618.2s
+[314/552] START cx0.75_cy0.25_layoutA__gamma_0.05__spatial_shift_y_js_0.05
+[314/552] VALID counts={'valid': 308, 'invalid': 6} elapsed=2627.5s
+[315/552] START cx0.75_cy0.25_layoutA__gamma_0.05__spatial_shift_y_js_0.1
+[315/552] VALID counts={'valid': 309, 'invalid': 6} elapsed=2638.4s
+[316/552] START cx0.75_cy0.25_layoutA__gamma_0.05__spatial_shift_y_js_0.15
+[316/552] VALID counts={'valid': 310, 'invalid': 6} elapsed=2647.8s
+[317/552] START cx0.75_cy0.25_layoutA__gamma_0.05__false_hotspot_y_js_0.05
+[317/552] VALID counts={'valid': 311, 'invalid': 6} elapsed=2658.5s
+[318/552] START cx0.75_cy0.25_layoutA__gamma_0.05__false_hotspot_y_js_0.1
+[318/552] VALID counts={'valid': 312, 'invalid': 6} elapsed=2667.1s
+[319/552] START cx0.75_cy0.25_layoutA__gamma_0.05__false_hotspot_y_js_0.15
+[319/552] VALID counts={'valid': 313, 'invalid': 6} elapsed=2676.9s
+[320/552] START cx0.75_cy0.25_layoutA__gamma_0.05__false_negative_suppression_y_js_0.05
+[320/552] VALID counts={'valid': 314, 'invalid': 6} elapsed=2688.2s
+[321/552] START cx0.75_cy0.25_layoutA__gamma_0.05__false_negative_suppression_y_js_0.1
+[321/552] VALID counts={'valid': 315, 'invalid': 6} elapsed=2696.7s
+[322/552] START cx0.75_cy0.25_layoutA__gamma_0.05__false_negative_suppression_y_js_0.15
+[322/552] VALID counts={'valid': 316, 'invalid': 6} elapsed=2702.4s
+[323/552] START cx0.75_cy0.25_layoutB__gamma_0.1__oracle
+[323/552] VALID counts={'valid': 317, 'invalid': 6} elapsed=2712.1s
+[324/552] START cx0.75_cy0.25_layoutB__gamma_0.1__uniform_prior_baseline
+[324/552] VALID counts={'valid': 318, 'invalid': 6} elapsed=2717.8s
+[325/552] START cx0.75_cy0.25_layoutB__gamma_0.1__diffuse_blur_js_0.05
+[325/552] VALID counts={'valid': 319, 'invalid': 6} elapsed=2724.9s
+[326/552] START cx0.75_cy0.25_layoutB__gamma_0.1__diffuse_blur_js_0.1
+[326/552] VALID counts={'valid': 320, 'invalid': 6} elapsed=2730.6s
+[327/552] START cx0.75_cy0.25_layoutB__gamma_0.1__diffuse_blur_js_0.15
+[327/552] VALID counts={'valid': 321, 'invalid': 6} elapsed=2737.4s
+[328/552] START cx0.75_cy0.25_layoutB__gamma_0.1__spatial_shift_x_js_0.05
+[328/552] VALID counts={'valid': 322, 'invalid': 6} elapsed=2749.4s
+[329/552] START cx0.75_cy0.25_layoutB__gamma_0.1__spatial_shift_x_js_0.1
+[329/552] VALID counts={'valid': 323, 'invalid': 6} elapsed=2759.1s
+[330/552] START cx0.75_cy0.25_layoutB__gamma_0.1__spatial_shift_x_js_0.15
+[330/552] VALID counts={'valid': 324, 'invalid': 6} elapsed=2766.7s
+[331/552] START cx0.75_cy0.25_layoutB__gamma_0.1__false_hotspot_x_js_0.05
+[331/552] VALID counts={'valid': 325, 'invalid': 6} elapsed=2774.9s
+[332/552] START cx0.75_cy0.25_layoutB__gamma_0.1__false_hotspot_x_js_0.1
+[332/552] VALID counts={'valid': 326, 'invalid': 6} elapsed=2782.0s
+[333/552] START cx0.75_cy0.25_layoutB__gamma_0.1__false_hotspot_x_js_0.15
+[333/552] VALID counts={'valid': 327, 'invalid': 6} elapsed=2789.5s
+[334/552] START cx0.75_cy0.25_layoutB__gamma_0.1__false_negative_suppression_x_js_0.05
+[334/552] VALID counts={'valid': 328, 'invalid': 6} elapsed=2796.8s
+[335/552] START cx0.75_cy0.25_layoutB__gamma_0.1__false_negative_suppression_x_js_0.1
+[335/552] VALID counts={'valid': 329, 'invalid': 6} elapsed=2803.8s
+[336/552] START cx0.75_cy0.25_layoutB__gamma_0.1__false_negative_suppression_x_js_0.15
+[336/552] VALID counts={'valid': 330, 'invalid': 6} elapsed=2809.5s
+[337/552] START cx0.75_cy0.25_layoutB__gamma_0.1__spatial_shift_y_js_0.05
+[337/552] VALID counts={'valid': 331, 'invalid': 6} elapsed=2817.1s
+[338/552] START cx0.75_cy0.25_layoutB__gamma_0.1__spatial_shift_y_js_0.1
+[338/552] VALID counts={'valid': 332, 'invalid': 6} elapsed=2824.6s
+[339/552] START cx0.75_cy0.25_layoutB__gamma_0.1__spatial_shift_y_js_0.15
+[339/552] VALID counts={'valid': 333, 'invalid': 6} elapsed=2832.7s
+[340/552] START cx0.75_cy0.25_layoutB__gamma_0.1__false_hotspot_y_js_0.05
+[340/552] VALID counts={'valid': 334, 'invalid': 6} elapsed=2841.6s
+[341/552] START cx0.75_cy0.25_layoutB__gamma_0.1__false_hotspot_y_js_0.1
+[341/552] VALID counts={'valid': 335, 'invalid': 6} elapsed=2851.5s
+[342/552] START cx0.75_cy0.25_layoutB__gamma_0.1__false_hotspot_y_js_0.15
+[342/552] VALID counts={'valid': 336, 'invalid': 6} elapsed=2859.8s
+[343/552] START cx0.75_cy0.25_layoutB__gamma_0.1__false_negative_suppression_y_js_0.05
+[343/552] VALID counts={'valid': 337, 'invalid': 6} elapsed=2867.1s
+[344/552] START cx0.75_cy0.25_layoutB__gamma_0.1__false_negative_suppression_y_js_0.1
+[344/552] VALID counts={'valid': 338, 'invalid': 6} elapsed=2873.5s
+[345/552] START cx0.75_cy0.25_layoutB__gamma_0.1__false_negative_suppression_y_js_0.15
+[345/552] VALID counts={'valid': 339, 'invalid': 6} elapsed=2878.9s
+[346/552] START cx0.75_cy0.25_layoutB__gamma_0.05__oracle
+[346/552] VALID counts={'valid': 340, 'invalid': 6} elapsed=2892.2s
+[347/552] START cx0.75_cy0.25_layoutB__gamma_0.05__uniform_prior_baseline
+[347/552] VALID counts={'valid': 341, 'invalid': 6} elapsed=2897.2s
+[348/552] START cx0.75_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.05
+[348/552] VALID counts={'valid': 342, 'invalid': 6} elapsed=2904.2s
+[349/552] START cx0.75_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.1
+[349/552] VALID counts={'valid': 343, 'invalid': 6} elapsed=2910.4s
+[350/552] START cx0.75_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.15
+[350/552] VALID counts={'valid': 344, 'invalid': 6} elapsed=2915.4s
+[351/552] START cx0.75_cy0.25_layoutB__gamma_0.05__spatial_shift_x_js_0.05
+[351/552] VALID counts={'valid': 345, 'invalid': 6} elapsed=2927.7s
+[352/552] START cx0.75_cy0.25_layoutB__gamma_0.05__spatial_shift_x_js_0.1
+[352/552] VALID counts={'valid': 346, 'invalid': 6} elapsed=2940.8s
+[353/552] START cx0.75_cy0.25_layoutB__gamma_0.05__spatial_shift_x_js_0.15
+[353/552] VALID counts={'valid': 347, 'invalid': 6} elapsed=2951.9s
+[354/552] START cx0.75_cy0.25_layoutB__gamma_0.05__false_hotspot_x_js_0.05
+[354/552] VALID counts={'valid': 348, 'invalid': 6} elapsed=2962.4s
+[355/552] START cx0.75_cy0.25_layoutB__gamma_0.05__false_hotspot_x_js_0.1
+[355/552] VALID counts={'valid': 349, 'invalid': 6} elapsed=2972.4s
+[356/552] START cx0.75_cy0.25_layoutB__gamma_0.05__false_hotspot_x_js_0.15
+[356/552] VALID counts={'valid': 350, 'invalid': 6} elapsed=2978.6s
+[357/552] START cx0.75_cy0.25_layoutB__gamma_0.05__false_negative_suppression_x_js_0.05
+[357/552] VALID counts={'valid': 351, 'invalid': 6} elapsed=2988.6s
+[358/552] START cx0.75_cy0.25_layoutB__gamma_0.05__false_negative_suppression_x_js_0.1
+[358/552] VALID counts={'valid': 352, 'invalid': 6} elapsed=2997.5s
+[359/552] START cx0.75_cy0.25_layoutB__gamma_0.05__false_negative_suppression_x_js_0.15
+[359/552] VALID counts={'valid': 353, 'invalid': 6} elapsed=3006.6s
+[360/552] START cx0.75_cy0.25_layoutB__gamma_0.05__spatial_shift_y_js_0.05
+[360/552] VALID counts={'valid': 354, 'invalid': 6} elapsed=3017.4s
+[361/552] START cx0.75_cy0.25_layoutB__gamma_0.05__spatial_shift_y_js_0.1
+[361/552] VALID counts={'valid': 355, 'invalid': 6} elapsed=3032.1s
+[362/552] START cx0.75_cy0.25_layoutB__gamma_0.05__spatial_shift_y_js_0.15
+[362/552] VALID counts={'valid': 356, 'invalid': 6} elapsed=3045.3s
+[363/552] START cx0.75_cy0.25_layoutB__gamma_0.05__false_hotspot_y_js_0.05
+[363/552] VALID counts={'valid': 357, 'invalid': 6} elapsed=3056.7s
+[364/552] START cx0.75_cy0.25_layoutB__gamma_0.05__false_hotspot_y_js_0.1
+[364/552] VALID counts={'valid': 358, 'invalid': 6} elapsed=3065.6s
+[365/552] START cx0.75_cy0.25_layoutB__gamma_0.05__false_hotspot_y_js_0.15
+[365/552] VALID counts={'valid': 359, 'invalid': 6} elapsed=3075.0s
+[366/552] START cx0.75_cy0.25_layoutB__gamma_0.05__false_negative_suppression_y_js_0.05
+[366/552] VALID counts={'valid': 360, 'invalid': 6} elapsed=3086.5s
+[367/552] START cx0.75_cy0.25_layoutB__gamma_0.05__false_negative_suppression_y_js_0.1
+[367/552] VALID counts={'valid': 361, 'invalid': 6} elapsed=3095.1s
+[368/552] START cx0.75_cy0.25_layoutB__gamma_0.05__false_negative_suppression_y_js_0.15
+[368/552] VALID counts={'valid': 362, 'invalid': 6} elapsed=3103.7s
+[369/552] START cx0.75_cy0.25_layoutC__gamma_0.1__oracle
+[369/552] VALID counts={'valid': 363, 'invalid': 6} elapsed=3112.5s
+[370/552] START cx0.75_cy0.25_layoutC__gamma_0.1__uniform_prior_baseline
+[370/552] VALID counts={'valid': 364, 'invalid': 6} elapsed=3118.3s
+[371/552] START cx0.75_cy0.25_layoutC__gamma_0.1__diffuse_blur_js_0.05
+[371/552] VALID counts={'valid': 365, 'invalid': 6} elapsed=3125.8s
+[372/552] START cx0.75_cy0.25_layoutC__gamma_0.1__diffuse_blur_js_0.1
+[372/552] VALID counts={'valid': 366, 'invalid': 6} elapsed=3130.6s
+[373/552] START cx0.75_cy0.25_layoutC__gamma_0.1__diffuse_blur_js_0.15
+[373/552] VALID counts={'valid': 367, 'invalid': 6} elapsed=3137.9s
+[374/552] START cx0.75_cy0.25_layoutC__gamma_0.1__spatial_shift_x_js_0.05
+[374/552] VALID counts={'valid': 368, 'invalid': 6} elapsed=3146.9s
+[375/552] START cx0.75_cy0.25_layoutC__gamma_0.1__spatial_shift_x_js_0.1
+[375/552] VALID counts={'valid': 369, 'invalid': 6} elapsed=3154.6s
+[376/552] START cx0.75_cy0.25_layoutC__gamma_0.1__spatial_shift_x_js_0.15
+[376/552] VALID counts={'valid': 370, 'invalid': 6} elapsed=3162.3s
+[377/552] START cx0.75_cy0.25_layoutC__gamma_0.1__false_hotspot_x_js_0.05
+[377/552] VALID counts={'valid': 371, 'invalid': 6} elapsed=3169.5s
+[378/552] START cx0.75_cy0.25_layoutC__gamma_0.1__false_hotspot_x_js_0.1
+[378/552] VALID counts={'valid': 372, 'invalid': 6} elapsed=3176.7s
+[379/552] START cx0.75_cy0.25_layoutC__gamma_0.1__false_hotspot_x_js_0.15
+[379/552] VALID counts={'valid': 373, 'invalid': 6} elapsed=3184.3s
+[380/552] START cx0.75_cy0.25_layoutC__gamma_0.1__false_negative_suppression_x_js_0.05
+[380/552] VALID counts={'valid': 374, 'invalid': 6} elapsed=3191.5s
+[381/552] START cx0.75_cy0.25_layoutC__gamma_0.1__false_negative_suppression_x_js_0.1
+[381/552] VALID counts={'valid': 375, 'invalid': 6} elapsed=3198.2s
+[382/552] START cx0.75_cy0.25_layoutC__gamma_0.1__false_negative_suppression_x_js_0.15
+[382/552] VALID counts={'valid': 376, 'invalid': 6} elapsed=3203.4s
+[383/552] START cx0.75_cy0.25_layoutC__gamma_0.1__spatial_shift_y_js_0.05
+[383/552] VALID counts={'valid': 377, 'invalid': 6} elapsed=3212.0s
+[384/552] START cx0.75_cy0.25_layoutC__gamma_0.1__spatial_shift_y_js_0.1
+[384/552] VALID counts={'valid': 378, 'invalid': 6} elapsed=3219.1s
+[385/552] START cx0.75_cy0.25_layoutC__gamma_0.1__spatial_shift_y_js_0.15
+[385/552] VALID counts={'valid': 379, 'invalid': 6} elapsed=3227.4s
+[386/552] START cx0.75_cy0.25_layoutC__gamma_0.1__false_hotspot_y_js_0.05
+[386/552] VALID counts={'valid': 380, 'invalid': 6} elapsed=3236.4s
+[387/552] START cx0.75_cy0.25_layoutC__gamma_0.1__false_hotspot_y_js_0.1
+[387/552] VALID counts={'valid': 381, 'invalid': 6} elapsed=3246.2s
+[388/552] START cx0.75_cy0.25_layoutC__gamma_0.1__false_hotspot_y_js_0.15
+[388/552] VALID counts={'valid': 382, 'invalid': 6} elapsed=3254.9s
+[389/552] START cx0.75_cy0.25_layoutC__gamma_0.1__false_negative_suppression_y_js_0.05
+[389/552] VALID counts={'valid': 383, 'invalid': 6} elapsed=3261.7s
+[390/552] START cx0.75_cy0.25_layoutC__gamma_0.1__false_negative_suppression_y_js_0.1
+[390/552] VALID counts={'valid': 384, 'invalid': 6} elapsed=3267.0s
+[391/552] START cx0.75_cy0.25_layoutC__gamma_0.1__false_negative_suppression_y_js_0.15
+[391/552] VALID counts={'valid': 385, 'invalid': 6} elapsed=3272.8s
+[392/552] START cx0.75_cy0.25_layoutC__gamma_0.05__oracle
+[392/552] VALID counts={'valid': 386, 'invalid': 6} elapsed=3284.5s
+[393/552] START cx0.75_cy0.25_layoutC__gamma_0.05__uniform_prior_baseline
+[393/552] VALID counts={'valid': 387, 'invalid': 6} elapsed=3290.3s
+[394/552] START cx0.75_cy0.25_layoutC__gamma_0.05__diffuse_blur_js_0.05
+[394/552] VALID counts={'valid': 388, 'invalid': 6} elapsed=3298.4s
+[395/552] START cx0.75_cy0.25_layoutC__gamma_0.05__diffuse_blur_js_0.1
+[395/552] VALID counts={'valid': 389, 'invalid': 6} elapsed=3306.7s
+[396/552] START cx0.75_cy0.25_layoutC__gamma_0.05__diffuse_blur_js_0.15
+[396/552] VALID counts={'valid': 390, 'invalid': 6} elapsed=3314.9s
+[397/552] START cx0.75_cy0.25_layoutC__gamma_0.05__spatial_shift_x_js_0.05
+[397/552] VALID counts={'valid': 391, 'invalid': 6} elapsed=3324.9s
+[398/552] START cx0.75_cy0.25_layoutC__gamma_0.05__spatial_shift_x_js_0.1
+[398/552] VALID counts={'valid': 392, 'invalid': 6} elapsed=3336.7s
+[399/552] START cx0.75_cy0.25_layoutC__gamma_0.05__spatial_shift_x_js_0.15
+[399/552] VALID counts={'valid': 393, 'invalid': 6} elapsed=3346.1s
+[400/552] START cx0.75_cy0.25_layoutC__gamma_0.05__false_hotspot_x_js_0.05
+[400/552] VALID counts={'valid': 394, 'invalid': 6} elapsed=3357.7s
+[401/552] START cx0.75_cy0.25_layoutC__gamma_0.05__false_hotspot_x_js_0.1
+[401/552] VALID counts={'valid': 395, 'invalid': 6} elapsed=3366.2s
+[402/552] START cx0.75_cy0.25_layoutC__gamma_0.05__false_hotspot_x_js_0.15
+[402/552] VALID counts={'valid': 396, 'invalid': 6} elapsed=3372.5s
+[403/552] START cx0.75_cy0.25_layoutC__gamma_0.05__false_negative_suppression_x_js_0.05
+[403/552] VALID counts={'valid': 397, 'invalid': 6} elapsed=3381.6s
+[404/552] START cx0.75_cy0.25_layoutC__gamma_0.05__false_negative_suppression_x_js_0.1
+[404/552] VALID counts={'valid': 398, 'invalid': 6} elapsed=3391.6s
+[405/552] START cx0.75_cy0.25_layoutC__gamma_0.05__false_negative_suppression_x_js_0.15
+[405/552] VALID counts={'valid': 399, 'invalid': 6} elapsed=3401.0s
+[406/552] START cx0.75_cy0.25_layoutC__gamma_0.05__spatial_shift_y_js_0.05
+[406/552] VALID counts={'valid': 400, 'invalid': 6} elapsed=3411.4s
+[407/552] START cx0.75_cy0.25_layoutC__gamma_0.05__spatial_shift_y_js_0.1
+[407/552] VALID counts={'valid': 401, 'invalid': 6} elapsed=3422.7s
+[408/552] START cx0.75_cy0.25_layoutC__gamma_0.05__spatial_shift_y_js_0.15
+[408/552] VALID counts={'valid': 402, 'invalid': 6} elapsed=3434.9s
+[409/552] START cx0.75_cy0.25_layoutC__gamma_0.05__false_hotspot_y_js_0.05
+[409/552] VALID counts={'valid': 403, 'invalid': 6} elapsed=3446.3s
+[410/552] START cx0.75_cy0.25_layoutC__gamma_0.05__false_hotspot_y_js_0.1
+[410/552] VALID counts={'valid': 404, 'invalid': 6} elapsed=3452.9s
+[411/552] START cx0.75_cy0.25_layoutC__gamma_0.05__false_hotspot_y_js_0.15
+[411/552] VALID counts={'valid': 405, 'invalid': 6} elapsed=3462.8s
+[412/552] START cx0.75_cy0.25_layoutC__gamma_0.05__false_negative_suppression_y_js_0.05
+[412/552] VALID counts={'valid': 406, 'invalid': 6} elapsed=3473.0s
+[413/552] START cx0.75_cy0.25_layoutC__gamma_0.05__false_negative_suppression_y_js_0.1
+[413/552] VALID counts={'valid': 407, 'invalid': 6} elapsed=3482.1s
+[414/552] START cx0.75_cy0.25_layoutC__gamma_0.05__false_negative_suppression_y_js_0.15
+[414/552] VALID counts={'valid': 408, 'invalid': 6} elapsed=3492.9s
+[415/552] START cx0.75_cy0.75_layoutA__gamma_0.1__oracle
+[415/552] VALID counts={'valid': 409, 'invalid': 6} elapsed=3500.7s
+[416/552] START cx0.75_cy0.75_layoutA__gamma_0.1__uniform_prior_baseline
+[416/552] VALID counts={'valid': 410, 'invalid': 6} elapsed=3506.2s
+[417/552] START cx0.75_cy0.75_layoutA__gamma_0.1__diffuse_blur_js_0.05
+[417/552] VALID counts={'valid': 411, 'invalid': 6} elapsed=3512.7s
+[418/552] START cx0.75_cy0.75_layoutA__gamma_0.1__diffuse_blur_js_0.1
+[418/552] VALID counts={'valid': 412, 'invalid': 6} elapsed=3517.9s
+[419/552] START cx0.75_cy0.75_layoutA__gamma_0.1__diffuse_blur_js_0.15
+[419/552] VALID counts={'valid': 413, 'invalid': 6} elapsed=3524.2s
+[420/552] START cx0.75_cy0.75_layoutA__gamma_0.1__spatial_shift_x_js_0.05
+[420/552] VALID counts={'valid': 414, 'invalid': 6} elapsed=3532.0s
+[421/552] START cx0.75_cy0.75_layoutA__gamma_0.1__spatial_shift_x_js_0.1
+[421/552] VALID counts={'valid': 415, 'invalid': 6} elapsed=3538.2s
+[422/552] START cx0.75_cy0.75_layoutA__gamma_0.1__spatial_shift_x_js_0.15
+[422/552] VALID counts={'valid': 416, 'invalid': 6} elapsed=3543.8s
+[423/552] START cx0.75_cy0.75_layoutA__gamma_0.1__false_hotspot_x_js_0.05
+[423/552] VALID counts={'valid': 417, 'invalid': 6} elapsed=3551.4s
+[424/552] START cx0.75_cy0.75_layoutA__gamma_0.1__false_hotspot_x_js_0.1
+[424/552] VALID counts={'valid': 418, 'invalid': 6} elapsed=3558.0s
+[425/552] START cx0.75_cy0.75_layoutA__gamma_0.1__false_hotspot_x_js_0.15
+[425/552] VALID counts={'valid': 419, 'invalid': 6} elapsed=3569.3s
+[426/552] START cx0.75_cy0.75_layoutA__gamma_0.1__false_negative_suppression_x_js_0.05
+[426/552] VALID counts={'valid': 420, 'invalid': 6} elapsed=3578.7s
+[427/552] START cx0.75_cy0.75_layoutA__gamma_0.1__false_negative_suppression_x_js_0.1
+[427/552] VALID counts={'valid': 421, 'invalid': 6} elapsed=3594.6s
+[428/552] START cx0.75_cy0.75_layoutA__gamma_0.1__false_negative_suppression_x_js_0.15
+[428/552] VALID counts={'valid': 422, 'invalid': 6} elapsed=3602.9s
+[429/552] START cx0.75_cy0.75_layoutA__gamma_0.1__spatial_shift_y_js_0.05
+[429/552] VALID counts={'valid': 423, 'invalid': 6} elapsed=3610.5s
+[430/552] START cx0.75_cy0.75_layoutA__gamma_0.1__spatial_shift_y_js_0.1
+[430/552] VALID counts={'valid': 424, 'invalid': 6} elapsed=3616.7s
+[431/552] START cx0.75_cy0.75_layoutA__gamma_0.1__spatial_shift_y_js_0.15
+[431/552] VALID counts={'valid': 425, 'invalid': 6} elapsed=3622.6s
+[432/552] START cx0.75_cy0.75_layoutA__gamma_0.1__false_hotspot_y_js_0.05
+[432/552] VALID counts={'valid': 426, 'invalid': 6} elapsed=3628.7s
+[433/552] START cx0.75_cy0.75_layoutA__gamma_0.1__false_hotspot_y_js_0.1
+[433/552] VALID counts={'valid': 427, 'invalid': 6} elapsed=3636.3s
+[434/552] START cx0.75_cy0.75_layoutA__gamma_0.1__false_hotspot_y_js_0.15
+[434/552] VALID counts={'valid': 428, 'invalid': 6} elapsed=3646.4s
+[435/552] START cx0.75_cy0.75_layoutA__gamma_0.1__false_negative_suppression_y_js_0.05
+[435/552] VALID counts={'valid': 429, 'invalid': 6} elapsed=3652.9s
+[436/552] START cx0.75_cy0.75_layoutA__gamma_0.1__false_negative_suppression_y_js_0.1
+[436/552] VALID counts={'valid': 430, 'invalid': 6} elapsed=3664.9s
+[437/552] START cx0.75_cy0.75_layoutA__gamma_0.1__false_negative_suppression_y_js_0.15
+[437/552] VALID counts={'valid': 431, 'invalid': 6} elapsed=3673.9s
+[438/552] START cx0.75_cy0.75_layoutA__gamma_0.05__oracle
+[438/552] VALID counts={'valid': 432, 'invalid': 6} elapsed=3684.9s
+[439/552] START cx0.75_cy0.75_layoutA__gamma_0.05__uniform_prior_baseline
+[439/552] VALID counts={'valid': 433, 'invalid': 6} elapsed=3690.1s
+[440/552] START cx0.75_cy0.75_layoutA__gamma_0.05__diffuse_blur_js_0.05
+[440/552] VALID counts={'valid': 434, 'invalid': 6} elapsed=3699.1s
+[441/552] START cx0.75_cy0.75_layoutA__gamma_0.05__diffuse_blur_js_0.1
+[441/552] VALID counts={'valid': 435, 'invalid': 6} elapsed=3704.3s
+[442/552] START cx0.75_cy0.75_layoutA__gamma_0.05__diffuse_blur_js_0.15
+[442/552] VALID counts={'valid': 436, 'invalid': 6} elapsed=3709.4s
+[443/552] START cx0.75_cy0.75_layoutA__gamma_0.05__spatial_shift_x_js_0.05
+[443/552] VALID counts={'valid': 437, 'invalid': 6} elapsed=3717.7s
+[444/552] START cx0.75_cy0.75_layoutA__gamma_0.05__spatial_shift_x_js_0.1
+[444/552] VALID counts={'valid': 438, 'invalid': 6} elapsed=3725.8s
+[445/552] START cx0.75_cy0.75_layoutA__gamma_0.05__spatial_shift_x_js_0.15
+[445/552] VALID counts={'valid': 439, 'invalid': 6} elapsed=3737.6s
+[446/552] START cx0.75_cy0.75_layoutA__gamma_0.05__false_hotspot_x_js_0.05
+[446/552] VALID counts={'valid': 440, 'invalid': 6} elapsed=3747.1s
+[447/552] START cx0.75_cy0.75_layoutA__gamma_0.05__false_hotspot_x_js_0.1
+[447/552] VALID counts={'valid': 441, 'invalid': 6} elapsed=3755.7s
+[448/552] START cx0.75_cy0.75_layoutA__gamma_0.05__false_hotspot_x_js_0.15
+[448/552] VALID counts={'valid': 442, 'invalid': 6} elapsed=3767.0s
+[449/552] START cx0.75_cy0.75_layoutA__gamma_0.05__false_negative_suppression_x_js_0.05
+[449/552] VALID counts={'valid': 443, 'invalid': 6} elapsed=3773.8s
+[450/552] START cx0.75_cy0.75_layoutA__gamma_0.05__false_negative_suppression_x_js_0.1
+[450/552] VALID counts={'valid': 444, 'invalid': 6} elapsed=3779.8s
+[451/552] START cx0.75_cy0.75_layoutA__gamma_0.05__false_negative_suppression_x_js_0.15
+[451/552] VALID counts={'valid': 445, 'invalid': 6} elapsed=3790.3s
+[452/552] START cx0.75_cy0.75_layoutA__gamma_0.05__spatial_shift_y_js_0.05
+[452/552] VALID counts={'valid': 446, 'invalid': 6} elapsed=3800.1s
+[453/552] START cx0.75_cy0.75_layoutA__gamma_0.05__spatial_shift_y_js_0.1
+[453/552] VALID counts={'valid': 447, 'invalid': 6} elapsed=3810.3s
+[454/552] START cx0.75_cy0.75_layoutA__gamma_0.05__spatial_shift_y_js_0.15
+[454/552] VALID counts={'valid': 448, 'invalid': 6} elapsed=3824.1s
+[455/552] START cx0.75_cy0.75_layoutA__gamma_0.05__false_hotspot_y_js_0.05
+[455/552] VALID counts={'valid': 449, 'invalid': 6} elapsed=3833.0s
+[456/552] START cx0.75_cy0.75_layoutA__gamma_0.05__false_hotspot_y_js_0.1
+[456/552] VALID counts={'valid': 450, 'invalid': 6} elapsed=3841.7s
+[457/552] START cx0.75_cy0.75_layoutA__gamma_0.05__false_hotspot_y_js_0.15
+[457/552] VALID counts={'valid': 451, 'invalid': 6} elapsed=3849.6s
+[458/552] START cx0.75_cy0.75_layoutA__gamma_0.05__false_negative_suppression_y_js_0.05
+[458/552] VALID counts={'valid': 452, 'invalid': 6} elapsed=3857.5s
+[459/552] START cx0.75_cy0.75_layoutA__gamma_0.05__false_negative_suppression_y_js_0.1
+[459/552] VALID counts={'valid': 453, 'invalid': 6} elapsed=3864.6s
+[460/552] START cx0.75_cy0.75_layoutA__gamma_0.05__false_negative_suppression_y_js_0.15
+[460/552] VALID counts={'valid': 454, 'invalid': 6} elapsed=3872.4s
+[461/552] START cx0.75_cy0.75_layoutB__gamma_0.1__oracle
+[461/552] VALID counts={'valid': 455, 'invalid': 6} elapsed=3882.4s
+[462/552] START cx0.75_cy0.75_layoutB__gamma_0.1__uniform_prior_baseline
+[462/552] VALID counts={'valid': 456, 'invalid': 6} elapsed=3888.0s
+[463/552] START cx0.75_cy0.75_layoutB__gamma_0.1__diffuse_blur_js_0.05
+[463/552] VALID counts={'valid': 457, 'invalid': 6} elapsed=3895.9s
+[464/552] START cx0.75_cy0.75_layoutB__gamma_0.1__diffuse_blur_js_0.1
+[464/552] VALID counts={'valid': 458, 'invalid': 6} elapsed=3902.9s
+[465/552] START cx0.75_cy0.75_layoutB__gamma_0.1__diffuse_blur_js_0.15
+[465/552] VALID counts={'valid': 459, 'invalid': 6} elapsed=3909.0s
+[466/552] START cx0.75_cy0.75_layoutB__gamma_0.1__spatial_shift_x_js_0.05
+[466/552] VALID counts={'valid': 460, 'invalid': 6} elapsed=3915.0s
+[467/552] START cx0.75_cy0.75_layoutB__gamma_0.1__spatial_shift_x_js_0.1
+[467/552] VALID counts={'valid': 461, 'invalid': 6} elapsed=3921.5s
+[468/552] START cx0.75_cy0.75_layoutB__gamma_0.1__spatial_shift_x_js_0.15
+[468/552] VALID counts={'valid': 462, 'invalid': 6} elapsed=3930.1s
+[469/552] START cx0.75_cy0.75_layoutB__gamma_0.1__false_hotspot_x_js_0.05
+[469/552] VALID counts={'valid': 463, 'invalid': 6} elapsed=3938.5s
+[470/552] START cx0.75_cy0.75_layoutB__gamma_0.1__false_hotspot_x_js_0.1
+[470/552] VALID counts={'valid': 464, 'invalid': 6} elapsed=3948.3s
+[471/552] START cx0.75_cy0.75_layoutB__gamma_0.1__false_hotspot_x_js_0.15
+[471/552] VALID counts={'valid': 465, 'invalid': 6} elapsed=3957.5s
+[472/552] START cx0.75_cy0.75_layoutB__gamma_0.1__false_negative_suppression_x_js_0.05
+[472/552] VALID counts={'valid': 466, 'invalid': 6} elapsed=3966.7s
+[473/552] START cx0.75_cy0.75_layoutB__gamma_0.1__false_negative_suppression_x_js_0.1
+[473/552] VALID counts={'valid': 467, 'invalid': 6} elapsed=3979.2s
+[474/552] START cx0.75_cy0.75_layoutB__gamma_0.1__false_negative_suppression_x_js_0.15
+[474/552] VALID counts={'valid': 468, 'invalid': 6} elapsed=3987.2s
+[475/552] START cx0.75_cy0.75_layoutB__gamma_0.1__spatial_shift_y_js_0.05
+[475/552] VALID counts={'valid': 469, 'invalid': 6} elapsed=3996.8s
+[476/552] START cx0.75_cy0.75_layoutB__gamma_0.1__spatial_shift_y_js_0.1
+[476/552] VALID counts={'valid': 470, 'invalid': 6} elapsed=4003.6s
+[477/552] START cx0.75_cy0.75_layoutB__gamma_0.1__spatial_shift_y_js_0.15
+[477/552] VALID counts={'valid': 471, 'invalid': 6} elapsed=4009.4s
+[478/552] START cx0.75_cy0.75_layoutB__gamma_0.1__false_hotspot_y_js_0.05
+[478/552] VALID counts={'valid': 472, 'invalid': 6} elapsed=4015.7s
+[479/552] START cx0.75_cy0.75_layoutB__gamma_0.1__false_hotspot_y_js_0.1
+[479/552] VALID counts={'valid': 473, 'invalid': 6} elapsed=4024.0s
+[480/552] START cx0.75_cy0.75_layoutB__gamma_0.1__false_hotspot_y_js_0.15
+[480/552] VALID counts={'valid': 474, 'invalid': 6} elapsed=4034.9s
+[481/552] START cx0.75_cy0.75_layoutB__gamma_0.1__false_negative_suppression_y_js_0.05
+[481/552] VALID counts={'valid': 475, 'invalid': 6} elapsed=4042.8s
+[482/552] START cx0.75_cy0.75_layoutB__gamma_0.1__false_negative_suppression_y_js_0.1
+[482/552] VALID counts={'valid': 476, 'invalid': 6} elapsed=4051.3s
+[483/552] START cx0.75_cy0.75_layoutB__gamma_0.1__false_negative_suppression_y_js_0.15
+[483/552] VALID counts={'valid': 477, 'invalid': 6} elapsed=4059.6s
+[484/552] START cx0.75_cy0.75_layoutB__gamma_0.05__oracle
+[484/552] VALID counts={'valid': 478, 'invalid': 6} elapsed=4074.7s
+[485/552] START cx0.75_cy0.75_layoutB__gamma_0.05__uniform_prior_baseline
+[485/552] VALID counts={'valid': 479, 'invalid': 6} elapsed=4079.7s
+[486/552] START cx0.75_cy0.75_layoutB__gamma_0.05__diffuse_blur_js_0.05
+[486/552] VALID counts={'valid': 480, 'invalid': 6} elapsed=4089.5s
+[487/552] START cx0.75_cy0.75_layoutB__gamma_0.05__diffuse_blur_js_0.1
+[487/552] VALID counts={'valid': 481, 'invalid': 6} elapsed=4095.4s
+[488/552] START cx0.75_cy0.75_layoutB__gamma_0.05__diffuse_blur_js_0.15
+[488/552] VALID counts={'valid': 482, 'invalid': 6} elapsed=4100.7s
+[489/552] START cx0.75_cy0.75_layoutB__gamma_0.05__spatial_shift_x_js_0.05
+[489/552] VALID counts={'valid': 483, 'invalid': 6} elapsed=4111.8s
+[490/552] START cx0.75_cy0.75_layoutB__gamma_0.05__spatial_shift_x_js_0.1
+[490/552] VALID counts={'valid': 484, 'invalid': 6} elapsed=4121.8s
+[491/552] START cx0.75_cy0.75_layoutB__gamma_0.05__spatial_shift_x_js_0.15
+[491/552] VALID counts={'valid': 485, 'invalid': 6} elapsed=4132.0s
+[492/552] START cx0.75_cy0.75_layoutB__gamma_0.05__false_hotspot_x_js_0.05
+[492/552] VALID counts={'valid': 486, 'invalid': 6} elapsed=4142.0s
+[493/552] START cx0.75_cy0.75_layoutB__gamma_0.05__false_hotspot_x_js_0.1
+[493/552] VALID counts={'valid': 487, 'invalid': 6} elapsed=4151.9s
+[494/552] START cx0.75_cy0.75_layoutB__gamma_0.05__false_hotspot_x_js_0.15
+[494/552] VALID counts={'valid': 488, 'invalid': 6} elapsed=4159.4s
+[495/552] START cx0.75_cy0.75_layoutB__gamma_0.05__false_negative_suppression_x_js_0.05
+[495/552] VALID counts={'valid': 489, 'invalid': 6} elapsed=4165.6s
+[496/552] START cx0.75_cy0.75_layoutB__gamma_0.05__false_negative_suppression_x_js_0.1
+[496/552] VALID counts={'valid': 490, 'invalid': 6} elapsed=4170.4s
+[497/552] START cx0.75_cy0.75_layoutB__gamma_0.05__false_negative_suppression_x_js_0.15
+[497/552] VALID counts={'valid': 491, 'invalid': 6} elapsed=4177.2s
+[498/552] START cx0.75_cy0.75_layoutB__gamma_0.05__spatial_shift_y_js_0.05
+[498/552] VALID counts={'valid': 492, 'invalid': 6} elapsed=4186.1s
+[499/552] START cx0.75_cy0.75_layoutB__gamma_0.05__spatial_shift_y_js_0.1
+[499/552] VALID counts={'valid': 493, 'invalid': 6} elapsed=4197.3s
+[500/552] START cx0.75_cy0.75_layoutB__gamma_0.05__spatial_shift_y_js_0.15
+[500/552] VALID counts={'valid': 494, 'invalid': 6} elapsed=4208.3s
+[501/552] START cx0.75_cy0.75_layoutB__gamma_0.05__false_hotspot_y_js_0.05
+[501/552] VALID counts={'valid': 495, 'invalid': 6} elapsed=4218.4s
+[502/552] START cx0.75_cy0.75_layoutB__gamma_0.05__false_hotspot_y_js_0.1
+[502/552] VALID counts={'valid': 496, 'invalid': 6} elapsed=4228.7s
+[503/552] START cx0.75_cy0.75_layoutB__gamma_0.05__false_hotspot_y_js_0.15
+[503/552] VALID counts={'valid': 497, 'invalid': 6} elapsed=4238.3s
+[504/552] START cx0.75_cy0.75_layoutB__gamma_0.05__false_negative_suppression_y_js_0.05
+[504/552] VALID counts={'valid': 498, 'invalid': 6} elapsed=4247.2s
+[505/552] START cx0.75_cy0.75_layoutB__gamma_0.05__false_negative_suppression_y_js_0.1
+[505/552] VALID counts={'valid': 499, 'invalid': 6} elapsed=4253.9s
+[506/552] START cx0.75_cy0.75_layoutB__gamma_0.05__false_negative_suppression_y_js_0.15
+[506/552] VALID counts={'valid': 500, 'invalid': 6} elapsed=4260.8s
+[507/552] START cx0.75_cy0.75_layoutC__gamma_0.1__oracle
+[507/552] VALID counts={'valid': 501, 'invalid': 6} elapsed=4270.0s
+[508/552] START cx0.75_cy0.75_layoutC__gamma_0.1__uniform_prior_baseline
+[508/552] VALID counts={'valid': 502, 'invalid': 6} elapsed=4275.6s
+[509/552] START cx0.75_cy0.75_layoutC__gamma_0.1__diffuse_blur_js_0.05
+[509/552] VALID counts={'valid': 503, 'invalid': 6} elapsed=4282.3s
+[510/552] START cx0.75_cy0.75_layoutC__gamma_0.1__diffuse_blur_js_0.1
+[510/552] VALID counts={'valid': 504, 'invalid': 6} elapsed=4289.2s
+[511/552] START cx0.75_cy0.75_layoutC__gamma_0.1__diffuse_blur_js_0.15
+[511/552] VALID counts={'valid': 505, 'invalid': 6} elapsed=4296.5s
+[512/552] START cx0.75_cy0.75_layoutC__gamma_0.1__spatial_shift_x_js_0.05
+[512/552] VALID counts={'valid': 506, 'invalid': 6} elapsed=4305.2s
+[513/552] START cx0.75_cy0.75_layoutC__gamma_0.1__spatial_shift_x_js_0.1
+[513/552] VALID counts={'valid': 507, 'invalid': 6} elapsed=4313.4s
+[514/552] START cx0.75_cy0.75_layoutC__gamma_0.1__spatial_shift_x_js_0.15
+[514/552] VALID counts={'valid': 508, 'invalid': 6} elapsed=4320.8s
+[515/552] START cx0.75_cy0.75_layoutC__gamma_0.1__false_hotspot_x_js_0.05
+[515/552] VALID counts={'valid': 509, 'invalid': 6} elapsed=4329.6s
+[516/552] START cx0.75_cy0.75_layoutC__gamma_0.1__false_hotspot_x_js_0.1
+[516/552] VALID counts={'valid': 510, 'invalid': 6} elapsed=4339.8s
+[517/552] START cx0.75_cy0.75_layoutC__gamma_0.1__false_hotspot_x_js_0.15
+[517/552] VALID counts={'valid': 511, 'invalid': 6} elapsed=4349.7s
+[518/552] START cx0.75_cy0.75_layoutC__gamma_0.1__false_negative_suppression_x_js_0.05
+[518/552] VALID counts={'valid': 512, 'invalid': 6} elapsed=4356.8s
+[519/552] START cx0.75_cy0.75_layoutC__gamma_0.1__false_negative_suppression_x_js_0.1
+[519/552] VALID counts={'valid': 513, 'invalid': 6} elapsed=4363.6s
+[520/552] START cx0.75_cy0.75_layoutC__gamma_0.1__false_negative_suppression_x_js_0.15
+[520/552] VALID counts={'valid': 514, 'invalid': 6} elapsed=4370.1s
+[521/552] START cx0.75_cy0.75_layoutC__gamma_0.1__spatial_shift_y_js_0.05
+[521/552] VALID counts={'valid': 515, 'invalid': 6} elapsed=4378.4s
+[522/552] START cx0.75_cy0.75_layoutC__gamma_0.1__spatial_shift_y_js_0.1
+[522/552] VALID counts={'valid': 516, 'invalid': 6} elapsed=4387.7s
+[523/552] START cx0.75_cy0.75_layoutC__gamma_0.1__spatial_shift_y_js_0.15
+[523/552] VALID counts={'valid': 517, 'invalid': 6} elapsed=4396.0s
+[524/552] START cx0.75_cy0.75_layoutC__gamma_0.1__false_hotspot_y_js_0.05
+[524/552] VALID counts={'valid': 518, 'invalid': 6} elapsed=4402.6s
+[525/552] START cx0.75_cy0.75_layoutC__gamma_0.1__false_hotspot_y_js_0.1
+[525/552] VALID counts={'valid': 519, 'invalid': 6} elapsed=4411.8s
+[526/552] START cx0.75_cy0.75_layoutC__gamma_0.1__false_hotspot_y_js_0.15
+[526/552] VALID counts={'valid': 520, 'invalid': 6} elapsed=4424.8s
+[527/552] START cx0.75_cy0.75_layoutC__gamma_0.1__false_negative_suppression_y_js_0.05
+[527/552] VALID counts={'valid': 521, 'invalid': 6} elapsed=4433.3s
+[528/552] START cx0.75_cy0.75_layoutC__gamma_0.1__false_negative_suppression_y_js_0.1
+[528/552] VALID counts={'valid': 522, 'invalid': 6} elapsed=4444.8s
+[529/552] START cx0.75_cy0.75_layoutC__gamma_0.1__false_negative_suppression_y_js_0.15
+[529/552] VALID counts={'valid': 523, 'invalid': 6} elapsed=4452.5s
+[530/552] START cx0.75_cy0.75_layoutC__gamma_0.05__oracle
+[530/552] VALID counts={'valid': 524, 'invalid': 6} elapsed=4463.0s
+[531/552] START cx0.75_cy0.75_layoutC__gamma_0.05__uniform_prior_baseline
+[531/552] VALID counts={'valid': 525, 'invalid': 6} elapsed=4468.7s
+[532/552] START cx0.75_cy0.75_layoutC__gamma_0.05__diffuse_blur_js_0.05
+[532/552] VALID counts={'valid': 526, 'invalid': 6} elapsed=4477.9s
+[533/552] START cx0.75_cy0.75_layoutC__gamma_0.05__diffuse_blur_js_0.1
+[533/552] VALID counts={'valid': 527, 'invalid': 6} elapsed=4483.5s
+[534/552] START cx0.75_cy0.75_layoutC__gamma_0.05__diffuse_blur_js_0.15
+[534/552] VALID counts={'valid': 528, 'invalid': 6} elapsed=4489.9s
+[535/552] START cx0.75_cy0.75_layoutC__gamma_0.05__spatial_shift_x_js_0.05
+[535/552] VALID counts={'valid': 529, 'invalid': 6} elapsed=4500.3s
+[536/552] START cx0.75_cy0.75_layoutC__gamma_0.05__spatial_shift_x_js_0.1
+[536/552] VALID counts={'valid': 530, 'invalid': 6} elapsed=4511.0s
+[537/552] START cx0.75_cy0.75_layoutC__gamma_0.05__spatial_shift_x_js_0.15
+[537/552] VALID counts={'valid': 531, 'invalid': 6} elapsed=4519.9s
+[538/552] START cx0.75_cy0.75_layoutC__gamma_0.05__false_hotspot_x_js_0.05
+[538/552] VALID counts={'valid': 532, 'invalid': 6} elapsed=4527.6s
+[539/552] START cx0.75_cy0.75_layoutC__gamma_0.05__false_hotspot_x_js_0.1
+[539/552] VALID counts={'valid': 533, 'invalid': 6} elapsed=4539.6s
+[540/552] START cx0.75_cy0.75_layoutC__gamma_0.05__false_hotspot_x_js_0.15
+[540/552] VALID counts={'valid': 534, 'invalid': 6} elapsed=4554.3s
+[541/552] START cx0.75_cy0.75_layoutC__gamma_0.05__false_negative_suppression_x_js_0.05
+[541/552] VALID counts={'valid': 535, 'invalid': 6} elapsed=4561.7s
+[542/552] START cx0.75_cy0.75_layoutC__gamma_0.05__false_negative_suppression_x_js_0.1
+[542/552] VALID counts={'valid': 536, 'invalid': 6} elapsed=4567.5s
+[543/552] START cx0.75_cy0.75_layoutC__gamma_0.05__false_negative_suppression_x_js_0.15
+[543/552] VALID counts={'valid': 537, 'invalid': 6} elapsed=4573.2s
+[544/552] START cx0.75_cy0.75_layoutC__gamma_0.05__spatial_shift_y_js_0.05
+[544/552] VALID counts={'valid': 538, 'invalid': 6} elapsed=4587.1s
+[545/552] START cx0.75_cy0.75_layoutC__gamma_0.05__spatial_shift_y_js_0.1
+[545/552] VALID counts={'valid': 539, 'invalid': 6} elapsed=4600.9s
+[546/552] START cx0.75_cy0.75_layoutC__gamma_0.05__spatial_shift_y_js_0.15
+[546/552] VALID counts={'valid': 540, 'invalid': 6} elapsed=4612.4s
+[547/552] START cx0.75_cy0.75_layoutC__gamma_0.05__false_hotspot_y_js_0.05
+[547/552] VALID counts={'valid': 541, 'invalid': 6} elapsed=4623.2s
+[548/552] START cx0.75_cy0.75_layoutC__gamma_0.05__false_hotspot_y_js_0.1
+[548/552] VALID counts={'valid': 542, 'invalid': 6} elapsed=4632.0s
+[549/552] START cx0.75_cy0.75_layoutC__gamma_0.05__false_hotspot_y_js_0.15
+[549/552] VALID counts={'valid': 543, 'invalid': 6} elapsed=4639.5s
+[550/552] START cx0.75_cy0.75_layoutC__gamma_0.05__false_negative_suppression_y_js_0.05
+[550/552] VALID counts={'valid': 544, 'invalid': 6} elapsed=4648.6s
+[551/552] START cx0.75_cy0.75_layoutC__gamma_0.05__false_negative_suppression_y_js_0.1
+[551/552] VALID counts={'valid': 545, 'invalid': 6} elapsed=4655.4s
+[552/552] START cx0.75_cy0.75_layoutC__gamma_0.05__false_negative_suppression_y_js_0.15
+[552/552] VALID counts={'valid': 546, 'invalid': 6} elapsed=4662.7s
+All 552 attempts recorded. Run audit_formal, then analyze_formal.
+/Users/leofang/Desktop/active_visual_search_thesis/milestone_4/audit_formal.py:182: RuntimeWarning: divide by zero encountered in matmul
+  phik = probabilities @ np.prod(np.cos(points[:, None, :] * k[None, :, :]), axis=2)
+/Users/leofang/Desktop/active_visual_search_thesis/milestone_4/audit_formal.py:182: RuntimeWarning: overflow encountered in matmul
+  phik = probabilities @ np.prod(np.cos(points[:, None, :] * k[None, :, :]), axis=2)
+/Users/leofang/Desktop/active_visual_search_thesis/milestone_4/audit_formal.py:182: RuntimeWarning: invalid value encountered in matmul
+  phik = probabilities @ np.prod(np.cos(points[:, None, :] * k[None, :, :]), axis=2)
+Formal audit: 50/552 conditions inspected; 0 integrity errors
+Formal audit: 100/552 conditions inspected; 0 integrity errors
+Formal audit: 150/552 conditions inspected; 0 integrity errors
+Formal audit: 200/552 conditions inspected; 0 integrity errors
+Formal audit: 250/552 conditions inspected; 0 integrity errors
+Formal audit: 300/552 conditions inspected; 0 integrity errors
+Formal audit: 350/552 conditions inspected; 0 integrity errors
+Formal audit: 400/552 conditions inspected; 0 integrity errors
+Formal audit: 450/552 conditions inspected; 0 integrity errors
+Formal audit: 500/552 conditions inspected; 0 integrity errors
+Formal audit: 550/552 conditions inspected; 0 integrity errors
+Formal audit: 552/552 conditions inspected; 0 integrity errors
+{
+  "integrity_passed": true,
+  "execution_complete": true,
+  "complete_matched_suite": false,
+  "planned_plans": 552,
+  "valid_plans": 546,
+  "invalid_or_failed_plans": 6,
+  "errors": []
+}
+{
+  "protocol_id": "m4-controlled-prior-v2-frozen",
+  "frozen_manifest_sha256": "76d6146d53d499b6965733154921070b9b05ae2aa326044838486a2b7bbab3a3",
+  "analysis_source_sha256": "85aac0e6c64ee4bfb1eb8439540926bfec76fd4999f1a7e756c9c6680b736dc1",
+  "formal_audit_sha256": "1a3bf95baf73ff15928dc9e1255655a0454d93e8da3c046c6d7ce00f139a39fc",
+  "planned_plans": 552,
+  "recorded_plans": 552,
+  "valid_plans": 546,
+  "complete_valid_matched_suite": false,
+  "table_rows": {
+    "condition_metrics": 552,
+    "primary_block_contrasts": 1464,
+    "primary_scene_contrasts": 744,
+    "primary_contrast_summary": 62,
+    "gamma_interactions_by_scene": 372,
+    "gamma_interaction_summary": 31,
+    "sampled_sanity_check": 3312,
+    "sampled_oracle_pairs": 3600
+  },
+  "planner_calls": 0,
+  "protocol_modified": false,
+  "files_sha256": {
+    "FORMAL_RESULTS_SUMMARY.md": "c12a120aeed4917e291bc5ab7cb970e67f7aeacdd4c7be52942d1cf17ab41981",
+    "condition_metrics.csv": "9783c3800f00815e66a3f13dfe05c0c09734b38bbaac1e88ea28ccf38b36fe61",
+    "figures/family_gamma_interaction.pdf": "807f4f38118493ee46344c0357e97df122c946baf10a7b404d97d48a24d819d6",
+    "figures/family_gamma_interaction.png": "de9d481964fe572375cd724e31389fe93f19c56b120f12acd9465ce019869b6a",
+    "figures/primary_contrasts_gamma_0.05.pdf": "f94f91df9431bdb12732197985c9162e02b3f3b78ac984a9bb1e63d9811ebc02",
+    "figures/primary_contrasts_gamma_0.05.png": "c06aac4e1839916bc34f25b1309e6e7e80bcd15395d02ae6044150160c8d8c19",
+    "figures/primary_contrasts_gamma_0.1.pdf": "9c2217d3d05dd3adff1ad2c1417d9357c9a7d02da7da366779fd7bc7d9da95dd",
+    "figures/primary_contrasts_gamma_0.1.png": "faab2ce9017d2ec9916fab553e1690d112cb4e4c7fbc03e5d116a04e8d2c4e98",
+    "figures/sampled_sanity_check.pdf": "565e3b94c98207f430bf77aef74b11e3ec3b0674cb151fc6382b9c61a973f7e7",
+    "figures/sampled_sanity_check.png": "7a834242aa09e72db9809dca9daf8dd81acd8684012b59838e314a539c22a710",
+    "figures/scene_matrix_gamma_0.05.pdf": "a484c4f85289a7a32548db597b68dfa5dc527c40fdbbdd64e364602ddbcd6479",
+    "figures/scene_matrix_gamma_0.05.png": "669de78125e20c8afd72bcbbad0cbd4a0680cca26a108d5f5ed54bf1fc372227",
+    "figures/scene_matrix_gamma_0.1.pdf": "fec5bcfb3bcfc6558da12e54a8fcd59d675cd78a6080f9165f84e4f72bd01520",
+    "figures/scene_matrix_gamma_0.1.png": "60a68c5c9c97513365f17f25e59178dbe2ebd0f14a538bab5aa2ca5324e0c5c9",
+    "figures/uniform_weighted_diagnostic.pdf": "d6da2a6d26205fcc6b363b04b580a58367c17c56a5308a296dbb576612dcd81c",
+    "figures/uniform_weighted_diagnostic.png": "9eeaa0b0b582db69bf264d5522fdcea34a5445e597733b2420962704cd4f439c",
+    "gamma_interaction_summary.csv": "73474f87bb117aaa56481b0ecaf9377fde84e775bbc863746245ebb9b4063b96",
+    "gamma_interactions_by_scene.csv": "d91a7c994465ac9ad573940fb2b0e1a65c1f2602c32e1ddaeda76b78e7f4cd6c",
+    "primary_block_contrasts.csv": "289633867b1e3f03fa5a24e0db2a981890c96962849c599232aa9d40ea156b6b",
+    "primary_contrast_summary.csv": "f644896921d6aaa0b8a895237875a3a9b9cae1b22c6a88c5e1928989f23cbb7f",
+    "primary_scene_contrasts.csv": "69087c351203df5c97163ad1eabd8f100352dd5eb817ea2c40b8d9ff4f7af912",
+    "sampled_oracle_pairs.csv": "97678a0b5c386a94aad5eda4e325b36ebb4e7c734f66f0ec981d3d6b1e839fea",
+    "sampled_sanity_check.csv": "4c9c6e26fe7010cfbb68f86d02d49c41b6dba68889c102985e52b5101a6e2286"
+  }
+}

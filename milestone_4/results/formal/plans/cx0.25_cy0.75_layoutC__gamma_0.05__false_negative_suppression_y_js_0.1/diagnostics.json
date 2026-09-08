@@ -1,0 +1,15 @@
+{
+  "valid": false,
+  "feasible": false,
+  "solver_success": false,
+  "solver_message": "Iteration limit reached",
+  "iterations": 600,
+  "finite": true,
+  "max_equality_residual": 1.3083031411120771e-05,
+  "max_inequality_violation": 6.199862274493262e-06,
+  "collision_free": true,
+  "ergodicity": 0.050006199862274496,
+  "optimization_seconds": 22.193716542,
+  "planning_seconds_including_compile": 23.183888709,
+  "backend": "scipy-SLSQP / upstream formulation"
+}

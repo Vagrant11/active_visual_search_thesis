@@ -1,0 +1,27 @@
+{
+  "scene_id": "cx0.25_cy0.25_layoutA",
+  "gamma": 0.05,
+  "prior_id": "false_hotspot_x_js_0.1",
+  "family": "false_hotspot",
+  "direction": "x",
+  "target_js_nats": 0.1,
+  "plan_id": "cx0.25_cy0.25_layoutA__gamma_0.05__false_hotspot_x_js_0.1",
+  "actual_js_nats": 0.09999999999993846,
+  "status": "valid",
+  "valid": true,
+  "attempt_count": 1,
+  "completed_at_utc": "2026-09-08T07:01:03.402484+00:00",
+  "artifact_sha256": {
+    "first_seen_grid.npz": "d3391a3770ba288765ae960c8b996549019ebe3c389052928c980e2603fb32cf",
+    "trajectory.npz": "c16c5e3b46fb252571cfce233aefe41b8fe921fc0ff7485f8ee6c2e66697657d",
+    "sampled_metrics.json": "d9f790c3e91c2061b090132e0c33567732cbea01222c1e67ed41dde962375059",
+    "exact_metrics.json": "66026f482ca74e74936b017ac61fdac76a0a21ea80d26dacda1cd4ee3aa16c57",
+    "diagnostics.json": "d9f1793446b4c64108fc646fc446ccce2959d2d7853a578f0631c3ca412e6473",
+    "episodes.csv": "5207fd7485163ad9383cf5808f535ad685a36d65d360aa29101f029679cbad6a",
+    "started.json": "6caccbd599619cffba04c047d7e5af2e4c526bc3f9a746f00ad1adb88d6a5c8a",
+    "solver_result.json": "99d94b78032110f3c9439e676cd2a3fdf1a2c302c70463487a21d575868b7f6b",
+    "worker_started.json": "6e89aaf4e8ad74e015da0be7f2d2dd1c8d975c89d8e5ad329c0afebd8d74e84a",
+    "worker_exit.json": "76ed51114cacb41fa522930f218be3197b97c3a50feb68e5b2a27e836bf2acf0",
+    "solver.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

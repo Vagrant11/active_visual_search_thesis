@@ -159,3 +159,49 @@ structures, unreachable-level rejection, unchanged M3 inputs, artifact/protocol
 tampering and pairing across seeds (including zero-time detection and timeouts).
 The pilot is the integration check against the actual planner. Its purpose is
 to validate the controlled design and outputs before considering expansion.
+
+## Frozen Protocol v2 formal suite
+
+The authoritative [frozen manifest](results/frozen/PROTOCOL_V2_FROZEN_MANIFEST.json)
+contains 12 scenes × 2 gamma values × 23 distinct prior conditions = **552 plans**.
+The formal runner loads the saved prior vectors and checks their hashes, source
+bytes, environment versions, JS values and full condition list before planning:
+
+```bash
+env MPLCONFIGDIR=/private/tmp/mplconfig XDG_CACHE_HOME=/private/tmp/xdg-cache \
+  /opt/miniconda3/envs/erg/bin/python -m milestone_4.run_formal
+```
+
+Repeat the same command to resume. Completed valid and invalid attempts are
+verified and skipped. A saved solver result resumes evaluation without planning;
+an attempt interrupted before a durable solver result is recorded as interrupted
+and is never retried. A lock prevents overlapping coordinators and remains held
+by an orphaned solver worker until that worker exits. Each plan uses a fresh
+process to bound JAX compilation memory; planner inputs, initialization and solver
+settings stay frozen. `--validate-only` checks inputs with zero planner calls.
+
+`results/formal/` preserves the manifest snapshot, source/input hashes, paired
+inputs, progress, and one directory per condition under `plans/`. Each completed
+plan has its attempt record, solver log/diagnostics, trajectory when returned by
+the solver, exact primary metrics, uniform reweighting diagnostics, sampled
+metrics and raw episodes. Valid plans also save every grid cell's first-visible
+time. Invalid plans have no search outcomes; missing metrics remain null. Saved
+artifact hashes protect checkpoint reuse.
+
+After all attempts are recorded, run the full audit and then generate the report:
+
+```bash
+env MPLCONFIGDIR=/private/tmp/mplconfig XDG_CACHE_HOME=/private/tmp/xdg-cache \
+  /opt/miniconda3/envs/erg/bin/python -m milestone_4.audit_formal
+env MPLCONFIGDIR=/private/tmp/mplconfig XDG_CACHE_HOME=/private/tmp/xdg-cache \
+  /opt/miniconda3/envs/erg/bin/python -m milestone_4.analyze_formal
+```
+
+These commands do not plan or tune. A faithfully recorded invalid attempt can
+pass the integrity audit while preventing a claim of a complete valid matched
+suite. Primary contrasts use exact detection probability and conditional weighted
+detection time, average the two direction contrasts within scene, weight scenes
+equally and keep gamma values separate. Reports include planned/available
+condition denominators. Sampled metrics use only the frozen five seeds and 256
+targets per seed as sanity checks; no population inference or post-hoc tuning is
+part of this run.

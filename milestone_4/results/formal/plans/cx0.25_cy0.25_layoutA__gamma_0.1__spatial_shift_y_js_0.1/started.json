@@ -1,0 +1,13 @@
+{
+  "scene_id": "cx0.25_cy0.25_layoutA",
+  "gamma": 0.1,
+  "prior_id": "spatial_shift_y_js_0.1",
+  "family": "spatial_shift",
+  "direction": "y",
+  "target_js_nats": 0.1,
+  "plan_id": "cx0.25_cy0.25_layoutA__gamma_0.1__spatial_shift_y_js_0.1",
+  "started_at_utc": "2026-09-08T06:58:53.508278+00:00",
+  "attempt_count": 1,
+  "frozen_manifest_sha256": "76d6146d53d499b6965733154921070b9b05ae2aa326044838486a2b7bbab3a3",
+  "prior_sha256": "14e69ea8057b57fb0db742ce9e01d8ec21c18fe706c6560cf721c2b568b3ed0c"
+}

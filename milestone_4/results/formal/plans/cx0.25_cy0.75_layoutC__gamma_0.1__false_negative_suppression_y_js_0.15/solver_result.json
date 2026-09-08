@@ -1,0 +1,19 @@
+{
+  "diagnostics": {
+    "valid": false,
+    "feasible": false,
+    "solver_success": false,
+    "solver_message": "More than 3*n iterations in LSQ subproblem",
+    "iterations": 2,
+    "finite": true,
+    "max_equality_residual": 0.03727205645252524,
+    "max_inequality_violation": 0.9875650963879967,
+    "collision_free": false,
+    "ergodicity": 0.6133279646552612,
+    "optimization_seconds": 0.076761458,
+    "planning_seconds_including_compile": 1.066764083,
+    "backend": "scipy-SLSQP / upstream formulation"
+  },
+  "trajectory_sha256": "cb79573292e282472fdb9288c7b60bcd86892b03fa9e866a6de50f1c0ea35357",
+  "saved_at_utc": "2026-09-08T07:32:22.945124+00:00"
+}

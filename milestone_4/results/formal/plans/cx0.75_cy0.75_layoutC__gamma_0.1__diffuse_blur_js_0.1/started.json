@@ -1,0 +1,13 @@
+{
+  "scene_id": "cx0.75_cy0.75_layoutC",
+  "gamma": 0.1,
+  "prior_id": "diffuse_blur_js_0.1",
+  "family": "diffuse_blur",
+  "direction": null,
+  "target_js_nats": 0.1,
+  "plan_id": "cx0.75_cy0.75_layoutC__gamma_0.1__diffuse_blur_js_0.1",
+  "started_at_utc": "2026-09-08T08:09:11.525244+00:00",
+  "attempt_count": 1,
+  "frozen_manifest_sha256": "76d6146d53d499b6965733154921070b9b05ae2aa326044838486a2b7bbab3a3",
+  "prior_sha256": "c9a732c6ec4c1a91d6831af701a3154c7766ed3643a16f019c012e6ca8c3b9ef"
+}

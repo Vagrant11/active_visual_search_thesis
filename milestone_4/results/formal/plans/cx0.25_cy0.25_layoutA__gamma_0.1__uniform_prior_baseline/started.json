@@ -1,0 +1,13 @@
+{
+  "scene_id": "cx0.25_cy0.25_layoutA",
+  "gamma": 0.1,
+  "prior_id": "uniform_prior_baseline",
+  "family": "uniform_prior_baseline",
+  "direction": null,
+  "target_js_nats": null,
+  "plan_id": "cx0.25_cy0.25_layoutA__gamma_0.1__uniform_prior_baseline",
+  "started_at_utc": "2026-09-08T06:57:12.935859+00:00",
+  "attempt_count": 1,
+  "frozen_manifest_sha256": "76d6146d53d499b6965733154921070b9b05ae2aa326044838486a2b7bbab3a3",
+  "prior_sha256": "35ddffc586ee1f0ab143a8f2ecdab719171e73a7ed9267dcd3e5d3de86eb60ed"
+}
