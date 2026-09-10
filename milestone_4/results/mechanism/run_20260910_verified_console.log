@@ -1,0 +1,25 @@
+Output: /Users/leofang/Desktop/active_visual_search_thesis/milestone_4/results/mechanism/run_20260910_verified
+Loading and verifying stored plans
+Task 1: diagnostics
+formal gamma=0.05 uniform_prior_baseline      n= 12 delta_tf=-1.199961 s delta_Hnode=+0.028598 nats delta_Hdwell_tf=+0.048512 nats
+formal gamma=0.05 diffuse_blur                n= 36 delta_tf=-1.033414 s delta_Hnode=+0.020039 nats delta_Hdwell_tf=+0.035826 nats
+formal gamma=0.05 spatial_shift               n= 72 delta_tf=-0.398091 s delta_Hnode=-0.016007 nats delta_Hdwell_tf=-0.045298 nats
+formal gamma=0.05 false_hotspot               n= 72 delta_tf=-0.408320 s delta_Hnode=+0.034454 nats delta_Hdwell_tf=+0.082400 nats
+formal gamma=0.05 false_negative_suppression  n= 71 delta_tf=-1.081793 s delta_Hnode=+0.010193 nats delta_Hdwell_tf=-0.004970 nats
+formal gamma=0.10 uniform_prior_baseline      n= 12 delta_tf=-0.457055 s delta_Hnode=+0.080040 nats delta_Hdwell_tf=+0.008035 nats
+formal gamma=0.10 diffuse_blur                n= 36 delta_tf=-0.578551 s delta_Hnode=+0.047321 nats delta_Hdwell_tf=-0.048094 nats
+formal gamma=0.10 spatial_shift               n= 68 delta_tf=-0.189487 s delta_Hnode=+0.024018 nats delta_Hdwell_tf=-0.054080 nats
+formal gamma=0.10 false_hotspot               n= 72 delta_tf=-0.233730 s delta_Hnode=+0.059608 nats delta_Hdwell_tf=+0.033879 nats
+formal gamma=0.10 false_negative_suppression  n= 71 delta_tf=-0.802542 s delta_Hnode=-0.003894 nats delta_Hdwell_tf=-0.108830 nats
+pilot  gamma=0.10 spatial_shift               n=  3 delta_tf=+0.126147 s delta_Hnode=+0.046210 nats delta_Hdwell_tf=+0.144336 nats
+pilot  gamma=0.10 diffuse_blur                n=  3 delta_tf=+0.104530 s delta_Hnode=+0.073936 nats delta_Hdwell_tf=+0.179675 nats
+pilot  gamma=0.10 false_hotspot               n=  3 delta_tf=+0.721268 s delta_Hnode=+0.064694 nats delta_Hdwell_tf=+0.353794 nats
+pilot  gamma=0.10 false_negative_suppression  n=  3 delta_tf=-0.230430 s delta_Hnode=+0.046210 nats delta_Hdwell_tf=+0.053655 nats
+pilot  gamma=0.05 spatial_shift               n=  3 delta_tf=+0.074758 s delta_Hnode=+0.006977 nats delta_Hdwell_tf=+0.014245 nats
+pilot  gamma=0.05 diffuse_blur                n=  3 delta_tf=-0.179450 s delta_Hnode=+0.069405 nats delta_Hdwell_tf=+0.193890 nats
+pilot  gamma=0.05 false_hotspot               n=  3 delta_tf=+0.421378 s delta_Hnode=+0.065917 nats delta_Hdwell_tf=+0.302355 nats
+pilot  gamma=0.05 false_negative_suppression  n=  3 delta_tf=-0.579152 s delta_Hnode=+0.020930 nats delta_Hdwell_tf=+0.090868 nats
+Task 2: original pilot plots and gamma comparison
+Task 3: suite visibility statistics
+Verifying three formal visibility replays and four rendered PNGs
+Completed: /Users/leofang/Desktop/active_visual_search_thesis/milestone_4/results/mechanism/run_20260910_verified

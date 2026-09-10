@@ -1,0 +1,27 @@
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/leofang/.cache/fontconfig
+	/Users/leofang/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+test_diagonal_corner_crossing_and_stationary_path (test_replay.ReplayTests) ... ok
+test_entropy_known_distributions_and_zeros (test_replay.ReplayTests) ... ok
+test_ergodic_metric_zero_when_prior_is_node_measure (test_replay.ReplayTests) ... ok
+test_exact_dwell_crossings_terminal_hold_and_truncation (test_replay.ReplayTests) ... ok
+test_metric_independent_upstream_implementation (test_replay.ReplayTests) ... /Users/leofang/Desktop/active_visual_search_thesis/milestone_4/results/mechanism/replay_analysis.py:125: RuntimeWarning: divide by zero encountered in matmul
+  phik = (prior / prior.sum()) @ grid_basis
+/Users/leofang/Desktop/active_visual_search_thesis/milestone_4/results/mechanism/replay_analysis.py:125: RuntimeWarning: overflow encountered in matmul
+  phik = (prior / prior.sum()) @ grid_basis
+/Users/leofang/Desktop/active_visual_search_thesis/milestone_4/results/mechanism/replay_analysis.py:125: RuntimeWarning: invalid value encountered in matmul
+  phik = (prior / prior.sum()) @ grid_basis
+ok
+test_node_weights_and_boundary (test_replay.ReplayTests) ... ok
+test_planner_not_imported (test_replay.ReplayTests) ... ok
+test_scene_pairing_and_incomplete_directions (test_replay.ReplayTests) ... ok
+test_three_stored_plans_independent_reference (test_replay.ReplayTests) ... ok
+test_visibility_budget_infinity_and_mass_identity (test_replay.ReplayTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.046s
+
+OK

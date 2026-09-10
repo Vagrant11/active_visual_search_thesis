@@ -1,0 +1,7 @@
+dataset,scene,gamma,family,js,direction,prior_id,plan_id,status,reason
+formal,cx0.25_cy0.25_layoutC,0.1,spatial_shift,0.15,y,spatial_shift_y_js_0.15,cx0.25_cy0.25_layoutC__gamma_0.1__spatial_shift_y_js_0.15,invalid,More than 3*n iterations in LSQ subproblem
+formal,cx0.25_cy0.75_layoutB,0.1,spatial_shift,0.1,y,spatial_shift_y_js_0.1,cx0.25_cy0.75_layoutB__gamma_0.1__spatial_shift_y_js_0.1,invalid,Iteration limit reached
+formal,cx0.25_cy0.75_layoutC,0.05,false_negative_suppression,0.1,y,false_negative_suppression_y_js_0.1,cx0.25_cy0.75_layoutC__gamma_0.05__false_negative_suppression_y_js_0.1,invalid,Iteration limit reached
+formal,cx0.25_cy0.75_layoutC,0.1,spatial_shift,0.1,x,spatial_shift_x_js_0.1,cx0.25_cy0.75_layoutC__gamma_0.1__spatial_shift_x_js_0.1,invalid,Iteration limit reached
+formal,cx0.25_cy0.75_layoutC,0.1,spatial_shift,0.05,y,spatial_shift_y_js_0.05,cx0.25_cy0.75_layoutC__gamma_0.1__spatial_shift_y_js_0.05,invalid,Positive directional derivative for linesearch
+formal,cx0.25_cy0.75_layoutC,0.1,false_negative_suppression,0.15,y,false_negative_suppression_y_js_0.15,cx0.25_cy0.75_layoutC__gamma_0.1__false_negative_suppression_y_js_0.15,invalid,More than 3*n iterations in LSQ subproblem

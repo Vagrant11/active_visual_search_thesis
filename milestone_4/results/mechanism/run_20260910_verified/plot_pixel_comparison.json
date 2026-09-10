@@ -1,0 +1,22 @@
+[
+  {
+    "file": "coverage_maps_gamma_0.05.png",
+    "original": "/Users/leofang/Desktop/active_visual_search_thesis/milestone_4/results/analysis/coverage_maps_gamma_0.05.png",
+    "pixels_identical": true
+  },
+  {
+    "file": "coverage_maps_gamma_0.1.png",
+    "original": "/Users/leofang/Desktop/active_visual_search_thesis/milestone_4/results/analysis/coverage_maps_gamma_0.1.png",
+    "pixels_identical": true
+  },
+  {
+    "file": "trajectories_gamma_0.05.png",
+    "original": "/Users/leofang/Desktop/active_visual_search_thesis/milestone_4/results/pilot/trajectories_gamma_0.05.png",
+    "pixels_identical": true
+  },
+  {
+    "file": "trajectories_gamma_0.1.png",
+    "original": "/Users/leofang/Desktop/active_visual_search_thesis/milestone_4/results/pilot/trajectories_gamma_0.1.png",
+    "pixels_identical": true
+  }
+]

@@ -1,0 +1,15 @@
+test_diagonal_corner_crossing_and_stationary_path (test_replay.ReplayTests) ... ok
+test_entropy_known_distributions_and_zeros (test_replay.ReplayTests) ... ok
+test_ergodic_metric_zero_when_prior_is_node_measure (test_replay.ReplayTests) ... ok
+test_exact_dwell_crossings_terminal_hold_and_truncation (test_replay.ReplayTests) ... ok
+test_metric_independent_upstream_implementation (test_replay.ReplayTests) ... ok
+test_node_weights_and_boundary (test_replay.ReplayTests) ... ok
+test_planner_not_imported (test_replay.ReplayTests) ... ok
+test_scene_pairing_and_incomplete_directions (test_replay.ReplayTests) ... ok
+test_three_stored_plans_independent_reference (test_replay.ReplayTests) ... ok
+test_visibility_budget_infinity_and_mass_identity (test_replay.ReplayTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.904s
+
+OK

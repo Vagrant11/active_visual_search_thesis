@@ -1,0 +1,8 @@
+{
+  "script_sha256": "15bd7f533de151c7b0e83d51e695aab6d7a758244737dae635c6047324ca426d",
+  "numpy": "2.0.2",
+  "valid_formal": 546,
+  "valid_pilot": 26,
+  "invalid_formal": 6,
+  "max_metric_replay_abs_difference": 1.2212453270876722e-15
+}
