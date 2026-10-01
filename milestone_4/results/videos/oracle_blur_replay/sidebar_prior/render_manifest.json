@@ -1,0 +1,105 @@
+{
+  "scene_id": "cx0.25_cy0.25_layoutB",
+  "gamma": 0.05,
+  "no_planner_imported_or_run": true,
+  "target": {
+    "seed": 104,
+    "episode": 0,
+    "grid_index": 725,
+    "xy": [
+      0.1375,
+      0.4625
+    ],
+    "selection": "First existing draw of last frozen evaluation seed; shared across videos"
+  },
+  "parameter_sources": {
+    "camera": "milestone_3.experiment.Environment",
+    "execution": "milestone_3.experiment.camera_trajectory",
+    "obstacles_grid_sampling": "results/formal/config.json embedded frozen_manifest",
+    "background": "results/formal/inputs/cx0.25_cy0.25_layoutB.npz: oracle",
+    "planner_prior_inset": "results/formal/inputs/cx0.25_cy0.25_layoutB.npz: condition prior_id (verified against frozen SHA256)",
+    "detection": "saved first_seen_grid.npz; probability = sum(oracle[first_seen <= t])"
+  },
+  "prior_inset": {
+    "title": "Prior given to planner \u03c6\u0302",
+    "colormap": "magma",
+    "placement": "right information column, above detection-probability curve",
+    "shared_across_videos": false,
+    "scales_by_prior": {
+      "oracle": {
+        "vmin": 0.0,
+        "vmax": 0.004999201997720107
+      },
+      "diffuse_blur_js_0.15": {
+        "vmin": 0.0,
+        "vmax": 0.0008213371067136798
+      }
+    }
+  },
+  "camera": {
+    "radius": 0.25,
+    "fov_degrees": 90.0,
+    "scan_rate": 1.5707963267948966,
+    "observation_dt": 0.05,
+    "budget": 15.0
+  },
+  "source_sha256_before": {
+    "milestone_4/results/formal/config.json": "b5d20c9e42f52cf1517e0d82012afc12a90de2787de07f0bd1680473fd46356b",
+    "milestone_4/results/formal/inputs/cx0.25_cy0.25_layoutB.npz": "cd29f177ca8a37529f98a64423429a0caba0e3355c731d8fb16919d3fd6264b4",
+    "milestone_3/experiment.py": "04fc4009f0581d941b4c264783f20c89988d7fbf5b710417a4f6acc2722472a7",
+    "milestone_2/visibility.py": "77fbde425ec5d2e4f36f7ff5000f14e05fe2ee6157ce5474b3f5072c85f04429",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__oracle/trajectory.npz": "c7aea2efd4d0b67a3e89711a474b46332256573780ec29caa4d8c3b332ebbd23",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__oracle/first_seen_grid.npz": "c62ebecf2a4ce1ebd8003328d5e2bb9505a3428cef524fecac66a06fff0b55e9",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__oracle/exact_metrics.json": "c85fa72b16c4c9f00d2645031a308eb24698590c5701b0428acdc1d53c6c2d54",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__oracle/result.json": "e347bcd5b90af0eacaa6c6529b0f3aa451d876b64f680da99264187308a89298",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.15/trajectory.npz": "df2a671d592ed8c7b7fa2a4d5816b134cc590151e8015c069df15451515ca17f",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.15/first_seen_grid.npz": "d5b8c0fede623b6ab94cbda410e3e99f745ab27a1b3c7312b1dd0bc3fc3458fd",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.15/exact_metrics.json": "e49d52c8def9b67e3c970b011e1768f7166348dd49ee848eac70a7eeea26ab8f",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.15/result.json": "6606ba9408553085f9a5d4614eaac13002bbdb787cbd621fe73f35e72353ef25"
+  },
+  "videos": [
+    {
+      "file": "cx0.25_cy0.25_layoutB__gamma_0.05__oracle.mp4",
+      "prior_id": "oracle",
+      "frames": 301,
+      "fps": 15.05,
+      "duration_seconds": 20.0,
+      "tf": 4.375367568309029,
+      "target_t_find": 0.55,
+      "first_detection_frame_zero_based": 11,
+      "first_detection_frame_one_based": 12,
+      "first_detection_video_seconds": 0.7308970099667774,
+      "final_detection_probability": 0.8047703073141987,
+      "sha256": "03565fdebdd5a3dfdcaae892d10e0dde0b2ea7f4c79aa685dd43aa52bb59959e"
+    },
+    {
+      "file": "cx0.25_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.15.mp4",
+      "prior_id": "diffuse_blur_js_0.15",
+      "frames": 301,
+      "fps": 15.05,
+      "duration_seconds": 20.0,
+      "tf": 4.741914112386511,
+      "target_t_find": 2.6500000000000004,
+      "first_detection_frame_zero_based": 53,
+      "first_detection_frame_one_based": 54,
+      "first_detection_video_seconds": 3.521594684385382,
+      "final_detection_probability": 0.7071210509246855,
+      "sha256": "10813c45874fff4e8327840774b54377cf4d10e71f7d1a09552f7b45135d8b89"
+    }
+  ],
+  "source_sha256_after": {
+    "milestone_4/results/formal/config.json": "b5d20c9e42f52cf1517e0d82012afc12a90de2787de07f0bd1680473fd46356b",
+    "milestone_4/results/formal/inputs/cx0.25_cy0.25_layoutB.npz": "cd29f177ca8a37529f98a64423429a0caba0e3355c731d8fb16919d3fd6264b4",
+    "milestone_3/experiment.py": "04fc4009f0581d941b4c264783f20c89988d7fbf5b710417a4f6acc2722472a7",
+    "milestone_2/visibility.py": "77fbde425ec5d2e4f36f7ff5000f14e05fe2ee6157ce5474b3f5072c85f04429",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__oracle/trajectory.npz": "c7aea2efd4d0b67a3e89711a474b46332256573780ec29caa4d8c3b332ebbd23",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__oracle/first_seen_grid.npz": "c62ebecf2a4ce1ebd8003328d5e2bb9505a3428cef524fecac66a06fff0b55e9",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__oracle/exact_metrics.json": "c85fa72b16c4c9f00d2645031a308eb24698590c5701b0428acdc1d53c6c2d54",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__oracle/result.json": "e347bcd5b90af0eacaa6c6529b0f3aa451d876b64f680da99264187308a89298",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.15/trajectory.npz": "df2a671d592ed8c7b7fa2a4d5816b134cc590151e8015c069df15451515ca17f",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.15/first_seen_grid.npz": "d5b8c0fede623b6ab94cbda410e3e99f745ab27a1b3c7312b1dd0bc3fc3458fd",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.15/exact_metrics.json": "e49d52c8def9b67e3c970b011e1768f7166348dd49ee848eac70a7eeea26ab8f",
+    "milestone_4/results/formal/plans/cx0.25_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.15/result.json": "6606ba9408553085f9a5d4614eaac13002bbdb787cbd621fe73f35e72353ef25"
+  },
+  "source_files_unchanged": true
+}
