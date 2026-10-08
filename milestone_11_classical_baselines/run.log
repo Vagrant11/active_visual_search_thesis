@@ -1,0 +1,71 @@
+lawn_fast 0.03s compute, path 34.55s, seen 1532/1532
+lawn_conservative 0.07s compute, path 82.95s, seen 1532/1532
+5 greedy_probability 0.06s compute, path 66.55s, seen 1532/1532
+5 greedy_probability_per_distance 0.06s compute, path 53.55s, seen 1532/1532
+19 greedy_probability 0.04s compute, path 45.90s, seen 1532/1532
+19 greedy_probability_per_distance 0.06s compute, path 57.55s, seen 1532/1532
+20 greedy_probability 0.06s compute, path 73.55s, seen 1532/1532
+20 greedy_probability_per_distance 0.07s compute, path 61.55s, seen 1532/1532
+30 greedy_probability 0.05s compute, path 57.10s, seen 1532/1532
+30 greedy_probability_per_distance 0.05s compute, path 53.55s, seen 1532/1532
+38 greedy_probability 0.05s compute, path 57.55s, seen 1532/1532
+38 greedy_probability_per_distance 0.06s compute, path 61.90s, seen 1532/1532
+49 greedy_probability 0.05s compute, path 61.55s, seen 1532/1532
+49 greedy_probability_per_distance 0.07s compute, path 69.15s, seen 1532/1532
+53 greedy_probability 0.05s compute, path 61.55s, seen 1532/1532
+53 greedy_probability_per_distance 0.06s compute, path 53.55s, seen 1532/1532
+83 greedy_probability 0.05s compute, path 53.55s, seen 1532/1532
+83 greedy_probability_per_distance 0.06s compute, path 51.30s, seen 1532/1532
+85 greedy_probability 0.05s compute, path 57.55s, seen 1532/1532
+85 greedy_probability_per_distance 0.06s compute, path 61.55s, seen 1532/1532
+86 greedy_probability 0.05s compute, path 58.15s, seen 1532/1532
+86 greedy_probability_per_distance 0.06s compute, path 57.85s, seen 1532/1532
+90 greedy_probability 0.05s compute, path 53.55s, seen 1532/1532
+90 greedy_probability_per_distance 0.07s compute, path 65.55s, seen 1532/1532
+94 greedy_probability 0.04s compute, path 45.55s, seen 1532/1532
+94 greedy_probability_per_distance 0.06s compute, path 54.25s, seen 1532/1532
+128 greedy_probability 0.05s compute, path 55.50s, seen 1532/1532
+128 greedy_probability_per_distance 0.05s compute, path 49.55s, seen 1532/1532
+129 greedy_probability 0.05s compute, path 61.55s, seen 1532/1532
+129 greedy_probability_per_distance 0.06s compute, path 57.55s, seen 1532/1532
+139 greedy_probability 0.06s compute, path 61.30s, seen 1532/1532
+139 greedy_probability_per_distance 0.06s compute, path 59.95s, seen 1532/1532
+140 greedy_probability 0.05s compute, path 57.55s, seen 1532/1532
+140 greedy_probability_per_distance 0.06s compute, path 57.55s, seen 1532/1532
+143 greedy_probability 0.04s compute, path 45.55s, seen 1532/1532
+143 greedy_probability_per_distance 0.05s compute, path 49.55s, seen 1532/1532
+182 greedy_probability 0.06s compute, path 65.05s, seen 1532/1532
+182 greedy_probability_per_distance 0.05s compute, path 53.55s, seen 1532/1532
+195 greedy_probability 0.05s compute, path 57.55s, seen 1532/1532
+195 greedy_probability_per_distance 0.06s compute, path 58.30s, seen 1532/1532
+198 greedy_probability 0.04s compute, path 50.90s, seen 1532/1532
+198 greedy_probability_per_distance 0.06s compute, path 58.25s, seen 1532/1532
+Traceback (most recent call last):
+  File "/Users/leofang/Desktop/active_visual_search_thesis/milestone_11_classical_baselines/experiment.py", line 537, in <module>
+    main()
+  File "/Users/leofang/Desktop/active_visual_search_thesis/milestone_11_classical_baselines/experiment.py", line 413, in main
+    evaluate(data, env, router, shared, classic, setup_seconds)
+  File "/Users/leofang/Desktop/active_visual_search_thesis/milestone_11_classical_baselines/experiment.py", line 499, in evaluate
+    row = dict(phi_seed=int(seed), method=item['method'], sample_id=item['sample_id'], source=item['source'],
+TypeError: dict() got multiple values for keyword argument 'tf'
+evaluated phi 5, T=4.8765, reference P=0.68432, 26/520 rows
+evaluated phi 19, T=5.4941, reference P=0.85071, 52/520 rows
+evaluated phi 20, T=5.1147, reference P=0.77479, 78/520 rows
+evaluated phi 30, T=5.3159, reference P=0.82819, 104/520 rows
+evaluated phi 38, T=5.0026, reference P=0.72547, 130/520 rows
+evaluated phi 49, T=4.8911, reference P=0.75506, 156/520 rows
+evaluated phi 53, T=6.5151, reference P=0.85985, 182/520 rows
+evaluated phi 83, T=5.3170, reference P=0.76856, 208/520 rows
+evaluated phi 85, T=5.9403, reference P=0.84406, 234/520 rows
+evaluated phi 86, T=5.4507, reference P=0.77273, 260/520 rows
+evaluated phi 90, T=5.1509, reference P=0.78962, 286/520 rows
+evaluated phi 94, T=6.2455, reference P=0.89432, 312/520 rows
+evaluated phi 128, T=5.6586, reference P=0.83516, 338/520 rows
+evaluated phi 129, T=5.0077, reference P=0.78075, 364/520 rows
+evaluated phi 139, T=6.0335, reference P=0.83930, 390/520 rows
+evaluated phi 140, T=4.6509, reference P=0.63492, 416/520 rows
+evaluated phi 143, T=5.5574, reference P=0.85869, 442/520 rows
+evaluated phi 182, T=6.0458, reference P=0.86726, 468/520 rows
+evaluated phi 195, T=5.5404, reference P=0.80617, 494/520 rows
+evaluated phi 198, T=4.8823, reference P=0.67608, 520/520 rows
+Matplotlib is building the font cache; this may take a moment.

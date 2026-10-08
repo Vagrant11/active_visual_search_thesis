@@ -1,0 +1,310 @@
+{
+  "generation_seconds": 0.04793962500000015,
+  "decisions": 57,
+  "events": [
+    {
+      "time": 0.0,
+      "event": "select_target",
+      "target": 1016
+    },
+    {
+      "time": 0.9,
+      "event": "target_observed",
+      "target": 1016
+    },
+    {
+      "time": 1.5,
+      "event": "select_target",
+      "target": 1020
+    },
+    {
+      "time": 2.15,
+      "event": "target_observed",
+      "target": 1020
+    },
+    {
+      "time": 2.15,
+      "event": "select_target",
+      "target": 1060
+    },
+    {
+      "time": 2.5,
+      "event": "target_observed",
+      "target": 1060
+    },
+    {
+      "time": 2.5,
+      "event": "select_target",
+      "target": 1100
+    },
+    {
+      "time": 2.85,
+      "event": "select_target",
+      "target": 1100
+    },
+    {
+      "time": 5.5,
+      "event": "select_target",
+      "target": 618
+    },
+    {
+      "time": 10.450000000000001,
+      "event": "target_observed",
+      "target": 618
+    },
+    {
+      "time": 10.450000000000001,
+      "event": "select_target",
+      "target": 1248
+    },
+    {
+      "time": 12.850000000000001,
+      "event": "target_observed",
+      "target": 1248
+    },
+    {
+      "time": 13.0,
+      "event": "select_target",
+      "target": 744
+    },
+    {
+      "time": 14.700000000000001,
+      "event": "target_observed",
+      "target": 744
+    },
+    {
+      "time": 14.8,
+      "event": "select_target",
+      "target": 1005
+    },
+    {
+      "time": 17.5,
+      "event": "target_observed",
+      "target": 1005
+    },
+    {
+      "time": 17.650000000000002,
+      "event": "select_target",
+      "target": 965
+    },
+    {
+      "time": 18.0,
+      "event": "target_observed",
+      "target": 965
+    },
+    {
+      "time": 18.0,
+      "event": "select_target",
+      "target": 925
+    },
+    {
+      "time": 18.35,
+      "event": "target_observed",
+      "target": 925
+    },
+    {
+      "time": 18.35,
+      "event": "select_target",
+      "target": 885
+    },
+    {
+      "time": 18.5,
+      "event": "target_observed",
+      "target": 885
+    },
+    {
+      "time": 18.650000000000002,
+      "event": "select_target",
+      "target": 1496
+    },
+    {
+      "time": 19.900000000000002,
+      "event": "select_target",
+      "target": 1496
+    },
+    {
+      "time": 21.5,
+      "event": "select_target",
+      "target": 1190
+    },
+    {
+      "time": 22.700000000000003,
+      "event": "select_target",
+      "target": 1190
+    },
+    {
+      "time": 25.5,
+      "event": "select_target",
+      "target": 546
+    },
+    {
+      "time": 26.35,
+      "event": "target_observed",
+      "target": 546
+    },
+    {
+      "time": 26.8,
+      "event": "select_target",
+      "target": 547
+    },
+    {
+      "time": 27.150000000000002,
+      "event": "select_target",
+      "target": 547
+    },
+    {
+      "time": 29.5,
+      "event": "select_target",
+      "target": 485
+    },
+    {
+      "time": 30.35,
+      "event": "target_observed",
+      "target": 485
+    },
+    {
+      "time": 31.0,
+      "event": "select_target",
+      "target": 1586
+    },
+    {
+      "time": 32.1,
+      "event": "target_observed",
+      "target": 1586
+    },
+    {
+      "time": 32.65,
+      "event": "select_target",
+      "target": 1360
+    },
+    {
+      "time": 33.65,
+      "event": "target_observed",
+      "target": 1360
+    },
+    {
+      "time": 34.300000000000004,
+      "event": "select_target",
+      "target": 521
+    },
+    {
+      "time": 35.1,
+      "event": "target_observed",
+      "target": 521
+    },
+    {
+      "time": 35.800000000000004,
+      "event": "select_target",
+      "target": 216
+    },
+    {
+      "time": 37.050000000000004,
+      "event": "select_target",
+      "target": 216
+    },
+    {
+      "time": 37.5,
+      "event": "select_target",
+      "target": 835
+    },
+    {
+      "time": 38.900000000000006,
+      "event": "select_target",
+      "target": 835
+    },
+    {
+      "time": 41.5,
+      "event": "select_target",
+      "target": 181
+    },
+    {
+      "time": 42.2,
+      "event": "target_observed",
+      "target": 181
+    },
+    {
+      "time": 42.800000000000004,
+      "event": "select_target",
+      "target": 144
+    },
+    {
+      "time": 43.25,
+      "event": "target_observed",
+      "target": 144
+    },
+    {
+      "time": 43.35,
+      "event": "select_target",
+      "target": 145
+    },
+    {
+      "time": 43.5,
+      "event": "target_observed",
+      "target": 145
+    },
+    {
+      "time": 43.650000000000006,
+      "event": "select_target",
+      "target": 1556
+    },
+    {
+      "time": 44.900000000000006,
+      "event": "target_observed",
+      "target": 1556
+    },
+    {
+      "time": 45.550000000000004,
+      "event": "select_target",
+      "target": 84
+    },
+    {
+      "time": 49.0,
+      "event": "select_target",
+      "target": 84
+    },
+    {
+      "time": 49.5,
+      "event": "select_target",
+      "target": 45
+    },
+    {
+      "time": 49.85,
+      "event": "target_observed",
+      "target": 45
+    },
+    {
+      "time": 49.85,
+      "event": "select_target",
+      "target": 438
+    },
+    {
+      "time": 51.7,
+      "event": "select_target",
+      "target": 438
+    }
+  ],
+  "dynamics_residual": 5.551115123125783e-17,
+  "diagnostics": {
+    "finite": true,
+    "tf": 53.550000000000004,
+    "duration_ok": true,
+    "out_of_bounds": false,
+    "out_of_bounds_tolerance": false,
+    "start_error": 0.0,
+    "end_error": 0.0,
+    "endpoint_max_component_error": 0.0,
+    "endpoint_fail": false,
+    "max_speed": 0.993566764978646,
+    "max_abs_acceleration_component": 1.000000000000023,
+    "initial_velocity_max_error": 0.0,
+    "speed_fail": false,
+    "acceleration_fail": false,
+    "initial_velocity_fail": false,
+    "dynamics_fail": false,
+    "rectangle_collision": false,
+    "min_circle_clearance": 9.999999999993348e-05,
+    "safety_circle_violation_squared": 0.0,
+    "circle_fail": false,
+    "physical_pass": true
+  }
+}

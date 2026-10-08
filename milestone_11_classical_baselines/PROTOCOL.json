@@ -1,0 +1,79 @@
+{
+  "only_val": true,
+  "test_used": false,
+  "val_phi": [
+    5,
+    19,
+    20,
+    30,
+    38,
+    49,
+    53,
+    83,
+    85,
+    86,
+    90,
+    94,
+    128,
+    129,
+    139,
+    140,
+    143,
+    182,
+    195,
+    198
+  ],
+  "cap_seconds": 120.0,
+  "environment": {
+    "obstacles": [
+      {
+        "xmin": 0.43,
+        "ymin": 0.43,
+        "xmax": 0.57,
+        "ymax": 0.57
+      }
+    ],
+    "camera": {
+      "sensing_radius": 0.25,
+      "fov_degrees": 90.0
+    },
+    "budget": 15.0,
+    "observation_dt": 0.05,
+    "scan_rate": 1.5707963267948966,
+    "clearance": 0.015
+  },
+  "disks": [
+    [
+      0.5,
+      0.5,
+      0.11399494936611662
+    ]
+  ],
+  "velocity_norm_limit": 1.0,
+  "control_component_limit": 1.0,
+  "routing": {
+    "vertices": 64,
+    "radial_margin": 0.0001,
+    "metric": "shortest visibility-graph length; deterministic ties",
+    "observation_arrival_offset": [
+      1e-06,
+      0.0
+    ],
+    "reason": "avoid undefined bearing when target equals camera position; still require original visibility"
+  },
+  "lawn": {
+    "row_spacing": 0.25,
+    "fast": "minimum discrete trapezoid duration; no scan wait at row ends",
+    "conservative": "0.9*2*sqrt(R^2-(spacing/2)^2)/pan_period; full rotation at row endpoints",
+    "cleanup": "both: nearest geometrically unseen free grid cell, move then wait until seen; no phi access"
+  },
+  "greedy": "target persists until observed/reached; observe every dt; reselect, brake only for direction change or arrival; no distance-step stops",
+  "greedy_ratio": "remaining normalized cell probability / visibility-graph shortest route length; denominator floor 1e-12",
+  "dynamics": "Euler dt=observation_dt; exact leg distance; v/a bounded; zero velocity at non-collinear corners; nonzero-speed straight continuation allowed",
+  "end_constraint": "classical free endpoint; ETO/NN/diffusion existing fixed endpoint; disclose asymmetry",
+  "common_time": "T_phi=mean of five ETO tf; no time rescaling; truncate or hold+pan",
+  "reference_probability": "mean of five ETO Pdet(T_phi)",
+  "guided_setting": "eta0.5_raw_smooth_scale; all 8 samples; raw eta0.5 auxiliary row",
+  "timing": "new classical construction+online observation+decision; shared graph separately; old methods saved timing; evaluator excluded",
+  "statistics": "equal phi weight; report censored reach rate and reached-only time; physics failures retained and separately labeled"
+}
