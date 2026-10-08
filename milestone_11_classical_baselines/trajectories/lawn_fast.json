@@ -1,0 +1,104 @@
+{
+  "generation_seconds": 0.03270162500000007,
+  "decisions": 0,
+  "events": [
+    {
+      "time": 11.65,
+      "event": "snake_complete"
+    },
+    {
+      "time": 11.65,
+      "event": "geometry_cleanup",
+      "target": 1400
+    },
+    {
+      "time": 13.5,
+      "event": "geometry_cleanup",
+      "target": 1240
+    },
+    {
+      "time": 14.15,
+      "event": "geometry_cleanup",
+      "target": 1200
+    },
+    {
+      "time": 14.5,
+      "event": "geometry_cleanup",
+      "target": 1450
+    },
+    {
+      "time": 17.5,
+      "event": "geometry_cleanup",
+      "target": 1500
+    },
+    {
+      "time": 18.5,
+      "event": "geometry_cleanup",
+      "target": 1501
+    },
+    {
+      "time": 21.5,
+      "event": "geometry_cleanup",
+      "target": 1233
+    },
+    {
+      "time": 25.5,
+      "event": "geometry_cleanup",
+      "target": 592
+    },
+    {
+      "time": 26.8,
+      "event": "geometry_cleanup",
+      "target": 553
+    },
+    {
+      "time": 27.150000000000002,
+      "event": "geometry_cleanup",
+      "target": 554
+    },
+    {
+      "time": 29.5,
+      "event": "geometry_cleanup",
+      "target": 542
+    },
+    {
+      "time": 30.6,
+      "event": "geometry_cleanup",
+      "target": 16
+    },
+    {
+      "time": 31.75,
+      "event": "geometry_cleanup",
+      "target": 14
+    },
+    {
+      "time": 33.5,
+      "event": "geometry_cleanup",
+      "target": 4
+    }
+  ],
+  "dynamics_residual": 5.551115123125783e-17,
+  "diagnostics": {
+    "finite": true,
+    "tf": 34.550000000000004,
+    "duration_ok": true,
+    "out_of_bounds": false,
+    "out_of_bounds_tolerance": false,
+    "start_error": 0.0,
+    "end_error": 0.0,
+    "endpoint_max_component_error": 0.0,
+    "endpoint_fail": false,
+    "max_speed": 0.9999999999999998,
+    "max_abs_acceleration_component": 1.000000000000023,
+    "initial_velocity_max_error": 0.0,
+    "speed_fail": false,
+    "acceleration_fail": false,
+    "initial_velocity_fail": false,
+    "dynamics_fail": false,
+    "rectangle_collision": false,
+    "min_circle_clearance": 0.011005050633883212,
+    "safety_circle_violation_squared": 0.0,
+    "circle_fail": false,
+    "physical_pass": true
+  }
+}

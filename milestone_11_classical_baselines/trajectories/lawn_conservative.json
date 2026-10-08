@@ -1,0 +1,34 @@
+{
+  "generation_seconds": 0.06576708400000009,
+  "decisions": 0,
+  "events": [
+    {
+      "time": 82.9,
+      "event": "snake_complete"
+    }
+  ],
+  "dynamics_residual": 6.895525817007808e-17,
+  "diagnostics": {
+    "finite": true,
+    "tf": 82.95,
+    "duration_ok": true,
+    "out_of_bounds": true,
+    "out_of_bounds_tolerance": false,
+    "start_error": 0.0,
+    "end_error": 0.0,
+    "endpoint_max_component_error": 0.0,
+    "endpoint_fail": false,
+    "max_speed": 0.09707493774362863,
+    "max_abs_acceleration_component": 0.9963776255617951,
+    "initial_velocity_max_error": 0.0,
+    "speed_fail": false,
+    "acceleration_fail": false,
+    "initial_velocity_fail": false,
+    "dynamics_fail": false,
+    "rectangle_collision": false,
+    "min_circle_clearance": 0.011005050633882824,
+    "safety_circle_violation_squared": 0.0,
+    "circle_fail": false,
+    "physical_pass": true
+  }
+}

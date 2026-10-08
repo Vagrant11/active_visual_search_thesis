@@ -1,0 +1,35 @@
+{
+  "videos": [
+    {
+      "file": "cx0.25_cy0.25_layoutB__gamma_0.05__oracle.mp4",
+      "decoded_frames": 301,
+      "seconds": 20.0,
+      "changed_pixel_bounds_vs_original_png": [
+        561,
+        185,
+        800,
+        425
+      ],
+      "outside_inset_unchanged": true
+    },
+    {
+      "file": "cx0.25_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.15.mp4",
+      "decoded_frames": 301,
+      "seconds": 20.0,
+      "changed_pixel_bounds_vs_original_png": [
+        561,
+        185,
+        800,
+        425
+      ],
+      "outside_inset_unchanged": true
+    }
+  ],
+  "prior_inset": {
+    "title": "Prior given to planner \u03c6\u0302",
+    "colormap": "magma",
+    "vmin": 0.0,
+    "vmax": 0.004999201997720107,
+    "shared_across_videos": true
+  }
+}

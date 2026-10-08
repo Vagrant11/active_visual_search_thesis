@@ -1,0 +1,22 @@
+[
+  {
+    "file": "cx0.25_cy0.25_layoutB__gamma_0.05__oracle.mp4",
+    "decoded_frames": 301,
+    "fps": 15.05,
+    "duration_seconds": 20.0,
+    "width": 1440.0,
+    "height": 900.0,
+    "codec": "h264",
+    "bytes": 458021
+  },
+  {
+    "file": "cx0.25_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.15.mp4",
+    "decoded_frames": 301,
+    "fps": 15.05,
+    "duration_seconds": 20.0,
+    "width": 1440.0,
+    "height": 900.0,
+    "codec": "h264",
+    "bytes": 462438
+  }
+]

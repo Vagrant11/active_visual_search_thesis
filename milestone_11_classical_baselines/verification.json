@@ -1,0 +1,10 @@
+{
+  "old_files_unchanged": true,
+  "protected_file_count": 18022,
+  "test_used": false,
+  "val_phi_count": 20,
+  "classical_paths": 42,
+  "classical_evaluation_rows": 80,
+  "recovered_evaluation_without_regeneration": true,
+  "wall_seconds_including_recovery": 82.90539312362671
+}

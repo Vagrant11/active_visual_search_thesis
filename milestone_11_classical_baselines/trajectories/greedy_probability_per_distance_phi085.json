@@ -1,0 +1,485 @@
+{
+  "generation_seconds": 0.06464133299999997,
+  "decisions": 92,
+  "events": [
+    {
+      "time": 0.0,
+      "event": "select_target",
+      "target": 686
+    },
+    {
+      "time": 0.5,
+      "event": "target_observed",
+      "target": 686
+    },
+    {
+      "time": 1.0,
+      "event": "select_target",
+      "target": 524
+    },
+    {
+      "time": 1.3,
+      "event": "target_observed",
+      "target": 524
+    },
+    {
+      "time": 1.35,
+      "event": "select_target",
+      "target": 523
+    },
+    {
+      "time": 1.5,
+      "event": "target_observed",
+      "target": 523
+    },
+    {
+      "time": 1.6500000000000001,
+      "event": "select_target",
+      "target": 483
+    },
+    {
+      "time": 2.0,
+      "event": "target_observed",
+      "target": 483
+    },
+    {
+      "time": 2.0,
+      "event": "select_target",
+      "target": 484
+    },
+    {
+      "time": 2.35,
+      "event": "target_observed",
+      "target": 484
+    },
+    {
+      "time": 2.35,
+      "event": "select_target",
+      "target": 444
+    },
+    {
+      "time": 2.5,
+      "event": "target_observed",
+      "target": 444
+    },
+    {
+      "time": 2.6500000000000004,
+      "event": "select_target",
+      "target": 889
+    },
+    {
+      "time": 3.7,
+      "event": "select_target",
+      "target": 889
+    },
+    {
+      "time": 5.5,
+      "event": "select_target",
+      "target": 1080
+    },
+    {
+      "time": 5.65,
+      "event": "target_observed",
+      "target": 1080
+    },
+    {
+      "time": 5.800000000000001,
+      "event": "select_target",
+      "target": 617
+    },
+    {
+      "time": 6.75,
+      "event": "select_target",
+      "target": 617
+    },
+    {
+      "time": 9.5,
+      "event": "select_target",
+      "target": 1019
+    },
+    {
+      "time": 12.05,
+      "event": "target_observed",
+      "target": 1019
+    },
+    {
+      "time": 12.15,
+      "event": "select_target",
+      "target": 1098
+    },
+    {
+      "time": 12.25,
+      "event": "target_observed",
+      "target": 1098
+    },
+    {
+      "time": 12.350000000000001,
+      "event": "target_observed",
+      "target": 1020
+    },
+    {
+      "time": 12.4,
+      "event": "select_target",
+      "target": 981
+    },
+    {
+      "time": 15.5,
+      "event": "select_target",
+      "target": 981
+    },
+    {
+      "time": 17.5,
+      "event": "select_target",
+      "target": 744
+    },
+    {
+      "time": 18.650000000000002,
+      "event": "target_observed",
+      "target": 744
+    },
+    {
+      "time": 18.650000000000002,
+      "event": "select_target",
+      "target": 745
+    },
+    {
+      "time": 18.8,
+      "event": "target_observed",
+      "target": 745
+    },
+    {
+      "time": 18.85,
+      "event": "select_target",
+      "target": 667
+    },
+    {
+      "time": 18.900000000000002,
+      "event": "target_observed",
+      "target": 667
+    },
+    {
+      "time": 18.95,
+      "event": "select_target",
+      "target": 790
+    },
+    {
+      "time": 19.3,
+      "event": "target_observed",
+      "target": 790
+    },
+    {
+      "time": 19.650000000000002,
+      "event": "select_target",
+      "target": 871
+    },
+    {
+      "time": 19.75,
+      "event": "target_observed",
+      "target": 871
+    },
+    {
+      "time": 19.85,
+      "event": "select_target",
+      "target": 911
+    },
+    {
+      "time": 19.900000000000002,
+      "event": "target_observed",
+      "target": 911
+    },
+    {
+      "time": 19.950000000000003,
+      "event": "select_target",
+      "target": 951
+    },
+    {
+      "time": 20.05,
+      "event": "target_observed",
+      "target": 951
+    },
+    {
+      "time": 20.150000000000002,
+      "event": "select_target",
+      "target": 1031
+    },
+    {
+      "time": 20.200000000000003,
+      "event": "target_observed",
+      "target": 1031
+    },
+    {
+      "time": 20.25,
+      "event": "select_target",
+      "target": 1111
+    },
+    {
+      "time": 20.3,
+      "event": "target_observed",
+      "target": 1111
+    },
+    {
+      "time": 20.35,
+      "event": "select_target",
+      "target": 1190
+    },
+    {
+      "time": 20.400000000000002,
+      "event": "target_observed",
+      "target": 1190
+    },
+    {
+      "time": 20.450000000000003,
+      "event": "select_target",
+      "target": 1160
+    },
+    {
+      "time": 23.3,
+      "event": "select_target",
+      "target": 1160
+    },
+    {
+      "time": 25.5,
+      "event": "select_target",
+      "target": 1290
+    },
+    {
+      "time": 26.5,
+      "event": "target_observed",
+      "target": 1290
+    },
+    {
+      "time": 26.5,
+      "event": "select_target",
+      "target": 1291
+    },
+    {
+      "time": 26.85,
+      "event": "select_target",
+      "target": 1291
+    },
+    {
+      "time": 29.5,
+      "event": "select_target",
+      "target": 1500
+    },
+    {
+      "time": 30.450000000000003,
+      "event": "target_observed",
+      "target": 1500
+    },
+    {
+      "time": 30.450000000000003,
+      "event": "select_target",
+      "target": 1501
+    },
+    {
+      "time": 30.8,
+      "event": "select_target",
+      "target": 1501
+    },
+    {
+      "time": 33.5,
+      "event": "select_target",
+      "target": 1471
+    },
+    {
+      "time": 34.5,
+      "event": "target_observed",
+      "target": 1471
+    },
+    {
+      "time": 34.5,
+      "event": "select_target",
+      "target": 1472
+    },
+    {
+      "time": 34.85,
+      "event": "select_target",
+      "target": 1472
+    },
+    {
+      "time": 37.5,
+      "event": "select_target",
+      "target": 1117
+    },
+    {
+      "time": 38.45,
+      "event": "target_observed",
+      "target": 1117
+    },
+    {
+      "time": 38.45,
+      "event": "select_target",
+      "target": 1118
+    },
+    {
+      "time": 38.800000000000004,
+      "event": "select_target",
+      "target": 1118
+    },
+    {
+      "time": 41.5,
+      "event": "select_target",
+      "target": 719
+    },
+    {
+      "time": 42.5,
+      "event": "target_observed",
+      "target": 719
+    },
+    {
+      "time": 42.5,
+      "event": "select_target",
+      "target": 393
+    },
+    {
+      "time": 42.6,
+      "event": "target_observed",
+      "target": 393
+    },
+    {
+      "time": 42.7,
+      "event": "select_target",
+      "target": 392
+    },
+    {
+      "time": 42.85,
+      "event": "target_observed",
+      "target": 392
+    },
+    {
+      "time": 43.0,
+      "event": "select_target",
+      "target": 430
+    },
+    {
+      "time": 43.900000000000006,
+      "event": "select_target",
+      "target": 430
+    },
+    {
+      "time": 45.5,
+      "event": "select_target",
+      "target": 390
+    },
+    {
+      "time": 45.85,
+      "event": "target_observed",
+      "target": 390
+    },
+    {
+      "time": 45.85,
+      "event": "select_target",
+      "target": 350
+    },
+    {
+      "time": 46.2,
+      "event": "target_observed",
+      "target": 350
+    },
+    {
+      "time": 46.2,
+      "event": "select_target",
+      "target": 310
+    },
+    {
+      "time": 46.5,
+      "event": "target_observed",
+      "target": 310
+    },
+    {
+      "time": 46.550000000000004,
+      "event": "select_target",
+      "target": 311
+    },
+    {
+      "time": 46.900000000000006,
+      "event": "select_target",
+      "target": 311
+    },
+    {
+      "time": 49.5,
+      "event": "select_target",
+      "target": 39
+    },
+    {
+      "time": 50.400000000000006,
+      "event": "target_observed",
+      "target": 39
+    },
+    {
+      "time": 50.400000000000006,
+      "event": "select_target",
+      "target": 22
+    },
+    {
+      "time": 51.75,
+      "event": "select_target",
+      "target": 22
+    },
+    {
+      "time": 53.5,
+      "event": "select_target",
+      "target": 6
+    },
+    {
+      "time": 54.1,
+      "event": "target_observed",
+      "target": 6
+    },
+    {
+      "time": 54.7,
+      "event": "select_target",
+      "target": 80
+    },
+    {
+      "time": 55.650000000000006,
+      "event": "select_target",
+      "target": 80
+    },
+    {
+      "time": 57.5,
+      "event": "select_target",
+      "target": 40
+    },
+    {
+      "time": 57.85,
+      "event": "target_observed",
+      "target": 40
+    },
+    {
+      "time": 57.85,
+      "event": "select_target",
+      "target": 1563
+    },
+    {
+      "time": 59.800000000000004,
+      "event": "select_target",
+      "target": 1563
+    }
+  ],
+  "dynamics_residual": 5.551115123125783e-17,
+  "diagnostics": {
+    "finite": true,
+    "tf": 61.550000000000004,
+    "duration_ok": true,
+    "out_of_bounds": false,
+    "out_of_bounds_tolerance": false,
+    "start_error": 0.0,
+    "end_error": 0.0,
+    "endpoint_max_component_error": 0.0,
+    "endpoint_fail": false,
+    "max_speed": 0.9529559276272956,
+    "max_abs_acceleration_component": 1.000000000000023,
+    "initial_velocity_max_error": 0.0,
+    "speed_fail": false,
+    "acceleration_fail": false,
+    "initial_velocity_fail": false,
+    "dynamics_fail": false,
+    "rectangle_collision": false,
+    "min_circle_clearance": 9.999999999987796e-05,
+    "safety_circle_violation_squared": 0.0,
+    "circle_fail": false,
+    "physical_pass": true
+  }
+}

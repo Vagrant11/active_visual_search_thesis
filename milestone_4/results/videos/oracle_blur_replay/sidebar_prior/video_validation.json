@@ -1,0 +1,45 @@
+{
+  "videos": [
+    {
+      "file": "cx0.25_cy0.25_layoutB__gamma_0.05__oracle.mp4",
+      "decoded_frames": 301,
+      "duration_seconds": 20.0,
+      "main_map_unchanged_on_snapshots": [
+        "oracle__frame_000.png",
+        "oracle__frame_010.png",
+        "oracle__frame_011.png",
+        "oracle__frame_300.png"
+      ],
+      "inset_outside_workspace": true
+    },
+    {
+      "file": "cx0.25_cy0.25_layoutB__gamma_0.05__diffuse_blur_js_0.15.mp4",
+      "decoded_frames": 301,
+      "duration_seconds": 20.0,
+      "main_map_unchanged_on_snapshots": [
+        "diffuse_blur_js_0.15__frame_000.png",
+        "diffuse_blur_js_0.15__frame_052.png",
+        "diffuse_blur_js_0.15__frame_053.png",
+        "diffuse_blur_js_0.15__frame_300.png"
+      ],
+      "inset_outside_workspace": true
+    }
+  ],
+  "prior_inset": {
+    "title": "Prior given to planner \u03c6\u0302",
+    "colormap": "magma",
+    "placement": "right information column, above detection-probability curve",
+    "shared_across_videos": false,
+    "scales_by_prior": {
+      "oracle": {
+        "vmin": 0.0,
+        "vmax": 0.004999201997720107
+      },
+      "diffuse_blur_js_0.15": {
+        "vmin": 0.0,
+        "vmax": 0.0008213371067136798
+      }
+    }
+  },
+  "source_files_unchanged": true
+}

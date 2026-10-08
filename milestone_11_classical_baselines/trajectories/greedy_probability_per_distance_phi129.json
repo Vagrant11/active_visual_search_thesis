@@ -1,0 +1,335 @@
+{
+  "generation_seconds": 0.057389459000000365,
+  "decisions": 62,
+  "events": [
+    {
+      "time": 0.0,
+      "event": "select_target",
+      "target": 455
+    },
+    {
+      "time": 0.45,
+      "event": "target_observed",
+      "target": 455
+    },
+    {
+      "time": 0.9,
+      "event": "select_target",
+      "target": 298
+    },
+    {
+      "time": 1.75,
+      "event": "target_observed",
+      "target": 298
+    },
+    {
+      "time": 1.75,
+      "event": "select_target",
+      "target": 299
+    },
+    {
+      "time": 2.1,
+      "event": "target_observed",
+      "target": 299
+    },
+    {
+      "time": 2.1,
+      "event": "select_target",
+      "target": 339
+    },
+    {
+      "time": 2.45,
+      "event": "target_observed",
+      "target": 339
+    },
+    {
+      "time": 2.45,
+      "event": "select_target",
+      "target": 340
+    },
+    {
+      "time": 2.8000000000000003,
+      "event": "select_target",
+      "target": 340
+    },
+    {
+      "time": 5.5,
+      "event": "select_target",
+      "target": 735
+    },
+    {
+      "time": 6.5,
+      "event": "target_observed",
+      "target": 735
+    },
+    {
+      "time": 6.5,
+      "event": "select_target",
+      "target": 774
+    },
+    {
+      "time": 6.8500000000000005,
+      "event": "select_target",
+      "target": 774
+    },
+    {
+      "time": 9.5,
+      "event": "select_target",
+      "target": 744
+    },
+    {
+      "time": 12.450000000000001,
+      "event": "target_observed",
+      "target": 744
+    },
+    {
+      "time": 12.5,
+      "event": "target_observed",
+      "target": 785
+    },
+    {
+      "time": 12.55,
+      "event": "select_target",
+      "target": 825
+    },
+    {
+      "time": 13.0,
+      "event": "target_observed",
+      "target": 825
+    },
+    {
+      "time": 13.05,
+      "event": "select_target",
+      "target": 864
+    },
+    {
+      "time": 16.150000000000002,
+      "event": "select_target",
+      "target": 864
+    },
+    {
+      "time": 17.5,
+      "event": "select_target",
+      "target": 366
+    },
+    {
+      "time": 21.75,
+      "event": "target_observed",
+      "target": 366
+    },
+    {
+      "time": 21.85,
+      "event": "select_target",
+      "target": 326
+    },
+    {
+      "time": 22.200000000000003,
+      "event": "target_observed",
+      "target": 326
+    },
+    {
+      "time": 22.200000000000003,
+      "event": "select_target",
+      "target": 245
+    },
+    {
+      "time": 22.25,
+      "event": "target_observed",
+      "target": 245
+    },
+    {
+      "time": 22.3,
+      "event": "select_target",
+      "target": 45
+    },
+    {
+      "time": 22.450000000000003,
+      "event": "target_observed",
+      "target": 45
+    },
+    {
+      "time": 22.6,
+      "event": "select_target",
+      "target": 764
+    },
+    {
+      "time": 23.700000000000003,
+      "event": "select_target",
+      "target": 764
+    },
+    {
+      "time": 25.5,
+      "event": "select_target",
+      "target": 721
+    },
+    {
+      "time": 25.75,
+      "event": "target_observed",
+      "target": 721
+    },
+    {
+      "time": 26.0,
+      "event": "select_target",
+      "target": 1162
+    },
+    {
+      "time": 27.05,
+      "event": "select_target",
+      "target": 1162
+    },
+    {
+      "time": 29.5,
+      "event": "select_target",
+      "target": 1212
+    },
+    {
+      "time": 30.5,
+      "event": "target_observed",
+      "target": 1212
+    },
+    {
+      "time": 30.5,
+      "event": "select_target",
+      "target": 1213
+    },
+    {
+      "time": 30.85,
+      "event": "select_target",
+      "target": 1213
+    },
+    {
+      "time": 33.5,
+      "event": "select_target",
+      "target": 1263
+    },
+    {
+      "time": 34.5,
+      "event": "target_observed",
+      "target": 1263
+    },
+    {
+      "time": 34.5,
+      "event": "select_target",
+      "target": 1303
+    },
+    {
+      "time": 34.85,
+      "event": "select_target",
+      "target": 1303
+    },
+    {
+      "time": 37.5,
+      "event": "select_target",
+      "target": 1273
+    },
+    {
+      "time": 38.5,
+      "event": "target_observed",
+      "target": 1273
+    },
+    {
+      "time": 38.5,
+      "event": "select_target",
+      "target": 1274
+    },
+    {
+      "time": 38.85,
+      "event": "select_target",
+      "target": 1274
+    },
+    {
+      "time": 41.5,
+      "event": "select_target",
+      "target": 875
+    },
+    {
+      "time": 42.5,
+      "event": "target_observed",
+      "target": 875
+    },
+    {
+      "time": 42.5,
+      "event": "select_target",
+      "target": 876
+    },
+    {
+      "time": 42.85,
+      "event": "select_target",
+      "target": 876
+    },
+    {
+      "time": 45.5,
+      "event": "select_target",
+      "target": 390
+    },
+    {
+      "time": 46.25,
+      "event": "target_observed",
+      "target": 390
+    },
+    {
+      "time": 46.6,
+      "event": "select_target",
+      "target": 391
+    },
+    {
+      "time": 46.95,
+      "event": "select_target",
+      "target": 391
+    },
+    {
+      "time": 49.5,
+      "event": "select_target",
+      "target": 36
+    },
+    {
+      "time": 50.45,
+      "event": "target_observed",
+      "target": 36
+    },
+    {
+      "time": 50.45,
+      "event": "select_target",
+      "target": 37
+    },
+    {
+      "time": 50.800000000000004,
+      "event": "select_target",
+      "target": 37
+    },
+    {
+      "time": 53.5,
+      "event": "select_target",
+      "target": 1527
+    },
+    {
+      "time": 56.7,
+      "event": "select_target",
+      "target": 1527
+    }
+  ],
+  "dynamics_residual": 5.551115123125783e-17,
+  "diagnostics": {
+    "finite": true,
+    "tf": 57.550000000000004,
+    "duration_ok": true,
+    "out_of_bounds": false,
+    "out_of_bounds_tolerance": false,
+    "start_error": 0.0,
+    "end_error": 0.0,
+    "endpoint_max_component_error": 0.0,
+    "endpoint_fail": false,
+    "max_speed": 0.8650051534019001,
+    "max_abs_acceleration_component": 1.000000000000023,
+    "initial_velocity_max_error": 0.0,
+    "speed_fail": false,
+    "acceleration_fail": false,
+    "initial_velocity_fail": false,
+    "dynamics_fail": false,
+    "rectangle_collision": false,
+    "min_circle_clearance": 9.999999999993348e-05,
+    "safety_circle_violation_squared": 0.0,
+    "circle_fail": false,
+    "physical_pass": true
+  }
+}
